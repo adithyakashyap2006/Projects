@@ -1,0 +1,45 @@
+import numpy as np
+import pandas as pd
+import streamlit as st
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
+import matplotlib.pyplot as plt
+data = pd.read_csv("Housing.csv")
+features = ['bedrooms', 'bathrooms', 'area']
+X = data[features]
+y = data['price']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+st.set_page_config(page_title='House Price Prediction')
+st.write('This app predicts the house price using a linear regression model')
+if st.checkbox('Show dataset'):
+    st.write('### Dataset')
+    st.dataframe(data.head())
+st.write('### Model Performance metrics')
+st.write(f'Mean squared error: **{mse:.2f}**')
+st.write(f'R^2 score: **{r2:.2f}**')
+st.write('### Actual vs Predicted values')
+fig, ax = plt.subplots()
+ax.scatter(y_test, y_pred, alpha=0.5)
+ax.set_xlabel('Actual values')
+ax.set_ylabel('Predicted values')
+ax.set_title('Actual vs predicted prices')
+st.pyplot(fig)
+st.write('### Predict House Price')
+area = st.number_input('Enter area of the house (in sq.m)', min_value=0, max_value=15000)
+bedrooms = st.number_input("Enter number of bedrooms", min_value=0, max_value=6)
+bathrooms = st.number_input('Enter number of bathrooms', min_value=1, max_value=7)
+if st.button('Predict Price'):
+    new_data = pd.DataFrame({'area': [area], 'bedrooms': [bedrooms], 'bathrooms': [bathrooms]})
+    predicted_price = model.predict(new_data)
+    st.success(f'Predicted Price: **${predicted_price[0]:,.2f}**')
+st.write('### Dollar to Rupee Converter')
+dollar_amount = st.number_input("Enter amount in dollars", min_value=0, max_value=2000)
+rupee_amount = dollar_amount * 85
+if st.button('Convert to INR'):
+    st.success(f'${dollar_amount} is approximately {rupee_amount:,.2f} rupees')
