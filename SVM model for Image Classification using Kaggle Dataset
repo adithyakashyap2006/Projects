@@ -1,0 +1,70 @@
+import os
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+# Loading data set
+data_dir = 'dataset/C:Users/Adithya/'
+categories = ['cat', 'dog']
+data = []
+labels = []
+img_size = 128
+print('Loading images:')
+for category in categories:
+    folder_path = os.path.join(data_dir, category)
+    label = categories.index(category)
+    for img_name in os.listdir(folder_path):
+        img_path = os.path.join(folder_path, img_name)
+        try:
+            img_arr = cv2.imread(img_path, cv2.IMREAD_COLOR)
+            img_arr = cv2.resize(img_arr, (img_size, img_size))
+            data.append(img_arr)
+            labels.append(label)
+        except Exception as e:
+            pass
+print('Loaded', len(data), 'images')
+# Data Preprocessing
+print('Data Preprocessing...')
+X = np.array(data)
+y = np.array(labels)
+X = X.reshape(len(X), -1)
+scaler = StandardScaler()
+scaler.fit_transform(X)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+print('Data preprocessing complete')
+# Model Training
+print('Training SVM model...')
+svm_model = SVC(kernel = 'rbf', C = 0.1, gamma = 'scale')
+svm_model.fit(X_train, y_train)
+print('Model training complete')
+# Model Evaluation
+print('Evaluating the model')
+y_pred = svm_model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy*100:.2f}%")
+print('\n Classification Report:\n', classification_report(y_test, y_pred))
+# Precition by giving new images
+# Displays the image with predicted label
+def predict_image(image_path):
+    img = cv2.imread(image_path)
+    if img is None:
+        print('Image not found or invalid path')
+        return
+    img_resized = cv2.resize(img, (img_size, img_size))
+    img_flat = img_resized.reshape(1, -1)
+    img_flat = scaler.transform(img_flat)
+    pred = svm_model.predict(img_flat)[0]
+    label = categories[pred]
+    plt.imshow(cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB))
+    plt.title(f'Prediction: {label.upper()}')
+    plt.axis('off')
+    plt.show()
+    print('The model predicts : {label.upper()}')
+
+# Giving images so that the model can predict
+print('Making sample predictions\n')
+predict_image('dataset/cat/cat.1.jpg')
+predict_image('dataset/dog/dog.1.jpg')
