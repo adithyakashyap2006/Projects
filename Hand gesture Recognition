@@ -1,0 +1,191 @@
+import cv2
+import mediapipe as mp
+import numpy as np
+import time
+class HandGestureRecognizer:
+    def __init__(self):
+        # Initialize MediaPipe Hands
+        self.mp_hands = mp.solutions.hands
+        self.mp_drawing = mp.solutions.drawing_utils
+        self.mp_drawing_styles = mp.solutions.drawing_styles
+        self.hands = self.mp_hands.Hands(
+            static_image_mode=False,
+            max_num_hands=2,
+            min_detection_confidence=0.7,
+            min_tracking_confidence=0.5
+        )
+        # Gesture history for smoothing
+        self.gesture_history = []
+        self.history_length = 5
+    def calculate_distance(self, point1, point2):
+        """Calculate Euclidean distance between two points"""
+        return np.sqrt((point1.x - point2.x) ** 2 + (point1.y - point2.y) ** 2)
+    def is_finger_extended(self, landmarks, finger_tip_id, finger_pip_id):
+        """Check if a finger is extended based on tip and PIP joint positions"""
+        tip = landmarks[finger_tip_id]
+        pip = landmarks[finger_pip_id]
+        return tip.y < pip.y
+    def is_thumb_extended(self, landmarks):
+        """Special check for thumb extension"""
+        thumb_tip = landmarks[4]
+        thumb_ip = landmarks[3]
+        thumb_mcp = landmarks[2]
+        # Check horizontal distance for thumb
+        distance_tip_to_ip = abs(thumb_tip.x - thumb_ip.x)
+        distance_ip_to_mcp = abs(thumb_ip.x - thumb_mcp.x)
+        return distance_tip_to_ip > distance_ip_to_mcp * 0.8
+    def classify_gesture(self, landmarks):
+        if not landmarks:
+            return "None", 0.0
+        # Check finger extensions
+        thumb_extended = self.is_thumb_extended(landmarks)
+        index_extended = self.is_finger_extended(landmarks, 8, 6)
+        middle_extended = self.is_finger_extended(landmarks, 12, 10)
+        ring_extended = self.is_finger_extended(landmarks, 16, 14)
+        pinky_extended = self.is_finger_extended(landmarks, 20, 18)
+        # Count extended fingers
+        extended_count = sum([
+            thumb_extended,
+            index_extended,
+            middle_extended,
+            ring_extended,
+            pinky_extended
+        ])
+        confidence = 0.85
+        # Gesture classification logic
+        # Thumbs Up
+        if thumb_extended and not any([index_extended, middle_extended, ring_extended, pinky_extended]):
+            return "Thumbs Up", confidence
+        # Peace Sign (Victory)
+        if index_extended and middle_extended and not any([thumb_extended, ring_extended, pinky_extended]):
+            return "Peace", confidence
+        # Pointing (Index finger only)
+        if index_extended and not any([thumb_extended, middle_extended, ring_extended, pinky_extended]):
+            return "Pointing", confidence
+        # Rock Sign (Index and Pinky)
+        if index_extended and pinky_extended and not any([thumb_extended, middle_extended, ring_extended]):
+            return "Rock", confidence
+        # OK Sign
+        thumb_tip = landmarks[4]
+        index_tip = landmarks[8]
+        ok_distance = self.calculate_distance(thumb_tip, index_tip)
+        if ok_distance < 0.05 and middle_extended and ring_extended and pinky_extended:
+            return "OK", confidence
+        # Fist (No fingers extended)
+        if extended_count == 0:
+            return "Fist", confidence
+        # Open Hand (All fingers extended)
+        if extended_count == 5:
+            return "Open Hand", confidence
+        # Three fingers (typically thumb, index, middle)
+        if extended_count == 3 and thumb_extended and index_extended and middle_extended:
+            return "Three", confidence
+        # Four fingers
+        if extended_count == 4 and not thumb_extended:
+            return "Four", confidence
+        return "Unknown", 0.5
+    def smooth_gesture(self, current_gesture):
+        self.gesture_history.append(current_gesture)
+        if len(self.gesture_history) > self.history_length:
+            self.gesture_history.pop(0)
+        if len(self.gesture_history) >= 3:
+            from collections import Counter
+            counter = Counter(self.gesture_history)
+            return counter.most_common(1)[0][0]
+        return current_gesture
+    def process_frame(self, frame):
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        results = self.hands.process(rgb_frame)
+        gesture_info = []
+        if results.multi_hand_landmarks:
+            for idx, hand_landmarks in enumerate(results.multi_hand_landmarks):
+                # Draw hand landmarks
+                self.mp_drawing.draw_landmarks(
+                    frame,
+                    hand_landmarks,
+                    self.mp_hands.HAND_CONNECTIONS,
+                    self.mp_drawing_styles.get_default_hand_landmarks_style(),
+                    self.mp_drawing_styles.get_default_hand_connections_style()
+                )
+                gesture, conf = self.classify_gesture(hand_landmarks.landmark)
+                gesture = self.smooth_gesture(gesture)
+                hand_label = results.multi_handedness[idx].classification[0].label
+                gesture_info.append({
+                    'hand': hand_label,
+                    'gesture': gesture,
+                    'confidence': conf
+                })
+                h, w, _ = frame.shape
+                wrist = hand_landmarks.landmark[0]
+                x, y = int(wrist.x * w), int(wrist.y * h)
+                text = f"{hand_label}: {gesture} ({conf:.2f})"
+                cv2.putText(frame, text, (x - 50, y - 30),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        return frame, gesture_info
+    def process_image(self, image_path):
+        frame = cv2.imread(image_path)
+        if frame is None:
+            print(f"Error: Could not read image from {image_path}")
+            return None
+        processed_frame, gesture_info = self.process_frame(frame)
+        return processed_frame, gesture_info
+    def run_webcam(self):
+        cap = cv2.VideoCapture(0)
+        if not cap.isOpened():
+            print("Error: Could not open webcam")
+            return
+        print("Hand Gesture Recognition Started")
+        print("Press 'q' to quit")
+        print("\nSupported Gestures:")
+        print("- Thumbs Up, Peace, Pointing, Rock")
+        print("- OK, Fist, Open Hand, Three, Four")
+        fps_time = time.time()
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                print("Error: Could not read frame")
+                break
+            frame = cv2.flip(frame, 1)
+            processed_frame, gesture_info = self.process_frame(frame)
+            current_time = time.time()
+            fps = 1 / (current_time - fps_time)
+            fps_time = current_time
+            cv2.putText(processed_frame, f"FPS: {fps:.1f}", (10, 30),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+            cv2.putText(processed_frame, "Press 'q' to quit", (10, 70),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+            cv2.imshow('Hand Gesture Recognition', processed_frame)
+            if gesture_info:
+                for info in gesture_info:
+                    print(f"\r{info['hand']} Hand: {info['gesture']} (Confidence: {info['confidence']:.2f})", end='')
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        cap.release()
+        cv2.destroyAllWindows()
+        self.hands.close()
+    def __del__(self):
+        if hasattr(self, 'hands'):
+            self.hands.close()
+def main():
+    recognizer = HandGestureRecognizer()
+    print("Hand Gesture Recognition System")
+    print("1. Real-time Webcam")
+    print("2. Process Image")
+    choice = input("Enter choice (1 or 2): ")
+    if choice == '1':
+        recognizer.run_webcam()
+    elif choice == '2':
+        image_path = input("Enter image path: ")
+        processed_frame, gesture_info = recognizer.process_image(image_path)
+        if processed_frame is not None:
+            print("\nDetected Gestures:")
+            for info in gesture_info:
+                print(f"{info['hand']} Hand: {info['gesture']} (Confidence: {info['confidence']:.2f})")
+            cv2.imshow('Gesture Recognition Result', processed_frame)
+            print("Press any key to close the window")
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
+    else:
+        print("Invalid choice")
+if __name__ == "__main__":
+    main()
