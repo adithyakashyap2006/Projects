@@ -1,0 +1,107 @@
+import numpy as np
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score, classification_report
+import os
+import warnings
+warnings.filterwarnings('ignore')
+print(os.listdir())
+data = pd.read_csv('description.csv')
+print(data.head())
+def load_data(file_path):
+    with open(file_path, 'r', encoding = 'utf-8') as f:
+        data = f.readlines()
+    data = [line.strip().split(' ::: ') for line in data]
+    return data
+train_data = load_data('train_data.csv')
+train_df = pd.DataFrame(train_data, columns = ['ID', 'Title', 'Genre', 'Description'])
+test_data = load_data('test_data.csv')
+test_df = pd.DataFrame(test_data, columns = ['ID', 'Title', 'Description'])
+test_solution = load_data('test_data_solution.csv')
+test_solution_df = pd.DataFrame(test_solution, columns = ['ID', 'Title', 'Genre', 'Description'])
+print('Train Data:')
+pd.set_option('display.max_columns', None)
+print(train_df.head())
+print('Test Data:')
+print(test_df.head(10))
+print('Test Solution Data:')
+print(test_solution_df.head())
+vectorizer = TfidfVectorizer(max_features = 10000)
+X_train_tfidf = vectorizer.fit_transform(train_df['Description'])
+X_test_tfidf = vectorizer.fit_transform(test_df['Description'])
+print('Training data shape:', X_train_tfidf.shape)
+print('Testing data shape:', X_test_tfidf.shape)
+encoder = LabelEncoder()
+y_train = encoder.fit_transform(train_df['Genre'])
+print('Unique Genres in the training data:', encoder.classes_)
+# Training model using Logistic Regression
+lr_model = LogisticRegression(max_iter = 200)
+lr_model.fit(X_train_tfidf, y_train)
+y_pred = lr_model.predict(X_test_tfidf)
+predicted_genres = encoder.inverse_transform(y_pred)
+test_df['Predicted Genre'] = predicted_genres
+print(test_df[['Title', 'Predicted Genre']])
+test_df['Predicted Genre'] = predicted_genres
+merged_df = pd.merge(test_solution_df[['ID', 'Genre']], test_df[['ID', 'Predicted Genre']], on = 'ID')
+print(merged_df.head(10))
+accuracy = accuracy_score(merged_df['Genre'], merged_df['Predicted Genre'])
+# Checking Accuracy and printing the classification report
+print('Accuracy:', accuracy)
+print('\n Classification Report:')
+print(classification_report(merged_df['Genre'], merged_df['Predicted Genre']))
+# Training the model using Multinomial Naive Bayes
+mnb_model = MultinomialNB()
+mnb_model.fit(X_train_tfidf, y_train)
+y_pred_nb = mnb_model.predict(X_test_tfidf)
+predicted_genres_nb = encoder.inverse_transform(y_pred_nb)
+test_df['Predicted Genre NB'] = predicted_genres_nb
+merged_df_nb = pd.merge(test_solution_df, test_df[['ID', 'Predicted Genre NB']], on = 'ID')
+print(merged_df_nb.head())
+# Checking Accuracy and printing the classification report
+accuracy_nb = accuracy_score(merged_df_nb['Genre'], merged_df_nb['Predicted Genre NB'])
+print('Naive Bayes accuracy:', accuracy_nb)
+print('\n Classification report:')
+print(classification_report(merged_df_nb['Genre'], merged_df_nb['Predicted Genre NB'],
+                                target_names = encoder.classes_))
+# Training the model with SVM using linear kernel
+svm_model = SVC(kernel = 'linear')
+svm_model.fit(X_train_tfidf, y_train)
+y_pred_svm = svm_model.predict(X_test_tfidf)
+predicted_genres_svm = encoder.inverse_transform(y_pred_svm)
+test_df['Predicted Genre SVM'] = predicted_genres_svm
+merged_df_svm = pd.merge(test_solution_df, test_df[['ID', 'Predicted Genre SVM']], on = 'ID')
+# Checking Accuracy and printing the classification report
+accuracy_svm = accuracy_score(merged_df_svm['Genre'], merged_df_svm['Predicted Genre NB'])
+print('SVM accuracy:', accuracy_svm)
+print('\n Classification report:')
+print(classification_report(merged_df_svm['Genre'], merged_df_svm['Predicted Genre NB'],
+                                    target_names = encoder.classes_))
+# Testing the model by giving inputs
+description_model = ['Explosive fight scenes in the city streets',
+                     'A haunted mansion that traps its visitors',
+                     'A brave adventurer in search of lost treasure',
+                     'A forbidden romance in the 1120s',
+                     'A daring love mission with love interest']
+# vectorize the new test data using the same vectorizer
+test_data_tfidf = vectorizer.transform(description_model)
+# Predict the genres using all 3 models which are trained
+y_pred_lr = lr_model.predict(test_data_tfidf)
+predicted_genres_lr = encoder.inverse_transform(y_pred_lr)
+y_pred_nb = mnb_model.predict(test_data_tfidf)
+predicted_genres_nb = encoder.inverse_transform(y_pred_nb)
+y_pred_svm = svm_model.predict(test_data_tfidf)
+predicted_genres_svm = encoder.inverse_transform(y_pred_svm)
+# Output the predicted genres
+print('Predicted Genres using Logistic Regression:', predicted_genres_lr)
+print('Predicted Genres using Multinomial Naive bayes:', predicted_genres_nb)
+print('Predicted Genres using Support Vector Machine:', predicted_genres_svm)
+for i, message in enumerate(description_model):
+    print('Story:', message)
+    print('Status: \t Naive Bayes Prediction:', predicted_genres_nb[i])
+    print('Status: \t Logistic Regression:', predicted_genres_lr[i])
+    print('Status: \t Support Vector Machine:', predicted_genres_svm[i])
+    print('='*100)
