@@ -1,0 +1,87 @@
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import SVC
+from sklearn.linear_model import  LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+data = pd.read_csv('spam.csv', encoding = 'ISO-8859-1')
+pd.set_option('display.max_columns', None)
+print(data.head())
+data.rename(columns = {'v1' : 'Status', 'v2' : 'Text 1', 'Unnamed: 2' : 'Text 2',
+                       'Unnamed: 3' : 'Text 3', 'Unnamed: 4' : 'Text 4'}, inplace = True)
+print(data.head())
+# Checking number of null values in each column
+print(data.isnull().sum())
+# Fill null values with " ", and combine all four Text columns into a single column named text
+data['Text'] = (
+    data['Text 1'].fillna(" ").astype(str) + " " +
+    data['Text 2'].fillna(" ").astype(str) + " " +
+    data['Text 3'].fillna(" ").astype(str) + " " +
+    data['Text 4'].fillna(" ").astype(str)
+)
+data =  data.drop(columns = ['Text 1', 'Text 2', 'Text 3', 'Text 4'])
+print(data.head())
+print(data.describe())
+print(data.info())
+print(data.shape)
+#Feature Extraction process
+LE = LabelEncoder()
+# Changing the text values into the numerical values in Status column
+# This will assign 1 for spam and 0 for not spam(ham)
+data['Status'] = LE.fit_transform(data['Status'])
+#print(data.head(10))
+X = data['Text']
+y = data['Status']
+# Here, X is the independent variable and y is the dependent variable
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+# Importing the TF-IDF Vectorizer
+vectorizer = TfidfVectorizer(stop_words = 'english', max_features = 5000)
+X_train_tfidf = vectorizer.fit_transform(X_train)
+X_test_tfidf = vectorizer.transform(X_test)
+# Note:
+# fit_transform() is used on training data and transform() is used on testing data
+# Importing the Multinomial Naive Bayes algorithm
+nb_model = MultinomialNB()
+nb_model.fit(X_train_tfidf, y_train)
+y_pred_nb = nb_model.predict(X_test_tfidf)
+print('Multinomial Naive Bayes:')
+print('Accuracy score:', accuracy_score(y_test, y_pred_nb))
+print('Classification Report:')
+print(classification_report(y_test, y_pred_nb))
+# Importing Logistic Regression algorithm
+lr = LogisticRegression()
+lr.fit(X_train_tfidf, y_train)
+y_pred_lr = lr.predict(X_test_tfidf)
+print('Logistic Regression:')
+print('Accuracy score:', accuracy_score(y_test, y_pred_lr))
+print('Classification Report:')
+print(classification_report(y_test, y_pred_lr))
+# Importing Support Vector Machine (SVM)
+svm_model = SVC()
+svm_model.fit(X_train_tfidf, y_train)
+y_pred_svm = svm_model.predict(X_test_tfidf)
+print('Support Vector Machine:')
+print('Accuracy:', accuracy_score(y_test, y_pred_svm))
+print('Classification report:')
+print(classification_report(y_test, y_pred_svm))
+# Among the three models: Multinomial NB, Logistic Regression and SVM; SVM produces the
+# highest accuracy
+# Giving the moddel sample messages for testing
+messages = ['Congratulations! You have won a lottery of 5,00,000. Click on the link below to claim your reward.',
+            'Hey! Are we meeting tomorrow for the presentation.',
+            'Hurray! You have won a free vacation to Maldives. Call the number to claim.',
+            'Hi, I am not well today, so can we postpone the group discussion.']
+messages_tfidf = vectorizer.transform(messages)
+predictions_nb = nb_model.predict(messages_tfidf)
+predictions_lr = lr.predict(messages_tfidf)
+predictions_svm = svm_model.predict(messages_tfidf)
+label_map = {0 : 'ham', 1 : 'spam'}
+for i, message in enumerate(messages):
+    print(f"Message: {message}")
+    print(f"Native Bayes Prediction : {label_map[predictions_nb[i]]}")
+    print(f"Logistic Regression Prediction : {label_map[predictions_lr[i]]}")
+    print(f"Support Vector Machine : {label_map[predictions_svm[i]]}")
+    print('*' * 100)
