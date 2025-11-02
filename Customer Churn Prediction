@@ -1,0 +1,119 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+import warnings
+warnings.filterwarnings('ignore')
+data = pd.read_csv('Churn_Modelling.csv')
+pd.set_option('display.max_columns', None)
+print(data.head())
+# Running Explanatory Data Analysis (EDA) to check presence of null values
+print(data.isnull().sum())
+print(data.info())
+print(data.shape)
+print(data.describe())
+print(data.columns)
+# Data Preprocessing - Feature scaling
+# Checking unique values in the Geography column
+print('Number of unique values in Geography column:', len(data['Geography'].unique()))
+print('List of unique values:', data['Geography'].unique())
+le = LabelEncoder()
+data['Geography'] = le.fit_transform(data['Geography'])
+print('List of unique values:', data['Geography'].unique())
+# The above statement has assigned; 0 for France, 1 for Germany, 2 for Spain
+# Performing feature scaling on Gender column
+print('Number of unique values in Gender column:', len(data['Gender'].unique()))
+print('List of unique values:', data['Gender'].unique())
+data['Gender'] = le.fit_transform(data['Gender'])
+print('List of unique values:', data['Gender'].unique())
+# The above statement assigns; 0 for Female and 1 for male
+# Checking unique values in the Surname column
+print('Number of unique values in the Surname column:', len(data['Surname'].unique()))
+print('List of unique values:', data['Surname'].unique())
+ct = ColumnTransformer(transformers = [('encoder', OneHotEncoder(), [2])], remainder = 'passthrough')
+data.iloc[:,2] = np.array(ct.fit_transform(data))
+print(data["Surname"])
+print(data.info())
+print(data.head())
+# This helps us visualize the changes we have made above
+# Printing graphs for data visualization
+sns.palplot(data)
+plt.show()
+# Plot heat map and check correlation
+plt.figure(figsize = (14,6))
+sns.heatmap(data.corr(), annot = True)
+plt.show()
+X = data.drop(columns=['Surname'])
+y = data.iloc[:, -1].values
+print(X)
+print(y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 42)
+print(X_train.shape)
+print(X_test.shape)
+lr = LogisticRegression(class_weight = 'balanced')
+lr.fit(X_train, y_train)
+# Calculating training score and testing score of Logistic Regression
+train_score = lr.score(X_train, y_train)
+test_score = lr.score(X_test, y_test)
+print('Train score:', train_score)
+print('Test score:', test_score)
+# Calculating metrics for Logistic Regression
+y_pred = lr.predict(X_test)
+print('Accuracy:', accuracy_score(y_test, y_pred))
+print('Classification Report:')
+print(classification_report(y_test, y_pred))
+print('Confusion matrix:')
+print(confusion_matrix(y_test, y_pred))
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+rfc = RandomForestClassifier(class_weight = "balanced")
+rfc.fit(X_train, y_train)
+# Calculating training and testing score of Random Forest Classifier
+train_score1 = rfc.score(X_train, y_train)
+test_score1 = rfc.score(X_test, y_test)
+print('Training score:', train_score1)
+print('Testing score:', test_score1)
+# Calculating metrics for Random Forest Classifier
+y_pred1 = rfc.predict(X_test)
+print('Accuracy:', accuracy_score(y_pred1, y_test))
+print('Classification Report:')
+print(classification_report(y_pred1, y_test))
+print('Confusion Matrix:')
+print(confusion_matrix(y_pred1, y_test))
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+gbc = GradientBoostingClassifier()
+gbc.fit(X_train, y_train)
+# Calculating training and testing score of Gradient Boosting Classifier
+train_score2 = gbc.score(X_train, y_train)
+test_score2 = gbc.score(X_test, y_test)
+print('Training score:', train_score2)
+print('Testing score:', test_score2)
+# Calculating metrics for Gradient Boosting Classifier
+y_pred2 = gbc.predict(X_test)
+print('Accuracy:', accuracy_score(y_pred2, y_test))
+print('Classification Report:')
+print(classification_report(y_pred2, y_test))
+print('Confusion Matrix:')
+print(confusion_matrix(y_pred2, y_test))
+# Writing a function for model testing
+def test_single_instance(models, X_test, y_test, index = 0):
+    actual_value = y_test[index]
+    data_values = X_test.iloc[index]
+    print(f"Actual Churn for the instance {index}:", actual_value)
+    print('Data value:\n', data_values)
+    for model_name, model in models.items():
+        print(f"Model testing for {model_name}")
+        y_pred_single = model.predict(X_test.iloc[[index]])
+        print(f"Predicted Churn for the instance {index}:", y_pred_single[0])
+        accuracy = accuracy_score([actual_value], y_pred_single)
+        print(f"Predicted accuracy for the instance {index}:", accuracy)
+        print('*' * 60)
+# Creating the dictionary containing the three models
+models = {'Logistic Regression' : lr, 'Random Forest Classifier' : rfc,
+              'Gradient Boosting Classifier' : gbc}
+print(test_single_instance(models, X_test, y_test, index = 0))
