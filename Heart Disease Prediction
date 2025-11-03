@@ -1,0 +1,55 @@
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+# Data collection
+data = pd.read_csv('heart_disease_data.csv')
+pd.set_option('display.max_columns', None)
+# Printing Data set information
+print(data.head())
+print(data.shape)
+print(data.info())
+print(data.describe())
+print(data.columns)
+# Checking missing values in the data set
+print(data.isnull().sum())
+print(data['target'].value_counts())
+# 1 indicates people having heart disease and 0 indicates people without heart disease
+# Now, Splitting features and target
+X = data.drop(columns = 'target', axis = 1)
+y = data['target']
+print(X)
+print(y)
+# Y is the target column on which we will be training the model
+# Applying model selection to split data into training and testing parts
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, stratify = y,
+                                                random_state = 2)
+# Checking shape of training data
+print('Shape of X:', X.shape)
+print('X train shape:', X_train.shape)
+print('X test shape:', X_test.shape)
+# Training Logistic Regression model on the data set
+model = LogisticRegression()
+model.fit(X_train, y_train)
+# Accuracy of training data
+X_train_prediction = model.predict(X_train)
+train_data_accuracy = accuracy_score(X_train_prediction, y_train)
+print('Accuracy of training data:', train_data_accuracy)
+# Accuracy of testing data
+X_test_prediction = model.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, y_test)
+print('Accuracy of testing data:', test_data_accuracy)
+# Predictive analysis
+input_data = (65,0,0,150,225,0,0,114,0,1,1,3,3)
+# Converting the data into numpy array
+input_array = np.asarray(input_data)
+print(input_array)
+input_reshape = input_array.reshape(1, -1)
+prediction = model.predict(input_reshape)
+print(prediction)
+if (prediction[0] == 0):
+    print('The person does not have heart disease')
+else:
+    print('The person is diagonised with heart disease')
+# We can check the model performance by giving different input values in the array
