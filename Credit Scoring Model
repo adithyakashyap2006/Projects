@@ -1,0 +1,107 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.model_selection import train_test_split
+data = pd.read_csv('credit scoring.csv')
+pd.set_option('display.max_columns', None)
+#print(data.head(10))
+# Analysing the data set
+print(data.info())
+print(data.columns)
+#print(data.dtypes)
+print(data.describe())
+print(data.shape)
+# Data Preprocessing
+# Checking for missing values
+print('Missing values per column:')
+print(data.isnull().sum()) # Gives missing values column wise
+print('Missing values in the entire data set:')
+print(data.isnull().sum().sum()) # Gives the total missing values in the data set
+# Using mean and median imputation to fill missing values
+data.fillna({'income' : data['income'].median()}, inplace = True)
+data.fillna({'loan_amount' : data['loan_amount'].median()}, inplace = True)
+# We use mode to replace missing values for credit history since it is has binary values
+data.fillna({'credit_history' : data['credit_history'].mode()[0]}, inplace = True)
+#print(data.head(20))
+print('Checking missing values after handling data:')
+print(data.isnull().sum())
+# Starting data visualization
+# Setting seaborn theme
+sns.set(style = 'whitegrid')
+fig, axes = plt.subplots(1, 2, figsize = (14,4))
+# Hist plots of income and loan amount
+sns.histplot(data['income'], kde = True, bins = 40, ax = axes[0])
+axes[0].set_title('Income Distribution')
+sns.histplot(data['loan_amount'], kde = True, bins = 40, ax = axes[1])
+axes[0].set_title('Loan Amount distribution')
+plt.tight_layout()
+plt.show()
+# Count plot of loan term
+sns.countplot(x = 'term', data = data)
+plt.title('Loan term distribution')
+plt.xlabel('Loan Term (Months)')
+plt.ylabel('Term')
+plt.show()
+# Count plot of credit history
+sns.countplot(x = 'credit_history', hue = 'defaulted', data = data)
+plt.title('Credit history vs defaulted')
+plt.xlabel('Credit History')
+plt.ylabel('Count')
+plt.legend()
+plt.show()
+# Plotting correlation heat map
+plt.figure(figsize = (10,6))
+#sns.heatmap(data.corr(numeric_only = True), annot = True, cmap = 'coolwarm', fmt = ".2f")
+plt.title('Feature correlation heatmap')
+plt.show()
+# Convert categorical features
+# Name the 36 values to 0 and 60 values to 1
+data['term_binary'] = data['term'].apply(lambda x : 1 if x == 60 else 0)
+# Create derived features so that the model can capture complex features
+data['log_income'] = np.log1p(data['income'])
+data['log_loan_amount'] = np.log1p(data['loan_amount'])
+print(data.head())
+# Selecting final features for modeling
+features = ['log_income', 'log_loan_amount', 'credit_history']
+target = 'defaulted'
+# Model training
+# Using standard scalar
+scaler = StandardScaler()
+scale_features = ['log_income', 'log_loan_amount']
+data[scale_features] = scaler.fit_transform(data[scale_features])
+print(data.head())
+# Splitting the data into training and testing data sets
+X = data[features]
+y = data[target]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+# Defining a dictionary containing 3 models
+models = {'Logistic Regression' : LogisticRegression(max_iter = 1000, random_state = 42),
+          'Decision Tree Classifier' : DecisionTreeClassifier(random_state = 42),
+          'Random Forest Classifier' : RandomForestClassifier(n_estimators = 100, random_state = 42)}
+for name, model in models.items():
+    print(f"Model:\n {model}")
+    pipeline = Pipeline([('Classifier', model)])
+    pipeline.fit(X_train, y_train)
+    y_pred = pipeline.predict(X_test)
+    print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+    print('Classification report:')
+    print(classification_report(y_test, y_pred))
+# The Logistic Regression model achieved the highest accuracy (65.2%),
+# followed by Random Forest (60.8%), and Decision Tree (54%).
+# 1. Logistic Regression
+# Performs better at identifying class 0 (majority class) than class 1.
+# Indicates class imbalance or less separability for class 1.
+# Generalization is fair — simple model, decent performance.
+# 2. Decision Tree
+# The model performs poorly overall and might be overfitting
+# to the training data or not well-tuned
+# 3. Random Forest
+# Suggests that while ensemble averaging improved stability,
+# it didn’t capture strong non-linear patterns — possibly due to parameter defaults.
