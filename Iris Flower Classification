@@ -1,0 +1,98 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+data = pd.read_csv('Iris.csv')
+pd.set_option('display.max_columns', None)
+print(data.head())
+print(data.columns)
+print(data.shape)
+# Deleting the id column
+data = data.drop(columns = ['Id'])
+print(data.head(10))
+# Checking the statistics for the dataset
+print(data.describe())
+# Printing the basic information of the data set
+print(data.info())
+# Diplaying number of samples in the Species column
+print(data['Species'].value_counts())
+# Data preprocessing
+# Checking for null values
+print(data.isnull().sum())
+# Performing exploratory data analysis
+# Histogram for Sepal length
+print(data['SepalLengthCm'].hist())
+# histogream for Sepal Width
+print(data['SepalWidthCm'].hist())
+# Histogram for Petal Length
+print(data['PetalLengthCm'].hist())
+# Histogram for petal width
+print(data['PetalWidthCm'].hist())
+# Scatter plots
+colors = ['red', 'orange', 'green']
+species = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+# Scatter plot of sepal length and sepal width
+for i in range(3):
+    x = data[data['Species'] == species[i]]
+    plt.scatter(x['SepalLengthCm'], x['SepalWidthCm'], c = colors[i], label = species[i])
+plt.xlabel('Sepal Length')
+plt.ylabel('Sepal Width')
+plt.legend()
+# Scatter plot of petal length and petal width
+for i in range(3):
+    x = data[data['Species'] == species[i]]
+    plt.scatter(x['PetalLengthCm'], x['PetalWidthCm'], c = colors[i], label = species[i])
+plt.xlabel('Petal Length')
+plt.ylabel('Petal Width')
+plt.legend()
+# Scatter plot of sepal length and petal length
+for i in range(3):
+    x = data[data['Species'] == species[i]]
+    plt.scatter(x['SepalLengthCm'], x['PetalLengthCm'], c = colors[i], label = species[i])
+plt.xlabel('Sepal Length')
+plt.ylabel('Petal Length')
+plt.legend()
+# Scatter plot of sepal width and petal width
+for i in range(3):
+    x = data[data['Species'] == species[i]]
+    plt.scatter(x['SepalWidthCm'], x['PetalWidthCm'], c = colors[i], label = species[i])
+plt.xlabel('Sepal Width')
+plt.ylabel('Petal Width')
+plt.legend()
+# Correlation matrix
+corr_matrix = data.select_dtypes(include=['number']).corr()
+print(corr_matrix)
+fig, ax = plt.subplots(figsize = (12,6))
+sns.heatmap(corr_matrix, annot = True, ax = ax, cmap = 'coolwarm')
+# Label Encoder converts the data into numeric form so that the machine can understand it easily 
+le = LabelEncoder()
+data['Species'] = le.fit_transform(data['Species'])
+print(data.head(10))
+# Model training
+# Splitting the model into training and testing data sets
+X = data.drop(columns = ['Species'])
+y = data['Species']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
+#Importing Logistic Regression to the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+#Printing accuracy of the model using Losgistic Regression
+print('Accuracy:', model.score(X_test, y_test))
+#Importing KNeighborsClassifier to the model
+model = KNeighborsClassifier()
+model.fit(X_train, y_train)
+#Printing accuracy of the model using KNeighborsClassifier
+print('Accuracy:', model.score(X_test, y_test))
+#Importing Decision Tree Classifier to the model
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+#Printing accuracy of the model using Decision Tree Classifier
+print('Accuracy:', model.score(X_test, y_test))
+# Every time we run the models, the accuracy of each algorithm changes
+# This occurs due to the changes between the training and testing data sets 
+# The increase or decrease in accuracy cannot be predicted but there will be a change in accuracy.
