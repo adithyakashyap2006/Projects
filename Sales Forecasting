@@ -1,0 +1,70 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import root_mean_squared_error
+data = pd.read_csv('train_0irEZ2H.csv')
+pd.set_option('display.max_columns', None)
+print(data.head())
+#Splitting the week column into day, month and year
+data[['day', 'month', 'year']] = data['week'].str.split('/', expand = True)
+#Dropping the week column for easier understanding of data set
+data = data.drop('week', axis = 1)
+print(data.head())
+#Splitting the data into train and test components
+X = data.drop('units_sold', axis = 1)
+y = data['units_sold']
+#Here, X will contain all columns except the target variable, i.e, units_sold
+# y is the target variable on which we will be making our predictions on
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+#Training the model using RandomForest Regressor
+model = RandomForestRegressor(n_jobs = -1)
+model.fit(X_train, y_train)
+print(model.score(X_test, y_test))
+# For better understanding of the target variable, calculate mean squared error
+y_pred = model.predict(X_test)
+print(' Root mean Squared error is: ', root_mean_squared_error(y_pred, y_test))
+# Describing the units_sold column
+print(data.units_sold.describe())
+#Plotting histogram to check presence of outliers
+data.units_sold.hist()
+# There is a huge amount of outliers
+#Scatter plot of y_pred and y_test
+plt.scatter(y_pred, y_test)
+plt.plot(np.linspace(y_pred.min(), y_pred.max()), np.linspace(y_test.min(), y_test.max()), color = 'red')
+#Plotting histograms for every column in the data set
+data.hist(figsize = (10,6))
+plt.show()
+# The following can be interpreted from the histograms
+# 1. is_featured_sku and is_displayed_sku are both right skewed
+# 2. store_id and sku_id must be converted into one hot encoded values
+data = data.drop('record_ID', axis = 1)
+#Dropping the record_ID column since there is not much data we can infer from it
+# Checking the number of unique values in store_id and sku_id
+print(len(data.store_id.unique()))
+print(len(data.sku_id.unique()))
+#Checking the 99 percentile value on units_sold and dropping vales that are above this threshold
+data = data[data.units_sold < data.units_sold.quantile(0.99)]
+data.units_sold.hist(bins = 20)
+#This histogram is more healthy
+# Converting each unique value in the store_id and sku_id column into separate columns
+# Dropping the store_id and sku_id columsn after this process
+data = data.join(pd.get_dummies(data.store_id, prefix = 'store')).drop('store_id', axis = 1)
+data = data.join(pd.get_dummies(data.sku_id, prefix = 'item')).drop('sku_id', axis = 1)
+print(data.head())
+# Training the model again using RandomForestRegressor
+model = RandomForestRegressor(n_jobs = -1)
+X = data.drop('units_sold', axis = 1)
+y = data['units_sold']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+# The score has improved from previous method
+y_pred = model.predict(X_test)
+print('Root mean squared error: ', root_mean_squared_error(y_pred, y_test))
+# The error is less compared to the previous value
+plt.scatter(y_pred, y_test)
+plt.plot(np.linspace(y_pred.min(), y_pred.max()), np.linspace(y_test.min(), y_test.max()), color = 'red')
+# The points are much closer to the lie and outliers have reduced
