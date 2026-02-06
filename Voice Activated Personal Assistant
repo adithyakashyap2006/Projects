@@ -1,0 +1,240 @@
+"""
+Voice-Activated Personal Assistant - Demo Version
+Works without API keys for immediate testing
+"""
+
+import speech_recognition as sr
+import pyttsx3
+import datetime
+from threading import Timer
+import random
+
+class SimpleVoiceAssistant:
+    def __init__(self):
+        # Initialize speech recognition
+        self.recognizer = sr.Recognizer()
+        self.microphone = sr.Microphone()
+        
+        # Initialize text-to-speech
+        self.engine = pyttsx3.init()
+        self.engine.setProperty('rate', 150)
+        self.engine.setProperty('volume', 0.9)
+        
+        # Storage
+        self.reminders = []
+        
+        # Demo data
+        self.demo_weather = [
+            "partly cloudy with a temperature of 22 degrees",
+            "sunny with a temperature of 28 degrees",
+            "rainy with a temperature of 18 degrees",
+            "clear skies with a temperature of 25 degrees"
+        ]
+        
+        self.demo_news = [
+            "Tech company announces breakthrough in AI research",
+            "Global markets show positive trends this week",
+            "Scientists discover new species in Amazon rainforest"
+        ]
+    
+    def speak(self, text):
+        """Convert text to speech"""
+        print(f"\n🤖 Assistant: {text}")
+        self.engine.say(text)
+        self.engine.runAndWait()
+    
+    def listen(self):
+        """Listen for voice input"""
+        with self.microphone as source:
+            print("\n🎤 Listening... (speak now)")
+            self.recognizer.adjust_for_ambient_noise(source, duration=1)
+            try:
+                audio = self.recognizer.listen(source, timeout=5, phrase_time_limit=10)
+                print("⚙️  Processing...")
+                command = self.recognizer.recognize_google(audio)
+                print(f"👤 You said: {command}")
+                return command.lower()
+            except sr.WaitTimeoutError:
+                return ""
+            except sr.UnknownValueError:
+                self.speak("Sorry, I didn't catch that. Could you repeat?")
+                return ""
+            except sr.RequestError:
+                self.speak("Sorry, there's an issue with the speech recognition service.")
+                return ""
+    
+    def get_weather(self, city=None):
+        """Get demo weather information"""
+        weather = random.choice(self.demo_weather)
+        city_name = city if city else "your location"
+        return f"The weather in {city_name} is {weather}."
+    
+    def get_news(self):
+        """Get demo news headlines"""
+        news_report = "Here are today's top headlines: "
+        for i, headline in enumerate(self.demo_news, 1):
+            news_report += f"{i}. {headline}. "
+        return news_report
+    
+    def set_reminder(self, reminder_text, minutes):
+        """Set a reminder"""
+        def remind():
+            self.speak(f"⏰ Reminder: {reminder_text}")
+        
+        timer = Timer(minutes * 60, remind)
+        timer.start()
+        
+        reminder_time = datetime.datetime.now() + datetime.timedelta(minutes=minutes)
+        self.reminders.append({
+            'text': reminder_text,
+            'time': reminder_time.strftime("%I:%M %p"),
+            'timer': timer
+        })
+        
+        return f"Reminder set for {minutes} minutes from now: {reminder_text}"
+    
+    def process_command(self, command):
+        """Process voice commands"""
+        if not command:
+            return True
+        
+        # Greetings
+        if any(word in command for word in ['hello', 'hi', 'hey']):
+            greetings = [
+                "Hello! How can I help you today?",
+                "Hi there! What can I do for you?",
+                "Hey! I'm here to assist you."
+            ]
+            self.speak(random.choice(greetings))
+        
+        # Time
+        elif 'time' in command:
+            now = datetime.datetime.now()
+            current_time = now.strftime("%I:%M %p")
+            self.speak(f"The current time is {current_time}")
+        
+        # Date
+        elif 'date' in command or ('what' in command and 'today' in command):
+            now = datetime.datetime.now()
+            current_date = now.strftime("%A, %B %d, %Y")
+            self.speak(f"Today is {current_date}")
+        
+        # Weather
+        elif 'weather' in command:
+            city = None
+            if 'in' in command:
+                words = command.split()
+                try:
+                    city_index = words.index('in') + 1
+                    city = words[city_index]
+                except:
+                    pass
+            weather_info = self.get_weather(city)
+            self.speak(weather_info)
+        
+        # News
+        elif 'news' in command:
+            news_info = self.get_news()
+            self.speak(news_info)
+        
+        # Reminders
+        elif 'reminder' in command or 'remind' in command:
+            try:
+                words = command.split()
+                if 'for' in words and 'minute' in command:
+                    for_index = words.index('for')
+                    minutes = int(words[for_index + 1])
+                    
+                    if 'to' in words:
+                        to_index = words.index('to')
+                        reminder_text = ' '.join(words[to_index + 1:])
+                    else:
+                        reminder_text = "your reminder"
+                    
+                    result = self.set_reminder(reminder_text, minutes)
+                    self.speak(result)
+                else:
+                    self.speak("Please specify the time in minutes. For example: set a reminder for 5 minutes to call mom.")
+            except Exception as e:
+                self.speak("Sorry, I couldn't understand the reminder format. Try: set a reminder for 5 minutes to call mom.")
+        
+        # List reminders
+        elif 'list' in command and 'reminder' in command:
+            if self.reminders:
+                reminder_list = "You have the following reminders: "
+                for i, reminder in enumerate(self.reminders, 1):
+                    reminder_list += f"{i}. {reminder['text']} at {reminder['time']}. "
+                self.speak(reminder_list)
+            else:
+                self.speak("You have no active reminders.")
+        
+        # Tell a joke
+        elif 'joke' in command:
+            jokes = [
+                "Why did the programmer quit his job? Because he didn't get arrays!",
+                "What do you call a bear with no teeth? A gummy bear!",
+                "Why don't scientists trust atoms? Because they make up everything!"
+            ]
+            self.speak(random.choice(jokes))
+        
+        # Calculator
+        elif 'calculate' in command or 'what is' in command:
+            try:
+                # Extract numbers and operation
+                if 'plus' in command or '+' in command:
+                    nums = [int(s) for s in command.split() if s.isdigit()]
+                    if len(nums) >= 2:
+                        result = sum(nums)
+                        self.speak(f"The result is {result}")
+                elif 'minus' in command or '-' in command:
+                    nums = [int(s) for s in command.split() if s.isdigit()]
+                    if len(nums) >= 2:
+                        result = nums[0] - nums[1]
+                        self.speak(f"The result is {result}")
+                else:
+                    self.speak("I can help with simple addition and subtraction. Try: what is 5 plus 3?")
+            except:
+                self.speak("Sorry, I couldn't understand the calculation.")
+        
+        # Help
+        elif 'help' in command or 'what can you do' in command:
+            help_text = """I can help you with: checking the time and date, getting weather information, 
+            reading news headlines, setting reminders, telling jokes, and doing simple calculations. 
+            Say 'exit' when you're done."""
+            self.speak(help_text)
+        
+        # Exit
+        elif any(word in command for word in ['exit', 'quit', 'stop', 'bye', 'goodbye']):
+            self.speak("Goodbye! Have a great day!")
+            return False
+        
+        # Unknown
+        else:
+            self.speak("I'm not sure how to help with that. Say 'help' to hear what I can do.")
+        
+        return True
+    
+    def run(self):
+        """Main loop"""
+        print("=" * 60)
+        print("🎤 VOICE-ACTIVATED PERSONAL ASSISTANT - DEMO VERSION")
+        print("=" * 60)
+        print("\n✓ Speech recognition initialized")
+        print("✓ Text-to-speech initialized")
+        print("\nNOTE: This demo version works without API keys!")
+        print("\nSay 'help' to hear available commands")
+        print("Say 'exit' to stop the assistant\n")
+        print("=" * 60)
+        
+        self.speak("Hello! I'm your voice assistant. How can I help you today?")
+        
+        while True:
+            command = self.listen()
+            if command:
+                should_continue = self.process_command(command)
+                if should_continue is False:
+                    break
+
+if __name__ == "__main__":
+    assistant = SimpleVoiceAssistant()
+    assistant.run()
