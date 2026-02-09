@@ -1,0 +1,35 @@
+import numpy as np
+import pandas as pd
+from pathlib import Path
+import tqdm
+import torch
+from diffusers import StableDiffusionPipeline
+from transformers import pipeline, set_seed
+import matplotlib.pyplot as plt
+import cv2
+#Writing a class by defining image parameters
+class CFG:
+    device = "cuda"
+    seed = 50
+    generator = torch.Generator(device).manual_seed(seed)
+    image_gen_length = 40
+    image_gen_model_id = "stabilityai/stable-diffusion-2"
+    image_gen_size = (400,400)
+    image_gen_guidance_scale = 9
+    prompt_gen_model = "gpt2"
+    prompt_dataset_size = 9
+    prompt_max_length = 12
+image_gen_model = StableDiffusionPipeline.from_pretrained(CFG.image_gen_model_id,
+                torch_dtype = torch.float16, revision = "fp16", guidance_scale = 9,
+                 use_auth_token = 'hf_llafhoFJaofhpwolakfllkahsdfl')
+image_gen_model = image_gen_model.to(CFG.device)
+#Writing a function to generate image
+def generate_image(prompt, model):
+    image = model(prompt, num_inference_steps = CFG.image_gen_steps,
+                  generator = CFG.generator, guidance_scale = image_gen_guidance_scale).images[0]
+    image = image.resize(CFG.image_gen_size)
+    return image
+# Passing diferent parameters to check the function
+
+generate_image("a kid riding a horse", image_gen_model)
+generate_image("eagle flying in the sky", image_gen_model)
