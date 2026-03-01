@@ -1,0 +1,92 @@
+import java.io.*;
+public class FileOperation
+{
+    public static void main(String args[])
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try
+        {
+            System.out.println("Choose any one of the options below:");
+            System.out.println("File Encryption");
+            System.out.println("File decryption");
+            System.out.println("Enter your choice:");
+            int choice = Integer.parseInt(reader.readLine());
+
+            System.out.println("Enter the input file path:");
+            String inputPath = reader.readLine();
+            
+            System.out.println("Enter the output file path:");
+            String outputPath = reader.readLine();
+
+            System.out.println("Enter the enctyption key:");
+            int key = Integer.parseInt(reader.readLine());
+
+            if (choice == 1)
+            {
+                EncryptFile(inputPath, outputPath, key);
+                System.out.println("File encrypted successfully!");
+            }
+            else if (choice == 2)
+            {
+                DecryptFile(inputPath, outputPath, key);
+                System.out.println("File decrypted successfully!");
+            }
+            else
+            {
+                System.out.println("Invalid option");
+            }
+        }
+        catch(IOException e)
+        {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+
+    private static void EncryptFile(String inputPath, String outputPath, int key) throws IOException
+    {
+        try 
+           (BufferedReader reader = new BufferedReader(new FileReader(inputPath)); 
+           BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath)))
+           {
+            String line;
+            while((line = reader.readLine()) != null)
+            {
+                String encryptedLine = EncryptString(line, key);
+                writer.write(encryptedLine);
+                writer.newLine();
+            }
+           }
+    }
+
+    private static void DecryptFile(String inputPath, String outputPath, int key) throws IOException
+    {
+        try 
+           (BufferedReader reader = new BufferedReader(new FileReader(inputPath)); 
+           BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath)))
+           {
+            String line;
+            while((line = reader.readLine()) != null)
+            {
+                String encryptedLine = DecryptString(line, key);
+                writer.write(encryptedLine);
+                writer.newLine();
+            }
+           }
+    }
+
+    private static String EncryptString(String text, int key)
+    {
+        StringBuilder encrypted = new StringBuilder();
+        for(int i = 0; i < text.length(); i++)
+        {
+            char c = text.charAt(i);
+            encrypted.append((char) (c ^ key));
+        }
+        return encrypted.toString();
+    }
+
+    private static String DecryptString(String encryptedText, int key)
+    {
+        return EncryptString(encryptedText, key);
+    }
+}
