@@ -1,0 +1,234 @@
+# Importing required libraries
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+from reportlab.platypus import (
+    SimpleDocTemplate,
+    Paragraph,
+    Spacer,
+    Image,
+    PageBreak,
+    Table,
+    TableStyle
+)
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import cm
+
+from openpyxl import Workbook
+from openpyxl.styles import Font
+
+# Uncomment the line below if reportlab is not already installed in your environment
+# !pip install reportlab
+
+# Importing the dataset
+df = pd.read_csv('sales_data_cleaned_new.csv')
+
+# FIX: parse Date as a real datetime instead of leaving it as a plain string,
+# so any future time-based analysis (trends, month-over-month, etc.) works correctly.
+df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+
+print(df.head())
+
+# Missing value detection
+def detect_missing_values(df):
+    missing_summary = df.isnull().sum().reset_index()
+    missing_summary.columns = ["Column", "Missing Values"]
+    return missing_summary
+    
+# FIX: this was defined but never called in the original notebook.
+# We call it here (on the raw data) so we have an audit trail of what
+# clean_data() is about to fix, and so export_excel() has a valid
+# missing_summary to write out later.
+missing_summary = detect_missing_values(df)
+missing_summary
+
+# Data Cleaning
+def clean_data(df):
+    original_rows = len(df)
+
+    df = df.drop_duplicates()
+
+    numeric_cols = df.select_dtypes(include=np.number).columns
+    for col in numeric_cols:
+        df[col] = df[col].fillna(df[col].median())
+
+    object_cols = df.select_dtypes(include="object").columns
+    for col in object_cols:
+        df[col] = df[col].fillna("Unknown")
+
+    cleaning_stats = {
+        "Original Rows": original_rows,
+        "Final Rows": len(df),
+        "Duplicates Removed": original_rows - len(df)
+    }
+
+    return df, cleaning_stats
+    
+clean_df, cleaning_stats = clean_data(df)
+cleaning_stats
+
+# Sales Analysis
+def analyze_sales(df):
+
+    region_sales = (
+        df.groupby("Region")["Revenue"]
+        .sum()
+        .reset_index()
+        .sort_values(by="Revenue", ascending=False)
+    )
+
+    avg_order_value = df["Revenue"].mean()
+
+    return {
+        "region_sales": region_sales,
+        "avg_order_value": avg_order_value
+    }
+    
+# FIX: analyze the CLEANED data (clean_df), not the raw df.
+sales_results = analyze_sales(clean_df)
+sales_results
+
+# Product Analysis
+def analyze_products(df):
+
+    top_products = (
+        df.groupby("Product")
+        .agg({
+            "Revenue": "sum",
+            "UnitsSold": "sum"
+        })
+        .reset_index()
+        .sort_values(by="Revenue", ascending=False)
+    )
+
+    category_perf = (
+        df.groupby("Category")["Revenue"]
+        .sum()
+        .reset_index()
+        .sort_values(by="Revenue", ascending=False)
+    )
+
+    return {
+        "top_products": top_products,
+        "category_perf": category_perf
+    }
+    
+# FIX: analyze the CLEANED data (clean_df), not the raw df.
+product_results = analyze_products(clean_df)
+product_results
+
+# Chart Generation
+def generate_charts(sales_results, product_results, outdir):
+
+    os.makedirs(outdir, exist_ok=True)
+
+    chart_paths = {}
+
+    # Revenue by Region
+    plt.figure(figsize=(8,5))
+    plt.bar(
+        sales_results["region_sales"]["Region"],
+        sales_results["region_sales"]["Revenue"]
+    )
+    plt.title("Revenue by Region")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+
+    region_chart = os.path.join(outdir, "region_sales.png")
+    plt.savefig(region_chart)
+    plt.close()
+
+    chart_paths["region"] = region_chart
+
+    # Revenue by Category
+    plt.figure(figsize=(8,5))
+    plt.bar(
+        product_results["category_perf"]["Category"],
+        product_results["category_perf"]["Revenue"]
+    )
+    plt.title("Revenue by Category")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+
+    category_chart = os.path.join(outdir, "category_sales.png")
+    plt.savefig(category_chart)
+    plt.close()
+
+    chart_paths["category"] = category_chart
+
+    return chart_paths
+    
+chart_paths = generate_charts(
+    sales_results,
+    product_results,
+    "output"
+)
+chart_paths
+
+from IPython.display import Image, display
+
+display(Image(filename=chart_paths["region"]))
+display(Image(filename=chart_paths["category"]))
+
+# Excel export
+def export_excel(
+    clean_df,
+    missing_summary,
+    cleaning_stats,
+    sales_results,
+    product_results,
+    out_path
+):
+
+    with pd.ExcelWriter(out_path, engine="openpyxl") as writer:
+
+        clean_df.to_excel(
+            writer,
+            sheet_name="Cleaned Data",
+            index=False
+        )
+
+        missing_summary.to_excel(
+            writer,
+            sheet_name="Missing Values",
+            index=False
+        )
+
+        pd.DataFrame([cleaning_stats]).to_excel(
+            writer,
+            sheet_name="Cleaning Stats",
+            index=False
+        )
+
+        sales_results["region_sales"].to_excel(
+            writer,
+            sheet_name="Region Sales",
+            index=False
+        )
+
+        product_results["top_products"].to_excel(
+            writer,
+            sheet_name="Top Products",
+            index=False
+        )
+
+        product_results["category_perf"].to_excel(
+            writer,
+            sheet_name="Category Performance",
+            index=False
+        )
+
+    print(f"[EXCEL EXPORT] Saved: {out_path}")
+    
+os.makedirs("output", exist_ok=True)
+export_excel(
+    clean_df,
+    missing_summary,
+    cleaning_stats,
+    sales_results,
+    product_results,
+    os.path.join("output", "sales_report.xlsx")
+)

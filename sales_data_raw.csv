@@ -1,0 +1,1526 @@
+OrderID,Date,Product,Category,Quantity,UnitPrice,Region,PaymentMode,CustomerID
+ORD1294,2025-05-04,Backpack,Accessories,8.0,1222.11,South,Cash,CUST1882
+ORD2002,2025-06-23,Table Lamp,Furniture,7.0,1156.85,South,Cash,CUST1856
+ORD2285,2025-06-12,Backpack,Accessories,4.0,1406.49,North,Cash,CUST1567
+ORD1043,2025-06-08,Wireless Mouse,Electronics,2.0,589.32,East,Cash,CUST1209
+ORD2105,2025-03-28,Notebook Set,Stationery,4.0,151.83,West,,CUST1238
+ORD2221,2025-05-28,Backpack,Accessories,6.0,1312.84,East,Debit Card,CUST1910
+ORD1758,2025-02-20,Backpack,Accessories,3.0,1376.95,South,Debit Card,CUST1825
+ORD1731,2025-03-15,USB-C Cable,Electronics,1.0,271.2,South,Debit Card,CUST1449
+ORD1643,2025-02-05,Office Chair,Furniture,7.0,5101.5,East,Net Banking,CUST1881
+ORD1718,2025-01-12,Water Bottle,Accessories,7.0,282.82,West,Debit Card,CUST1358
+ORD1813,2025-02-21,Wireless Mouse,Electronics,2.0,597.25,North,Credit Card,CUST1584
+ORD1383,2025-05-17,Wireless Mouse,Electronics,7.0,540.52,East,Net Banking,CUST1293
+ORD1694,2025-02-27,Backpack,Accessories,5.0,1203.88,North,Debit Card,CUST1372
+ORD1071,2025-07-23,Coffee Mug,Kitchen,3.0,205.32,East,Net Banking,CUST1679
+ORD1350,2025-07-10,Wireless Mouse,Electronics,4.0,608.38,North,Debit Card,CUST1352
+ORD1409,2025-03-27,Backpack,Accessories,7.0,1378.0,East,Debit Card,CUST1342
+ORD2011,2025-05-10,USB-C Cable,Electronics,4.0,247.22,South,Cash,CUST1054
+ORD1883,2025-02-08,Desk Organizer,Stationery,3.0,374.74,South,Credit Card,CUST1429
+ORD1871,2025-04-23,Office Chair,Furniture,8.0,5186.83,West,UPI,CUST1437
+ORD1467,2025-05-31,Bluetooth Speaker,Electronics,7.0,1454.49,West,Cash,CUST1810
+ORD2206,2025-01-21,Yoga Mat,Fitness,1.0,737.31,West,UPI,CUST1805
+ORD1680,2025-03-20,Bluetooth Speaker,Electronics,4.0,1573.44,East,UPI,CUST1422
+ORD2475,2025-06-23,Backpack,Accessories,3.0,1409.67,North,Cash,CUST1997
+ORD1746,2025-03-02,Notebook Set,Stationery,4.0,160.11,South,UPI,CUST1207
+ORD1754,2025-03-02,LED Desk Lamp,Electronics,5.0,893.85,East,Cash,CUST1188
+ORD2061,2025-07-20,Notebook Set,Stationery,5.0,139.93,North,Net Banking,CUST1869
+ORD2081,2025-06-26,Table Lamp,Furniture,6.0,1102.08,East,UPI,CUST1013
+ORD2010,2025-01-02,Backpack,Accessories,4.0,1218.96,North,Net Banking,CUST1370
+ORD2294,2025-04-26,Table Lamp,Furniture,5.0,1138.07,East,Cash,CUST1215
+ORD1474,2025-01-05,Bluetooth Speaker,Electronics,2.0,1353.24,South,Credit Card,CUST1944
+ORD1837,2025-07-07,Desk Organizer,Stationery,7.0,381.88,North,UPI,CUST1442
+ORD1140,2025-06-15,Bluetooth Speaker,Electronics,3.0,1498.51,East,Net Banking,CUST1722
+ORD2366,2025-07-24,Desk Organizer,Stationery,7.0,382.52,South,Debit Card,CUST1065
+ORD1179,2025-04-03,Notebook Set,Stationery,2.0,163.33,East,Net Banking,CUST1923
+ORD1354,2025-05-18,Office Chair,Furniture,7.0,,South,Credit Card,CUST1774
+ORD1748,2025-06-23,Bluetooth Speaker,Electronics,8.0,1533.13,North,Debit Card,CUST1380
+ORD1716,2025-06-03,Yoga Mat,Fitness,1.0,859.36,North,Credit Card,CUST1493
+ORD1691,2025-05-18,Office Chair,Furniture,4.0,4762.28,North,Credit Card,CUST1913
+ORD1737,2025-04-27,Notebook Set,Stationery,7.0,151.23,East,UPI,CUST1416
+ORD1653,2025-03-22,Desk Organizer,Stationery,1.0,315.0,East,UPI,CUST1635
+ORD1454,2025-02-24,Backpack,Accessories,8.0,1238.87,East,Cash,CUST1560
+ORD2367,2025-04-09,USB-C Cable,Electronics,4.0,247.74,East,Net Banking,CUST1985
+ORD1781,2025-07-16,Wireless Mouse,Electronics,7.0,634.7,South,Credit Card,CUST1561
+ORD1832,2025-06-29,Table Lamp,Furniture,2.0,1221.84,East,Credit Card,CUST1748
+ORD2370,2025-03-14,Backpack,Accessories,4.0,1229.64,North,Debit Card,CUST1058
+ORD2131,2025-05-02,USB-C Cable,Electronics,7.0,234.55,North,Cash,CUST1516
+ORD1060,2025-07-29,Notebook Set,Stationery,8.0,144.52,South,UPI,CUST1024
+ORD1414,2025-02-23,Table Lamp,Furniture,8.0,1270.38,North,Debit Card,CUST1689
+ORD1095,2025-07-03,Table Lamp,Furniture,2.0,1265.61,South,Cash,CUST1110
+ORD1860,2025-02-09,Yoga Mat,Fitness,7.0,874.19,East,Debit Card,CUST1555
+ORD1263,2025-02-18,Desk Organizer,Stationery,5.0,339.02,North,Cash,CUST1279
+ORD2382,2025-04-16,Coffee Mug,Kitchen,,218.71,North,Credit Card,CUST1516
+ORD1146,2025-05-27,Notebook Set,Stationery,7.0,141.06,West,Credit Card,CUST1325
+ORD1619,2025-06-25,Wireless Mouse,Electronics,3.0,596.97,West,Credit Card,CUST1908
+ORD1611,2025-04-29,LED Desk Lamp,Electronics,1.0,827.05,South,Credit Card,CUST1872
+ORD1407,2025-07-20,Coffee Mug,Kitchen,2.0,193.47,South,Debit Card,CUST1608
+ORD1432,2025-04-01,Water Bottle,Accessories,8.0,306.02,,Net Banking,CUST1604
+ORD1771,2025-01-27,Backpack,Accessories,2.0,1185.67,West,Net Banking,CUST1055
+ORD1325,2025-03-11,USB-C Cable,Electronics,5.0,230.94,South,UPI,CUST1051
+ORD1414,2025-02-23,Table Lamp,Furniture,8.0,1270.38,North,Debit Card,CUST1689
+ORD2441,2025-07-12,LED Desk Lamp,Electronics,1.0,928.72,North,Credit Card,CUST1216
+ORD1116,2025-05-27,Wireless Mouse,Electronics,5.0,595.33,West,Cash,CUST1188
+ORD1111,2025-03-11,Coffee Mug,Kitchen,5.0,189.11,North,UPI,CUST1323
+ORD1101,2025-04-22,Office Chair,Furniture,3.0,5232.75,East,Net Banking,CUST1827
+ORD2162,2025-07-08,Coffee Mug,Kitchen,3.0,189.48,East,Cash,CUST1203
+ORD1363,2025-07-08,Yoga Mat,Fitness,3.0,819.13,West,Net Banking,CUST1507
+ORD1200,2025-04-01,LED Desk Lamp,Electronics,2.0,913.01,South,UPI,CUST1672
+ORD2056,2025-05-20,Table Lamp,Furniture,6.0,1234.31,East,Debit Card,CUST1917
+ORD1983,2025-01-28,Desk Organizer,Stationery,8.0,364.03,North,Credit Card,CUST1074
+ORD2420,2025-05-22,Office Chair,Furniture,3.0,4756.34,West,Cash,CUST1464
+ORD1488,2025-03-23,Table Lamp,Furniture,5.0,1277.17,East,Credit Card,CUST1514
+ORD1141,2025-04-17,LED Desk Lamp,Electronics,8.0,985.35,South,Debit Card,CUST1564
+ORD1830,2025-03-07,Notebook Set,Stationery,5.0,136.84,West,Net Banking,CUST1939
+ORD1870,2025-04-16,LED Desk Lamp,Electronics,4.0,942.58,South,UPI,CUST1067
+ORD2201,2025-05-12,Wireless Mouse,Electronics,6.0,655.7,South,UPI,CUST1953
+ORD1172,2025-06-22,Table Lamp,Furniture,5.0,1219.28,East,Credit Card,CUST1691
+ORD2046,2025-04-24,Backpack,Accessories,1.0,1244.84,North,Credit Card,CUST1892
+ORD1630,2025-06-17,Notebook Set,Stationery,8.0,162.42,East,Credit Card,CUST1836
+ORD1621,2025-05-15,Desk Organizer,Stationery,,382.36,East,Net Banking,CUST1535
+ORD1127,2025-03-15,Yoga Mat,Fitness,8.0,738.97,East,Debit Card,CUST1965
+ORD1564,2025-06-04,Backpack,Accessories,2.0,1217.93,South,Debit Card,CUST1758
+ORD1898,2025-05-08,Desk Organizer,Stationery,8.0,370.5,South,Cash,CUST1198
+ORD1586,2025-03-17,Yoga Mat,Fitness,8.0,855.12,West,Credit Card,CUST1887
+ORD1531,2025-07-10,Water Bottle,Accessories,2.0,283.33,East,UPI,CUST1651
+ORD1504,2025-01-13,USB-C Cable,Electronics,5.0,237.06,South,Credit Card,CUST1974
+ORD1927,2025-07-28,Bluetooth Speaker,Electronics,8.0,1378.26,East,Debit Card,CUST1481
+ORD1063,2025-02-15,LED Desk Lamp,Electronics,5.0,815.98, west ,Cash,CUST1746
+ORD1610,2025-07-05,Table Lamp,Furniture,2.0,1296.07,South,,CUST1303
+ORD2455,2025-02-26,LED Desk Lamp,Electronics,5.0,928.83,North,UPI,CUST1944
+ORD1058,2025-07-08,Office Chair,Furniture,6.0,5281.33,West,UPI,CUST1273
+ORD1210,2025-04-21,Water Bottle,Accessories,2.0,286.04,West,Net Banking,CUST1683
+ORD1693,2025-05-22,Wireless Mouse,Electronics,5.0,604.21,West,UPI,CUST1374
+ORD1452,2025-03-25,Coffee Mug,Kitchen,1.0,213.68,North,Debit Card,CUST1650
+ORD1412,2025-03-25,Notebook Set,Stationery,7.0,142.45,West,Cash,CUST1116
+ORD2211,2025-04-28,Coffee Mug,Kitchen,7.0,213.68,West,Cash,CUST1633
+ORD1374,2025-05-12,Water Bottle,Accessories,8.0,296.97,West,Cash,CUST1936
+ORD1901,2025-02-24,Desk Organizer,Stationery,1.0,358.82,East,Cash,CUST1809
+ORD1674,2025-01-19,Table Lamp,Furniture,6.0,1301.65,North,Cash,CUST1805
+ORD1117,2025-03-06,Wireless Mouse,Electronics,8.0,552.77,North,Debit Card,CUST1503
+ORD2283,2025-07-12,Notebook Set,Stationery,4.0,148.79,West,Credit Card,CUST1275
+ORD1701,2025-02-14,Yoga Mat,Fitness,7.0,823.56,East,Net Banking,CUST1669
+ORD1206,2025-02-25,USB-C Cable,Electronics,7.0,245.01, east ,UPI,CUST1378
+ORD2287,2025-04-25,Backpack,Accessories,2.0,1388.96,South,UPI,CUST1382
+ORD1609,2025-06-21,Yoga Mat,Fitness,8.0,742.93, north ,Net Banking,CUST1076
+ORD1361,2025-03-01,LED Desk Lamp,Electronics,6.0,912.93,East,UPI,CUST1309
+ORD1204,2025-03-31,Water Bottle,Accessories,1.0,279.95,South,Net Banking,CUST1673
+ORD1027,2025-06-16,Desk Organizer,Stationery,6.0,344.68,West,Credit Card,CUST1253
+ORD2145,2025-03-02,Bluetooth Speaker,Electronics,2.0,1580.9,East,Cash,CUST1852
+ORD1009,2025-04-27,LED Desk Lamp,Electronics,6.0,838.35,East,UPI,CUST1686
+ORD2427,2025-07-28,Wireless Mouse,Electronics,6.0,614.69,North,UPI,CUST1267
+ORD2088,2025-02-23,Office Chair,Furniture,3.0,5480.01,West,Credit Card,CUST1079
+ORD1984,2025-05-27,Bluetooth Speaker,Electronics,5.0,1582.12,North,Debit Card,CUST1152
+ORD2094,2025-01-26,Bluetooth Speaker,Electronics,1.0,1507.65,South,Cash,CUST1175
+ORD2343,2025-03-25,Office Chair,Furniture,4.0,4552.35,East,UPI,CUST1871
+ORD1869,2025-02-11,Office Chair,Furniture,4.0,4725.33,West,Credit Card,CUST1947
+ORD1930,2025-01-17,Wireless Mouse,Electronics,-1.0,552.62,West,Debit Card,CUST1866
+ORD1699,2025-01-12,Coffee Mug,Kitchen,1.0,218.13,East,Credit Card,CUST1720
+ORD1518,2025-06-18,Notebook Set,Stationery,4.0,142.04,North,UPI,CUST1589
+ORD1816,2025-04-30,Bluetooth Speaker,Electronics,1.0,1457.31, west ,Cash,CUST1813
+ORD1348,2025-05-12,Office Chair,Furniture,7.0,4955.81,North,Net Banking,CUST1473
+ORD2309,2025-07-14,USB-C Cable,Electronics,1.0,268.11,South,Credit Card,CUST1284
+ORD1720,2025-01-22,Notebook Set,Stationery,5.0,151.93,West,Cash,CUST1193
+ORD2266,2025-03-14,LED Desk Lamp,Electronics,4.0,842.02,West,Credit Card,CUST1125
+ORD2128,2025-04-04,LED Desk Lamp,Electronics,7.0,845.38,,Net Banking,CUST1219
+ORD2394,2025-01-08,Backpack,Accessories,1.0,1256.68,South,Credit Card,CUST1225
+ORD1313,2025-07-04,Notebook Set,Stationery,1.0,151.49,South,Net Banking,CUST1644
+ORD1167,2025-02-14,Backpack,Accessories,4.0,1203.44,East,Net Banking,CUST1513
+ORD1358,2025-03-03,Wireless Mouse,Electronics,4.0,547.16,North,Debit Card,CUST1612
+ORD1620,2025-04-23,Backpack,Accessories,1.0,1185.55,East,Credit Card,CUST1721
+ORD1017,2025-02-10,Desk Organizer,Stationery,7.0,355.73, west ,Debit Card,CUST1610
+ORD2282,2025-03-08,Water Bottle,Accessories,7.0,325.41,North,Credit Card,CUST1207
+ORD2167,2025-04-22,USB-C Cable,Electronics,8.0,265.3,West,Credit Card,CUST1229
+ORD1907,2025-03-22,Desk Organizer,Stationery,1.0,328.64,East,Cash,CUST1067
+ORD1845,2025-06-09,Coffee Mug,Kitchen,3.0,196.63,South,UPI,CUST1701
+ORD1118,2025-05-28,Bluetooth Speaker,Electronics,1.0,1394.59,East,Credit Card,CUST1254
+ORD1640,2025-06-27,Office Chair,Furniture,0.0,5229.45,South,Credit Card,CUST1396
+ORD2433,2025-04-12,Table Lamp,Furniture,5.0,1080.64,South,Debit Card,CUST1001
+ORD2319,2025-01-15,Desk Organizer,Stationery,1.0,334.69,West,Debit Card,CUST1098
+ORD1415,2025-02-05,Coffee Mug,Kitchen,5.0,188.73,South,Debit Card,CUST1808
+ORD1262,2025-05-12,LED Desk Lamp,Electronics,7.0,986.94,West,Cash,CUST1037
+ORD1510,2025-04-08,Wireless Mouse,Electronics,7.0,559.8,South,UPI,CUST1281
+ORD1597,2025-05-14,Table Lamp,Furniture,6.0,1183.09,South,Cash,CUST1923
+ORD2466,2025-06-30,LED Desk Lamp,Electronics,7.0,819.67,East,UPI,CUST1847
+ORD2062,2025-06-23,Coffee Mug,Kitchen,2.0,217.94,West,UPI,CUST1502
+ORD1739,2025-03-07,USB-C Cable,Electronics,5.0,258.67,West,Net Banking,CUST1495
+ORD1447,2025-03-13,USB-C Cable,Electronics,3.0,240.22,East,Cash,CUST1586
+ORD2077,2025-01-15,Yoga Mat,Fitness,3.0,770.19,South,Cash,CUST1167
+ORD1023,2025-01-05,Coffee Mug,Kitchen,0.0,216.08,East,UPI,CUST1059
+ORD1241,2025-04-04,Backpack,Accessories,4.0,1421.0,East,Debit Card,CUST1239
+ORD1489,2025-01-14,Desk Organizer,Stationery,3.0,329.68,North,Debit Card,CUST1070
+ORD2146,2025-07-08,Yoga Mat,Fitness,7.0,847.87,South,Debit Card,CUST1223
+ORD1506,2025-01-16,Wireless Mouse,Electronics,4.0,554.76,West,Cash,CUST1702
+ORD1252,2025-02-08,Notebook Set,Stationery,7.0,137.41,East,UPI,CUST1308
+ORD1541,2025-04-11,Wireless Mouse,Electronics,8.0,557.5,East,Credit Card,CUST1437
+ORD1186,2025-07-22,Water Bottle,Accessories,4.0,304.31,North,UPI,CUST1271
+ORD1658,2025-06-02,Water Bottle,Accessories,1.0,315.36,East,Debit Card,CUST1808
+ORD1857,2025-03-02,LED Desk Lamp,Electronics,5.0,955.08,East,Debit Card,CUST1911
+ORD1606,2025-02-21,Yoga Mat,Fitness,5.0,851.97,South,Cash,CUST1720
+ORD1396,2025-06-02,Yoga Mat,Fitness,7.0,873.93,East,Credit Card,CUST1649
+ORD2410,2025-02-28,Wireless Mouse,Electronics,6.0,580.16,South,Net Banking,CUST1055
+ORD2412,2025-04-24,Office Chair,Furniture,1.0,4563.7,West,Credit Card,CUST1976
+ORD2473,2025-02-23,Office Chair,Furniture,4.0,5303.3, south ,Credit Card,CUST1370
+ORD2123,2025-01-17,Table Lamp,Furniture,5.0,1106.55,South,Credit Card,CUST1551
+ORD1013,2025-05-26,Notebook Set,Stationery,6.0,140.44,West,Debit Card,CUST1905
+ORD1108,2025-05-06,Table Lamp,Furniture,8.0,1269.25,North,Cash,CUST1226
+ORD1962,2025-06-04,Bluetooth Speaker,Electronics,3.0,1621.96,South,Debit Card,CUST1378
+ORD1392,2025-01-05,Water Bottle,Accessories,4.0,304.2,West,Credit Card,CUST1306
+ORD1742,2025-06-23,Notebook Set,Stationery,4.0,157.94,West,Cash,CUST1528
+ORD2067,2025-04-19,Table Lamp,Furniture,7.0,1112.57,North,UPI,CUST1212
+ORD1034,2025-02-18,Notebook Set,Stationery,8.0,138.28,South,Cash,CUST1473
+ORD1369,2025-01-14,Notebook Set,Stationery,5.0,145.34,North,Credit Card,CUST1192
+ORD1098,2025-06-25,LED Desk Lamp,Electronics,2.0,952.26,North,Cash,CUST1545
+ORD2457,2025-07-16,Yoga Mat,Fitness,2.0,822.01,West,Debit Card,CUST1669
+ORD2033,2025-04-14,Table Lamp,Furniture,3.0,1268.51,East,Debit Card,CUST1720
+ORD1287,2025-02-27,Table Lamp,Furniture,6.0,1306.31,East,Credit Card,CUST1256
+ORD2076,2025-05-02,Desk Organizer,Stationery,2.0,340.15,North,Cash,CUST1166
+ORD2085,2025-01-05,Office Chair,Furniture,8.0,4847.24,,UPI,CUST1836
+ORD1445,2025-05-31,Table Lamp,Furniture,6.0,1285.58,West,UPI,CUST1630
+ORD1507,2025-06-15,Desk Organizer,Stationery,2.0,354.75,East,Credit Card,CUST1022
+ORD1285,2025-06-13,USB-C Cable,Electronics,3.0,262.34,South,Debit Card,CUST1514
+ORD1324,2025-06-17,Coffee Mug,Kitchen,5.0,208.84,South,UPI,CUST1847
+ORD1642,2025-07-15,Table Lamp,Furniture,4.0,1144.71,East,Cash,CUST1463
+ORD2078,2025-03-11,Wireless Mouse,Electronics,6.0,589.36,East,Credit Card,CUST1296
+ORD1024,2025-05-26,Notebook Set,Stationery,2.0,136.65,West,Credit Card,CUST1778
+ORD1110,2025-03-30,USB-C Cable,Electronics,7.0,273.73,East,Cash,CUST1719
+ORD1015,2025-07-11,LED Desk Lamp,Electronics,7.0,970.53,West,Cash,CUST1224
+ORD2369,2025-06-26,Wireless Mouse,Electronics,8.0,542.32,South,Credit Card,CUST1933
+ORD1905,2025-06-10,Office Chair,Furniture,8.0,5390.98,East,Debit Card,CUST1802
+ORD1712,2025-06-03,Backpack,Accessories,,1375.54,South,Net Banking,CUST1675
+ORD2471,2025-02-03,Bluetooth Speaker,Electronics,6.0,1574.63,North,Cash,CUST1468
+ORD1147,2025-05-02,Table Lamp,Furniture,7.0,1171.68,South,Debit Card,CUST1987
+ORD1740,2025-07-13,Notebook Set,Stationery,6.0,162.74,West,Debit Card,CUST1918
+ORD1430,2025-02-17,USB-C Cable,Electronics,6.0,240.33,West,Credit Card,CUST1268
+ORD1228,2025-06-16,Yoga Mat,Fitness,4.0,770.48,West,Net Banking,CUST1154
+ORD2351,2025-02-28,Water Bottle,Accessories,1.0,296.92,East,Debit Card,CUST1461
+ORD1707,2025-05-03,Desk Organizer,Stationery,8.0,328.81,South,Debit Card,CUST1022
+ORD1330,2025-03-01,Yoga Mat,Fitness,1.0,865.03,South,Debit Card,CUST1903
+ORD1185,2025-07-24,LED Desk Lamp,Electronics,3.0,828.86,North,UPI,CUST1015
+ORD2124,2025-01-10,Water Bottle,Accessories,8.0,308.43,West,Net Banking,CUST1527
+ORD2097,2025-04-08,Water Bottle,Accessories,7.0,281.91,South,Debit Card,CUST1115
+ORD2292,2025-06-28,Backpack,Accessories,2.0,1384.86,East,Debit Card,CUST1215
+ORD1913,2025-04-24,Bluetooth Speaker,Electronics,1.0,1588.65,South,UPI,CUST1348
+ORD1099,2025-06-19,Backpack,Accessories,6.0,1187.01,East,Credit Card,CUST1869
+ORD1004,2025-02-09,LED Desk Lamp,Electronics,4.0,981.21,East,Credit Card,CUST1094
+ORD2115,2025-01-09,Wireless Mouse,Electronics,3.0,605.79,East,UPI,CUST1503
+ORD1046,2025-05-25,Yoga Mat,Fitness,2.0,730.81,South,Net Banking,CUST1271
+ORD2318,2025-01-15,Coffee Mug,Kitchen,5.0,203.41,West,Credit Card,CUST1104
+ORD1666,2025-07-30,USB-C Cable,Electronics,6.0,249.71,West,Debit Card,CUST1044
+ORD1193,2025-04-21,Yoga Mat,Fitness,2.0,845.84,North,Net Banking,CUST1738
+ORD1744,2025-07-30,Table Lamp,Furniture,6.0,1097.33,South,Debit Card,CUST1321
+ORD2232,2025-07-20,Water Bottle,Accessories,6.0,315.11,East,UPI,CUST1873
+ORD1189,2025-07-20,Table Lamp,Furniture,5.0,1188.94,North,Credit Card,CUST1490
+ORD1026,2025-05-16,LED Desk Lamp,Electronics,7.0,982.49,South,Cash,CUST1408
+ORD1858,2025-05-23,Wireless Mouse,Electronics,5.0,566.12,East,Debit Card,CUST1672
+ORD2098,2025-02-01,Water Bottle,Accessories,8.0,275.7,South,Debit Card,CUST1780
+ORD1075,2025-03-04,Backpack,Accessories,3.0,1339.54,North,Credit Card,CUST1797
+ORD1673,2025-04-10,Wireless Mouse,Electronics,2.0,603.17,North,Net Banking,CUST1046
+ORD1828,2025-07-30,Table Lamp,Furniture,5.0,1299.5,South,Credit Card,CUST1038
+ORD1581,2025-04-14,Backpack,Accessories,7.0,1360.5,South,Cash,CUST1743
+ORD2203,2025-03-18,Coffee Mug,Kitchen,3.0,218.27,East,UPI,CUST1535
+ORD1970,2025-03-11,Desk Organizer,Stationery,6.0,332.97,North,Cash,CUST1670
+ORD1471,2025-05-07,Notebook Set,Stationery,7.0,137.46,West,Net Banking,CUST1072
+ORD2478,2025-03-19,Coffee Mug,Kitchen,3.0,205.08,West,Credit Card,CUST1796
+ORD1713,2025-03-09,USB-C Cable,Electronics,3.0,260.16,East,Debit Card,CUST1610
+ORD1328,2025-02-10,USB-C Cable,Electronics,7.0,256.61,West,Debit Card,CUST1666
+ORD1113,2025-07-14,Yoga Mat,Fitness,5.0,875.79,South,Cash,CUST1232
+ORD2244,2025-02-08,Desk Organizer,Stationery,1.0,382.35,East,Debit Card,CUST1411
+ORD1051,2025-03-06,Coffee Mug,Kitchen,,182.77,West,Cash,CUST1045
+ORD1915,2025-06-23,USB-C Cable,Electronics,3.0,234.32,North,Debit Card,CUST1396
+ORD1249,2025-04-06,Bluetooth Speaker,Electronics,4.0,1357.55,North,Cash,CUST1810
+ORD1562,2025-03-21,LED Desk Lamp,Electronics,5.0,960.64,North,UPI,CUST1137
+ORD1500,2025-02-04,Notebook Set,Stationery,2.0,138.73,South,Debit Card,CUST1477
+ORD2013,2025-06-21,Office Chair,Furniture,1.0,4553.12,East,Cash,CUST1214
+ORD1769,2025-04-16,Coffee Mug,Kitchen,3.0,186.42,North,UPI,CUST1745
+ORD1286,2025-02-01,Wireless Mouse,Electronics,3.0,575.53,South,Cash,CUST1957
+ORD2200,2025-07-27,Backpack,Accessories,6.0,1328.58,West,Debit Card,CUST1095
+ORD1259,2025-02-04,Water Bottle,Accessories,1.0,290.17,East,,CUST1850
+ORD2187,2025-07-30,USB-C Cable,Electronics,5.0,252.15,South,Net Banking,CUST1994
+ORD1981,2025-02-15,LED Desk Lamp,Electronics,8.0,821.58,South,Net Banking,CUST1402
+ORD1881,2025-04-26,Table Lamp,Furniture,6.0,1099.56,West,Net Banking,CUST1626
+ORD2303,2025-04-12,Desk Organizer,Stationery,2.0,374.82,West,UPI,CUST1565
+ORD2480,2025-01-30,Bluetooth Speaker,Electronics,2.0,1385.69,South,Credit Card,CUST1600
+ORD2141,2025-06-18,LED Desk Lamp,Electronics,3.0,924.94,North,Debit Card,CUST1801
+ORD1164,2025-06-08,Notebook Set,Stationery,5.0,154.3,South,Credit Card,CUST1925
+ORD1278,2025-07-02,Office Chair,Furniture,8.0,5496.16,East,Cash,CUST1726
+ORD2241,2025-04-16,Backpack,Accessories,7.0,1402.42,East,Credit Card,CUST1453
+ORD1207,2025-07-04,LED Desk Lamp,Electronics,6.0,948.78,North,Credit Card,CUST1159
+ORD1275,2025-03-05,LED Desk Lamp,Electronics,0.0,813.76,South,Debit Card,CUST1530
+ORD1835,2025-06-12,Wireless Mouse,Electronics,7.0,545.58,North,Cash,CUST1552
+ORD2199,2025-05-02,Backpack,Accessories,5.0,1315.38,West,Credit Card,
+ORD1284,2025-06-14,Water Bottle,Accessories,2.0,296.01,East,UPI,CUST1899
+ORD2317,2025-01-16,Bluetooth Speaker,Electronics,1.0,1462.24,North,UPI,CUST1063
+ORD2451,2025-02-06,Table Lamp,Furniture,1.0,1109.76,North,Cash,CUST1852
+ORD1020,2025-02-10,Backpack,Accessories,8.0,1169.94,East,Net Banking,CUST1780
+ORD2295,2025-06-03,Coffee Mug,Kitchen,6.0,179.73,South,Credit Card,CUST1623
+ORD1464,2025-07-18,Backpack,Accessories,3.0,1335.78,South,Credit Card,CUST1543
+ORD2093,2025-03-13,Table Lamp,Furniture,6.0,1163.56,South,Net Banking,CUST1583
+ORD1397,2025-07-20,LED Desk Lamp,Electronics,8.0,897.31,East,Net Banking,CUST1963
+ORD1416,2025-01-19,Backpack,Accessories,8.0,1426.48, west ,Net Banking,CUST1410
+ORD2217,2025-05-30,Coffee Mug,Kitchen,4.0,187.11,West,Credit Card,CUST1341
+ORD1997,2025-01-10,Bluetooth Speaker,Electronics,3.0,1495.67,North,Debit Card,CUST1928
+ORD2249,2025-03-14,USB-C Cable,Electronics,4.0,228.72,,Net Banking,CUST1348
+ORD1899,2025-01-31,Wireless Mouse,Electronics,1.0,594.79,North,UPI,CUST1818
+ORD2198,2025-06-20,Water Bottle,Accessories,2.0,318.86,South,Debit Card,CUST1456
+ORD1547,2025-05-25,LED Desk Lamp,Electronics,1.0,836.27,North,Credit Card,CUST1684
+ORD2196,2025-02-11,Notebook Set,Stationery,7.0,157.33,East,UPI,CUST1123
+ORD2042,2025-07-24,Water Bottle,Accessories,2.0,280.36,West,Credit Card,CUST1082
+ORD1378,2025-07-05,Coffee Mug,Kitchen,8.0,197.44,East,UPI,CUST1143
+ORD1128,2025-05-09,LED Desk Lamp,Electronics,8.0,887.81,North,Debit Card,CUST1752
+ORD1808,2025-05-19,LED Desk Lamp,Electronics,6.0,890.74,West,UPI,CUST1904
+ORD2465,2025-03-21,Water Bottle,Accessories,2.0,285.45,West,UPI,CUST1506
+ORD1882,2025-04-07,Office Chair,Furniture,7.0,4543.0,South,Cash,CUST1579
+ORD1330,2025-03-01,Yoga Mat,Fitness,1.0,865.03,South,Debit Card,CUST1903
+ORD1783,2025-07-03,Office Chair,Furniture,7.0,5327.36,South,Cash,CUST1081
+ORD2490,2025-05-28,Office Chair,Furniture,8.0,5194.06,East,Net Banking,CUST1551
+ORD1151,2025-06-10,Water Bottle,Accessories,8.0,321.27,North,Net Banking,CUST1070
+ORD2023,2025-02-13,Backpack,Accessories,6.0,1226.22,East,Net Banking,CUST1160
+ORD1326,2025-05-16,Desk Organizer,Stationery,4.0,358.63,North,Credit Card,CUST1423
+ORD1652,2025-03-15,Table Lamp,Furniture,1.0,1301.27,West,Debit Card,CUST1979
+ORD2169,2025-04-08,Coffee Mug,Kitchen,3.0,196.27,South,Net Banking,CUST1220
+ORD2476,2025-02-15,Coffee Mug,Kitchen,1.0,183.77,East,Net Banking,CUST1444
+ORD2435,2025-04-06,Office Chair,Furniture,3.0,5203.01,South,Debit Card,CUST1186
+ORD1565,2025-07-14,Coffee Mug,Kitchen,6.0,211.78,South,Credit Card,CUST1318
+ORD2385,2025-04-13,Table Lamp,Furniture,4.0,1174.22,North,Cash,CUST1117
+ORD1426,2025-03-04,Table Lamp,Furniture,3.0,1211.45,East,Net Banking,CUST1436
+ORD1789,2025-02-08,Bluetooth Speaker,Electronics,1.0,1497.08,East,Debit Card,CUST1319
+ORD2404,2025-06-05,Wireless Mouse,Electronics,8.0,584.91,South,Net Banking,CUST1601
+ORD1671,2025-01-14,Bluetooth Speaker,Electronics,3.0,1587.21,North,Net Banking,CUST1841
+ORD1936,2025-01-30,Coffee Mug,Kitchen,8.0,192.05,North,Debit Card,CUST1180
+ORD1872,2025-07-18,Backpack,Accessories,1.0,1327.04,West,Cash,CUST1403
+ORD2274,2025-07-12,Notebook Set,Stationery,8.0,149.08,North,Credit Card,CUST1674
+ORD1880,2025-03-24,LED Desk Lamp,Electronics,3.0,938.26,North,Credit Card,CUST1116
+ORD1540,2025-04-15,Notebook Set,Stationery,5.0,153.79,East,UPI,CUST1098
+ORD1055,2025-03-20,Wireless Mouse,Electronics,6.0,646.8,North,Cash,CUST1215
+ORD2391,2025-06-28,Coffee Mug,Kitchen,1.0,,North,Debit Card,CUST1706
+ORD1760,2025-05-24,LED Desk Lamp,Electronics,1.0,880.73,South,Credit Card,CUST1220
+ORD2205,2025-04-19,USB-C Cable,Electronics,7.0,228.81,East,Cash,CUST1260
+ORD1351,2025-01-17,Table Lamp,Furniture,1.0,1303.21,North,Debit Card,CUST1032
+ORD1346,2025-02-12,Office Chair,Furniture,6.0,5353.42,West,Credit Card,CUST1696
+ORD1895,2025-04-16,USB-C Cable,Electronics,4.0,258.75,North,Credit Card,CUST1585
+ORD1170,2025-06-23,Notebook Set,Stationery,7.0,162.92,East,Credit Card,CUST1809
+ORD1593,2025-04-09,Coffee Mug,Kitchen,1.0,180.6,South,Cash,CUST1972
+ORD1810,2025-06-18,Bluetooth Speaker,Electronics,7.0,1406.02,West,Net Banking,CUST1157
+ORD2363,2025-01-03,Table Lamp,Furniture,8.0,1273.43,East,Cash,CUST1230
+ORD1308,2025-05-13,Coffee Mug,Kitchen,8.0,185.03,South,Cash,CUST1953
+ORD1264,2025-07-24,Bluetooth Speaker,Electronics,6.0,1480.1,West,Debit Card,CUST1916
+ORD2208,2025-04-27,Table Lamp,Furniture,8.0,1228.69,East,Cash,CUST1989
+ORD1738,2025-01-28,USB-C Cable,Electronics,2.0,249.16,East,Credit Card,CUST1822
+ORD1513,2025-02-21,Backpack,Accessories,4.0,1332.97,North,Debit Card,CUST1800
+ORD1501,2025-04-15,Water Bottle,Accessories,2.0,301.15,South,Debit Card,CUST1315
+ORD1798,2025-03-02,Bluetooth Speaker,Electronics,7.0,1446.39,South,Cash,CUST1598
+ORD2233,2025-05-12,Table Lamp,Furniture,2.0,1248.5,West,Debit Card,CUST1985
+ORD1498,2025-03-02,Office Chair,Furniture,5.0,4760.04,East,Debit Card,CUST1717
+ORD1957,2025-05-01,USB-C Cable,Electronics,6.0,245.07,East,Cash,CUST1171
+ORD2177,2025-01-11,USB-C Cable,Electronics,3.0,237.06,West,Cash,CUST1898
+ORD1410,2025-07-28,Backpack,Accessories,3.0,1247.15,South,Debit Card,CUST1321
+ORD1102,2025-07-18,USB-C Cable,Electronics,8.0,247.25,East,Cash,CUST1872
+ORD2277,2025-05-06,Wireless Mouse,Electronics,1.0,579.83,South,Debit Card,CUST1024
+ORD1213,2025-05-08,Wireless Mouse,Electronics,7.0,560.15,West,Net Banking,CUST1720
+ORD1833,2025-04-08,Yoga Mat,Fitness,2.0,843.76,East,Cash,CUST1900
+ORD2165,2025-02-13,Table Lamp,Furniture,1.0,1175.27,West,Net Banking,CUST1266
+ORD2489,2025-01-01,Desk Organizer,Stationery,4.0,335.08,East,Net Banking,CUST1455
+ORD1340,2025-01-31,Desk Organizer,Stationery,8.0,335.52,West,Net Banking,CUST1945
+ORD1735,2025-05-13,Notebook Set,Stationery,1.0,156.06,North,Credit Card,CUST1562
+ORD1698,2025-03-01,Water Bottle,Accessories,1.0,309.08,East,Debit Card,CUST1480
+ORD1199,2025-07-12,Desk Organizer,Stationery,7.0,374.69,North,Cash,CUST1614
+ORD2050,2025-03-14,Water Bottle,Accessories,8.0,326.28,South,Net Banking,CUST1292
+ORD1367,2025-05-23,Backpack,Accessories,3.0,1270.01,East,UPI,CUST1338
+ORD2418,2025-05-10,Backpack,Accessories,7.0,1366.63,West,Credit Card,CUST1780
+ORD2316,2025-06-08,Yoga Mat,Fitness,8.0,841.2,West,Net Banking,CUST1127
+ORD1463,2025-07-26,Table Lamp,Furniture,2.0,1103.85,East,Cash,CUST1140
+ORD1216,2025-04-14,Bluetooth Speaker,Electronics,1.0,1638.77,South,Net Banking,CUST1471
+ORD2361,2025-03-22,Bluetooth Speaker,Electronics,4.0,1477.65,West,UPI,CUST1449
+ORD1253,2025-01-13,Bluetooth Speaker,Electronics,4.0,1474.96,West,Credit Card,CUST1113
+ORD1152,2025-06-11,Notebook Set,Stationery,5.0,163.82,North,Debit Card,CUST1100
+ORD1194,2025-04-21,Notebook Set,Stationery,8.0,160.57,West,Cash,CUST1847
+ORD2450,2025-06-18,Coffee Mug,Kitchen,2.0,208.32,East,Net Banking,CUST1199
+ORD1558,2025-03-30,USB-C Cable,Electronics,7.0,237.25,West,Net Banking,CUST1623
+ORD2190,2025-02-01,Desk Organizer,Stationery,7.0,340.17,North,Cash,
+ORD1068,2025-04-18,Notebook Set,Stationery,7.0,154.28,South,Net Banking,CUST1582
+ORD1130,2025-07-15,Wireless Mouse,Electronics,5.0,608.13,South,Debit Card,CUST1531
+ORD1344,2025-07-21,Yoga Mat,Fitness,2.0,803.08,East,Credit Card,CUST1939
+ORD2223,2025-01-06,Backpack,Accessories,3.0,1243.93,South,Debit Card,CUST1352
+ORD1300,2025-04-11,Bluetooth Speaker,Electronics,8.0,1638.91,South,Net Banking,CUST1361
+ORD1922,2025-02-06,LED Desk Lamp,Electronics,5.0,912.32,South,Credit Card,CUST1318
+ORD2268,2025-05-25,LED Desk Lamp,Electronics,8.0,970.97,West,Debit Card,
+ORD2452,2025-05-21,Desk Organizer,Stationery,8.0,325.83,West,Credit Card,
+ORD1370,2025-07-05,Yoga Mat,Fitness,4.0,795.71,East,Cash,CUST1979
+ORD1503,2025-03-25,Notebook Set,Stationery,3.0,136.82,South,Cash,CUST1405
+ORD1240,2025-02-11,Office Chair,Furniture,3.0,5330.28,South,Debit Card,CUST1044
+ORD1585,2025-02-27,Water Bottle,Accessories,5.0,294.24,East,Cash,CUST1266
+ORD1999,2025-01-13,Desk Organizer,Stationery,5.0,371.39,North,Debit Card,CUST1625
+ORD1187,2025-02-02,Wireless Mouse,Electronics,7.0,602.13,North,Debit Card,CUST1459
+ORD1732,2025-02-21,Wireless Mouse,Electronics,5.0,562.43,South,Net Banking,CUST1173
+ORD2121,2025-04-20,Bluetooth Speaker,Electronics,6.0,1646.49,West,Cash,CUST1057
+ORD2058,2025-07-07,Bluetooth Speaker,Electronics,8.0,1618.97,South,Net Banking,CUST1119
+ORD2120,2025-04-04,Office Chair,Furniture,6.0,5308.49,North,Cash,CUST1389
+ORD1995,2025-01-15,Water Bottle,Accessories,6.0,316.21,North,Debit Card,CUST1121
+ORD1302,2025-01-28,Wireless Mouse,Electronics,7.0,555.15,East,Cash,CUST1782
+ORD1283,2025-07-16,Backpack,Accessories,7.0,1383.0,North,UPI,CUST1995
+ORD1977,2025-05-25,Desk Organizer,Stationery,3.0,376.64,South,Cash,CUST1301
+ORD2127,2025-02-22,Desk Organizer,Stationery,6.0,348.77,East,UPI,CUST1629
+ORD2350,2025-01-22,USB-C Cable,Electronics,3.0,261.53,East,Debit Card,CUST1531
+ORD1530,2025-07-27,Water Bottle,Accessories,4.0,307.35,North,Debit Card,CUST1144
+ORD2082,2025-05-13,Office Chair,Furniture,5.0,4872.04,West,Debit Card,CUST1348
+ORD1109,2025-06-27,Backpack,Accessories,4.0,1248.65,East,Debit Card,CUST1566
+ORD2323,2025-01-27,Bluetooth Speaker,Electronics,1.0,1527.53,North,Net Banking,CUST1808
+ORD1122,2025-01-21,Desk Organizer,Stationery,3.0,330.84,North,UPI,CUST1002
+ORD1450,2025-04-11,Desk Organizer,Stationery,8.0,324.02,East,Debit Card,CUST1384
+ORD1280,2025-05-11,Water Bottle,Accessories,4.0,276.36,South,UPI,CUST1242
+ORD1568,2025-03-12,Notebook Set,Stationery,6.0,158.64, west ,Credit Card,CUST1697
+ORD1681,2025-05-12,Desk Organizer,Stationery,3.0,325.33,South,Net Banking,CUST1854
+ORD1920,2025-03-11,Bluetooth Speaker,Electronics,3.0,1396.32,North,Credit Card,CUST1981
+ORD1791,2025-01-15,Office Chair,Furniture,5.0,5274.6,North,Net Banking,CUST1481
+ORD1511,2025-04-25,LED Desk Lamp,Electronics,3.0,815.33,South,Cash,CUST1510
+ORD1546,2025-01-12,Coffee Mug,Kitchen,5.0,196.6,East,UPI,CUST1857
+ORD2297,2025-06-30,Table Lamp,Furniture,8.0,1261.94, north ,Credit Card,CUST1551
+ORD1747,2025-06-08,Notebook Set,Stationery,6.0,138.75,North,Credit Card,CUST1942
+ORD2095,2025-01-02,USB-C Cable,Electronics,2.0,270.13,West,Cash,CUST1714
+ORD2335,2025-01-30,USB-C Cable,Electronics,3.0,238.57,South,Net Banking,CUST1934
+ORD1649,2025-02-07,LED Desk Lamp,Electronics,1.0,933.27,East,UPI,CUST1771
+ORD2143,2025-04-04,Backpack,Accessories,2.0,1272.21,South,UPI,CUST1114
+ORD1067,2025-06-20,LED Desk Lamp,Electronics,7.0,867.75,East,Net Banking,CUST1130
+ORD1648,2025-06-21,Wireless Mouse,Electronics,1.0,563.05,South,Cash,CUST1699
+ORD1571,2025-04-09,Wireless Mouse,Electronics,1.0,558.62,South,UPI,CUST1662
+ORD1972,2025-05-14,Notebook Set,Stationery,6.0,154.3,South,Cash,CUST1560
+ORD2075,2025-06-03,Bluetooth Speaker,Electronics,6.0,1523.3,West,Cash,CUST1643
+ORD2432,2025-05-27,Desk Organizer,Stationery,6.0,370.93,East,,CUST1952
+ORD1603,2025-05-02,LED Desk Lamp,Electronics,3.0,846.05,North,Cash,CUST1430
+ORD1389,2025-01-22,Office Chair,Furniture,8.0,5344.26,East,Net Banking,CUST1878
+ORD1553,2025-02-21,Backpack,Accessories,3.0,1385.8,East,Cash,CUST1932
+ORD1912,2025-02-14,LED Desk Lamp,Electronics,2.0,876.38,North,UPI,CUST1935
+ORD1372,2025-06-28,Notebook Set,Stationery,4.0,145.92,South,Net Banking,CUST1329
+ORD1525,2025-04-04,USB-C Cable,Electronics,2.0,242.7,West,Net Banking,CUST1103
+ORD1651,2025-07-09,Desk Organizer,Stationery,4.0,365.92,West,UPI,CUST1523
+ORD1318,2025-02-14,Water Bottle,Accessories,8.0,323.65,East,Net Banking,CUST1362
+ORD1954,2025-07-07,Table Lamp,Furniture,5.0,1190.59,North,Net Banking,CUST1911
+ORD1963,2025-03-08,Office Chair,Furniture,4.0,4983.92,North,Cash,CUST1086
+ORD1587,2025-05-30,Desk Organizer,Stationery,2.0,347.06,South,Net Banking,CUST1122
+ORD1708,2025-01-12,Notebook Set,Stationery,3.0,151.19,South,UPI,CUST1644
+ORD1132,2025-05-01,Bluetooth Speaker,Electronics,6.0,1471.52,East,Credit Card,CUST1878
+ORD1943,2025-01-14,USB-C Cable,Electronics,1.0,259.13,East,Credit Card,CUST1881
+ORD2270,2025-02-08,Coffee Mug,Kitchen,6.0,182.65,West,Debit Card,CUST1238
+ORD1804,2025-04-07,Table Lamp,Furniture,6.0,1252.81,East,Credit Card,CUST1496
+ORD1492,2025-05-07,Yoga Mat,Fitness,4.0,836.15,South,UPI,CUST1006
+ORD2302,2025-04-03,Coffee Mug,Kitchen,1.0,190.27,South,Credit Card,CUST1200
+ORD1985,2025-06-13,Desk Organizer,Stationery,1.0,379.22,West,Cash,CUST1155
+ORD1465,2025-01-03,Yoga Mat,Fitness,3.0,789.43,South,UPI,CUST1941
+ORD2034,2025-01-01,Desk Organizer,Stationery,2.0,340.96,East,Net Banking,CUST1033
+ORD1125,2025-05-31,Desk Organizer,Stationery,4.0,343.77,South,UPI,CUST1930
+ORD2256,2025-05-30,USB-C Cable,Electronics,4.0,265.08,East,Debit Card,CUST1100
+ORD2448,2025-01-05,Water Bottle,Accessories,6.0,321.33,East,Debit Card,CUST1239
+ORD2342,2025-04-20,Yoga Mat,Fitness,4.0,866.28,South,Net Banking,CUST1301
+ORD1650,2025-01-09,USB-C Cable,Electronics,6.0,264.64,North,Net Banking,CUST1888
+ORD1918,2025-07-10,Desk Organizer,Stationery,5.0,315.67,East,UPI,CUST1328
+ORD1386,2025-01-21,Backpack,Accessories,6.0,1418.33,West,Net Banking,CUST1249
+ORD1289,2025-05-09,Bluetooth Speaker,Electronics,3.0,1526.52,South,UPI,CUST1674
+ORD1906,2025-07-10,Backpack,Accessories,1.0,1386.06,East,Net Banking,CUST1742
+ORD1874,2025-03-04,Wireless Mouse,Electronics,7.0,656.96,North,Net Banking,CUST1396
+ORD1863,2025-03-23,Office Chair,Furniture,2.0,5056.33,North,UPI,CUST1325
+ORD1053,2025-05-22,Coffee Mug,Kitchen,7.0,201.42,North,Credit Card,CUST1967
+ORD1595,2025-03-30,Table Lamp,Furniture,5.0,1110.02,West,Net Banking,CUST1602
+ORD1617,2025-07-05,Table Lamp,Furniture,1.0,1314.48,South,Credit Card,CUST1426
+ORD1825,2025-07-10,USB-C Cable,Electronics,5.0,242.03,West,Debit Card,CUST1982
+ORD1751,2025-05-03,Backpack,Accessories,1.0,1299.64,West,UPI,CUST1468
+ORD1040,2025-05-29,Wireless Mouse,Electronics,1.0,628.71,North,Credit Card,CUST1598
+ORD1339,2025-05-27,Table Lamp,Furniture,1.0,1141.82, east ,UPI,
+ORD1728,2025-06-07,USB-C Cable,Electronics,1.0,232.1,North,Credit Card,CUST1843
+ORD1902,2025-03-20,Bluetooth Speaker,Electronics,5.0,1501.01,East,Credit Card,CUST1116
+ORD2137,2025-06-12,Bluetooth Speaker,Electronics,4.0,1602.72,East,Cash,CUST1661
+ORD2210,2025-01-05,USB-C Cable,Electronics,1.0,243.77,North,UPI,CUST1671
+ORD1083,2025-05-19,Water Bottle,Accessories,8.0,293.96,South,Debit Card,CUST1398
+ORD1115,2025-05-22,Wireless Mouse,Electronics,5.0,622.65,South,Debit Card,CUST1105
+ORD2174,2025-03-07,Yoga Mat,Fitness,2.0,734.33,North,Credit Card,CUST1340
+ORD2020,2025-04-27,Yoga Mat,Fitness,3.0,781.0,South,Debit Card,CUST1737
+ORD1451,2025-01-20,Coffee Mug,Kitchen,2.0,,East,Cash,CUST1465
+ORD2025,2025-05-06,USB-C Cable,Electronics,4.0,253.56,West,Cash,CUST1014
+ORD2301,2025-04-02,Table Lamp,Furniture,4.0,1100.67,East,UPI,CUST1239
+ORD1270,2025-06-13,LED Desk Lamp,Electronics,1.0,822.59,West,Cash,CUST1525
+ORD1953,2025-05-04,Yoga Mat,Fitness,6.0,737.18,West,Credit Card,CUST1145
+ORD2271,2025-03-28,Backpack,Accessories,1.0,1418.01,West,Cash,CUST1661
+ORD1809,2025-06-08,Wireless Mouse,Electronics,6.0,632.07,South,Cash,CUST1738
+ORD1848,2025-01-06,Coffee Mug,Kitchen,6.0,187.42,South,UPI,CUST1559
+ORD1377,2025-05-26,Backpack,Accessories,4.0,1298.82,East,Cash,CUST1781
+ORD1556,2025-07-20,USB-C Cable,Electronics,7.0,229.7,South,UPI,CUST1580
+ORD1096,2025-01-07,Yoga Mat,Fitness,5.0,811.11,West,Debit Card,CUST1964
+ORD1757,2025-07-28,Notebook Set,Stationery,2.0,155.58,South,Net Banking,CUST1442
+ORD1484,2025-02-12,Yoga Mat,Fitness,6.0,744.24,North,Net Banking,CUST1690
+ORD2388,2025-02-11,LED Desk Lamp,Electronics,3.0,959.86,North,UPI,CUST1301
+ORD2461,2025-05-18,Yoga Mat,Fitness,4.0,854.47,West,Cash,CUST1789
+ORD1048,2025-05-20,Coffee Mug,Kitchen,5.0,203.44,North,Net Banking,CUST1306
+ORD1799,2025-04-12,Bluetooth Speaker,Electronics,4.0,1351.78,North,Net Banking,CUST1802
+ORD2133,2025-04-27,USB-C Cable,Electronics,3.0,267.97,South,Net Banking,CUST1511
+ORD2070,2025-02-21,Office Chair,Furniture,3.0,5331.22,East,Net Banking,CUST1502
+ORD1153,2025-06-30,Desk Organizer,Stationery,2.0,345.07,East,Credit Card,CUST1047
+ORD1237,2025-04-03,Wireless Mouse,Electronics,5.0,560.7,South,Cash,CUST1970
+ORD1054,2025-02-08,Table Lamp,Furniture,1.0,1279.24,South,Debit Card,CUST1130
+ORD1394,2025-07-13,Backpack,Accessories,3.0,1374.47,North,Net Banking,CUST1763
+ORD1123,2025-04-26,Backpack,Accessories,8.0,1244.77,South,Cash,CUST1723
+ORD1355,2025-03-18,Wireless Mouse,Electronics,8.0,619.79,West,Net Banking,CUST1388
+ORD1431,2025-05-06,Desk Organizer,Stationery,6.0,355.77,West,Net Banking,CUST1116
+ORD1134,2025-01-10,USB-C Cable,Electronics,8.0,228.49,East,Cash,CUST1118
+ORD1268,2025-03-20,LED Desk Lamp,Electronics,8.0,917.45,West,UPI,CUST1706
+ORD1385,2025-05-15,Bluetooth Speaker,Electronics,3.0,1421.34,East,Cash,CUST1273
+ORD1097,2025-02-20,Table Lamp,Furniture,2.0,1221.09,South,Credit Card,CUST1713
+ORD1220,2025-07-18,Notebook Set,Stationery,6.0,144.56,South,UPI,
+ORD1041,2025-05-09,Coffee Mug,Kitchen,3.0,181.36,North,UPI,CUST1070
+ORD1219,2025-07-19,Water Bottle,Accessories,3.0,273.67,North,Net Banking,CUST1522
+ORD2464,2025-04-27,Desk Organizer,Stationery,3.0,356.08,South,Credit Card,CUST1613
+ORD1992,2025-06-11,Bluetooth Speaker,Electronics,6.0,1494.95,West,UPI,CUST1143
+ORD1829,2025-04-02,Coffee Mug,Kitchen,3.0,184.61,East,Net Banking,CUST1255
+ORD2390,2025-04-02,Coffee Mug,Kitchen,3.0,187.72,North,Net Banking,CUST1221
+ORD1765,2025-03-15,Yoga Mat,Fitness,8.0,820.05,South,UPI,CUST1655
+ORD1861,2025-02-22,Office Chair,Furniture,3.0,,South,UPI,CUST1316
+ORD1012,2025-02-28,Wireless Mouse,Electronics,1.0,635.54,West,Cash,CUST1067
+ORD2026,2025-04-20,Table Lamp,Furniture,4.0,1138.53,West,Net Banking,CUST1227
+ORD2072,2025-04-29,Table Lamp,Furniture,4.0,1085.54,North,UPI,CUST1268
+ORD2149,2025-04-19,USB-C Cable,Electronics,8.0,258.1,East,UPI,CUST1371
+ORD2459,2025-01-23,LED Desk Lamp,Electronics,2.0,825.13,South,Credit Card,CUST1586
+ORD2288,2025-02-13,USB-C Cable,Electronics,4.0,250.87,West,Net Banking,CUST1462
+ORD1806,2025-05-20,Office Chair,Furniture,6.0,4822.72,West,Cash,CUST1888
+ORD1756,2025-03-13,Backpack,Accessories,8.0,1215.84,South,Net Banking,CUST1702
+ORD1946,2025-02-18,Office Chair,Furniture,7.0,5342.26,East,Debit Card,CUST1157
+ORD2345,2025-06-07,Desk Organizer,Stationery,2.0,325.79,West,Net Banking,CUST1383
+ORD1677,2025-07-23,Backpack,Accessories,5.0,1418.54,South,Cash,CUST1693
+ORD1974,2025-01-27,USB-C Cable,Electronics,8.0,241.61,East,Cash,CUST1197
+ORD1684,2025-07-05,Notebook Set,Stationery,8.0,162.46,East,UPI,CUST1687
+ORD2498,2025-04-08,Backpack,Accessories,1.0,1419.55,South,Credit Card,CUST1276
+ORD1862,2025-06-30,Table Lamp,Furniture,3.0,1182.23,South,Net Banking,CUST1939
+ORD2378,2025-07-22,Table Lamp,Furniture,5.0,1172.88,South,Debit Card,CUST1255
+ORD1669,2025-04-19,Desk Organizer,Stationery,2.0,328.45,West,Credit Card,CUST1764
+ORD1517,2025-05-16,Coffee Mug,Kitchen,6.0,209.62,South,UPI,CUST1102
+ORD1224,2025-05-01,Bluetooth Speaker,Electronics,8.0,1538.39,East,Net Banking,CUST1057
+ORD1336,2025-04-14,Desk Organizer,Stationery,7.0,350.07,North,Debit Card,CUST1685
+ORD1232,2025-06-23,Water Bottle,Accessories,1.0,316.3,East,Credit Card,CUST1337
+ORD2212,2025-04-03,Yoga Mat,Fitness,7.0,847.68,North,UPI,CUST1138
+ORD1572,2025-06-23,Notebook Set,Stationery,4.0,142.12,West,Net Banking,CUST1020
+ORD2109,2025-01-08,Office Chair,Furniture,2.0,5236.75,North,Debit Card,CUST1694
+ORD1468,2025-03-05,Office Chair,Furniture,5.0,5143.59,South,Net Banking,CUST1615
+ORD2086,2025-06-02,Coffee Mug,Kitchen,6.0,185.95,East,Credit Card,CUST1762
+ORD2484,2025-07-20,USB-C Cable,Electronics,8.0,227.28,North,UPI,CUST1988
+ORD1704,2025-02-05,USB-C Cable,Electronics,8.0,232.35,North,Net Banking,CUST1658
+ORD1297,2025-02-06,Notebook Set,Stationery,2.0,135.61,West,Net Banking,CUST1428
+ORD1887,2025-06-18,Yoga Mat,Fitness,8.0,791.61,West,Credit Card,CUST1615
+ORD2084,2025-06-07,USB-C Cable,Electronics,2.0,244.88,North,Credit Card,CUST1838
+ORD1473,2025-04-18,Yoga Mat,Fitness,6.0,806.41,South,Debit Card,CUST1977
+ORD2417,2025-01-21,Coffee Mug,Kitchen,6.0,194.95,South,Debit Card,CUST1451
+ORD1205,2025-01-18,Backpack,Accessories,3.0,1361.6,North,Credit Card,CUST1764
+ORD1003,2025-03-13,Yoga Mat,Fitness,1.0,840.36,South,Debit Card,CUST1348
+ORD2064,2025-04-20,Table Lamp,Furniture,6.0,1171.69,North,Cash,CUST1353
+ORD2054,2025-02-11,USB-C Cable,Electronics,5.0,230.15,North,Debit Card,CUST1953
+ORD1729,2025-05-01,Office Chair,Furniture,7.0,4587.22,East,UPI,CUST1379
+ORD2397,2025-04-12,USB-C Cable,Electronics,7.0,230.12,South,Credit Card,CUST1365
+ORD2393,2025-03-05,Notebook Set,Stationery,6.0,161.18,South,Credit Card,CUST1016
+ORD2488,2025-03-18,USB-C Cable,Electronics,6.0,272.22,South,Debit Card,CUST1967
+ORD2321,2025-07-23,Coffee Mug,Kitchen,7.0,214.12,North,Cash,CUST1666
+ORD1736,2025-07-05,LED Desk Lamp,Electronics,6.0,871.58,East,UPI,
+ORD1692,2025-05-10,Wireless Mouse,Electronics,1.0,636.45,West,Net Banking,CUST1217
+ORD2063,2025-06-04,Water Bottle,Accessories,1.0,323.43,,Debit Card,CUST1151
+ORD1637,2025-06-22,Desk Organizer,Stationery,2.0,368.0,West,Debit Card,CUST1674
+ORD1705,2025-02-24,LED Desk Lamp,Electronics,3.0,842.71,East,Net Banking,CUST1734
+ORD1820,2025-04-17,USB-C Cable,Electronics,2.0,262.26,East,Debit Card,CUST1719
+ORD1157,2025-02-06,Yoga Mat,Fitness,4.0,792.79,East,Debit Card,CUST1261
+ORD1462,2025-06-27,Backpack,Accessories,3.0,1293.21,South,Debit Card,CUST1091
+ORD1160,2025-02-20,LED Desk Lamp,Electronics,7.0,962.53,North,UPI,CUST1390
+ORD1305,2025-01-31,Yoga Mat,Fitness,3.0,874.92,West,Cash,CUST1813
+ORD1395,2025-01-14,Water Bottle,Accessories,2.0,295.24, north ,Cash,CUST1619
+ORD1399,2025-03-17,Yoga Mat,Fitness,4.0,833.05,North,Cash,CUST1157
+ORD2166,2025-01-23,Office Chair,Furniture,6.0,4669.19,North,Credit Card,CUST1735
+ORD1702,2025-05-13,Bluetooth Speaker,Electronics,5.0,1461.92,South,Net Banking,CUST1415
+ORD2458,2025-07-20,Desk Organizer,Stationery,7.0,370.53,South,Cash,CUST1118
+ORD2272,2025-02-12,Bluetooth Speaker,Electronics,,1520.58,East,Net Banking,CUST1660
+ORD2250,2025-02-10,Desk Organizer,Stationery,1.0,316.05,East,UPI,CUST1852
+ORD1777,2025-06-11,Coffee Mug,Kitchen,7.0,199.93,East,Cash,CUST1493
+ORD2368,2025-06-13,Coffee Mug,Kitchen,5.0,182.81,,Net Banking,CUST1181
+ORD2426,2025-06-16,Wireless Mouse,Electronics,7.0,650.1,South,UPI,CUST1489
+ORD1457,2025-04-20,Wireless Mouse,Electronics,4.0,658.38,South,Cash,CUST1162
+ORD2487,2025-02-11,Desk Organizer,Stationery,2.0,353.36,North,Credit Card,CUST1127
+ORD1478,2025-06-24,Desk Organizer,Stationery,2.0,335.75,West,UPI,CUST1059
+ORD1638,2025-05-10,Yoga Mat,Fitness,3.0,873.12,North,Net Banking,CUST1753
+ORD2126,2025-04-10,Yoga Mat,Fitness,6.0,810.59,West,Credit Card,CUST1707
+ORD2406,2025-04-20,Table Lamp,Furniture,4.0,1227.72,North,UPI,CUST1383
+ORD1700,2025-06-12,USB-C Cable,Electronics,5.0,265.68,East,Net Banking,CUST1557
+ORD2079,2025-05-16,LED Desk Lamp,Electronics,2.0,901.49,South,Credit Card,CUST1613
+ORD2326,2025-03-21,Office Chair,Furniture,7.0,5012.12,East,Cash,CUST1597
+ORD1347,2025-07-03,Notebook Set,Stationery,8.0,136.81,West,Credit Card,CUST1464
+ORD1446,2025-07-20,Office Chair,Furniture,4.0,5312.47,North,Net Banking,CUST1359
+ORD2359,2025-07-14,USB-C Cable,Electronics,3.0,267.2,South,UPI,CUST1740
+ORD1379,2025-05-20,Table Lamp,Furniture,8.0,1123.23,North,Net Banking,CUST1034
+ORD2315,2025-01-14,Water Bottle,Accessories,6.0,300.18,South,Credit Card,CUST1794
+ORD1635,2025-02-20,Yoga Mat,Fitness,4.0,738.4,West,UPI,CUST1468
+ORD2005,2025-03-04,Coffee Mug,Kitchen,1.0,184.41, west ,UPI,CUST1016
+ORD1231,2025-06-06,USB-C Cable,Electronics,3.0,242.22,East,Debit Card,CUST1418
+ORD1382,2025-04-06,Coffee Mug,Kitchen,1.0,203.69,West,Debit Card,CUST1016
+ORD2246,2025-05-16,LED Desk Lamp,Electronics,3.0,935.01,West,UPI,CUST1908
+ORD1072,2025-06-08,Desk Organizer,Stationery,6.0,320.62,South,Cash,CUST1230
+ORD1070,2025-06-05,Yoga Mat,Fitness,6.0,,West,UPI,CUST1523
+ORD1091,2025-03-06,Backpack,Accessories,2.0,1291.29,North,Cash,CUST1229
+ORD2380,2025-06-28,Backpack,Accessories,1.0,1231.37,South,Cash,CUST1903
+ORD1171,2025-01-04,Backpack,Accessories,5.0,1308.5,West,Cash,CUST1688
+ORD1168,2025-02-12,LED Desk Lamp,Electronics,5.0,973.45,West,Cash,CUST1764
+ORD1493,2025-01-07,Backpack,Accessories,4.0,1309.79,North,Cash,CUST1001
+ORD1602,2025-01-13,Wireless Mouse,Electronics,2.0,589.03,West,Credit Card,CUST1560
+ORD2347,2025-07-03,Coffee Mug,Kitchen,8.0,197.96,West,Net Banking,CUST1665
+ORD1272,2025-01-09,Coffee Mug,Kitchen,3.0,181.78,East,Cash,CUST1392
+ORD2151,2025-06-19,Table Lamp,Furniture,1.0,1244.73,South,Cash,CUST1565
+ORD1420,2025-01-26,Wireless Mouse,Electronics,5.0,565.7,South,Debit Card,CUST1383
+ORD1094,2025-04-30,Notebook Set,Stationery,5.0,156.95,South,Net Banking,CUST1621
+ORD2038,2025-05-24,Desk Organizer,Stationery,2.0,353.24,South,UPI,CUST1342
+ORD1926,2025-07-02,Notebook Set,Stationery,2.0,163.12,West,Net Banking,CUST1134
+ORD1042,2025-01-18,Yoga Mat,Fitness,4.0,783.62,South,Net Banking,CUST1608
+ORD1056,2025-03-05,Desk Organizer,Stationery,2.0,338.79,West,Net Banking,CUST1767
+ORD2492,2025-02-06,Notebook Set,Stationery,5.0,159.61,South,UPI,CUST1616
+ORD2352,2025-04-21,Coffee Mug,Kitchen,7.0,193.73,West,Cash,CUST1279
+ORD1038,2025-04-10,Wireless Mouse,Electronics,5.0,650.1,West,Cash,CUST1433
+ORD1306,2025-05-23,Water Bottle,Accessories,6.0,314.25,South,Net Banking,CUST1521
+ORD1683,2025-05-21,Desk Organizer,Stationery,2.0,334.39, north ,Cash,CUST1100
+ORD1664,2025-06-07,Desk Organizer,Stationery,4.0,381.03,East,Debit Card,CUST1937
+ORD1408,2025-02-20,Yoga Mat,Fitness,8.0,736.19, east ,Credit Card,CUST1971
+ORD1166,2025-07-07,Water Bottle,Accessories,3.0,274.49,East,Cash,CUST1765
+ORD1534,2025-04-23,Backpack,Accessories,7.0,1420.87,West,Debit Card,CUST1902
+ORD1893,2025-03-24,LED Desk Lamp,Electronics,6.0,970.48,North,Debit Card,CUST1863
+ORD2444,2025-04-03,Notebook Set,Stationery,7.0,145.38,North,Cash,CUST1894
+ORD2083,2025-01-27,Office Chair,Furniture,4.0,4653.62,South,UPI,CUST1814
+ORD2434,2025-01-18,Bluetooth Speaker,Electronics,7.0,1506.48,East,Debit Card,CUST1174
+ORD1717,2025-02-03,Desk Organizer,Stationery,1.0,376.71,West,Net Banking,CUST1430
+ORD2402,2025-06-28,Desk Organizer,Stationery,7.0,361.42,South,Cash,CUST1179
+ORD1316,2025-06-26,Backpack,Accessories,4.0,1275.72,,Credit Card,CUST1722
+ORD2134,2025-06-19,Notebook Set,Stationery,8.0,142.08,West,Net Banking,CUST1744
+ORD2306,2025-01-06,Desk Organizer,Stationery,5.0,361.61,West,Credit Card,CUST1960
+ORD1516,2025-02-26,Yoga Mat,Fitness,1.0,862.24,East,Credit Card,CUST1828
+ORD2116,2025-02-04,Backpack,Accessories,,1355.04,West,Credit Card,CUST1582
+ORD1533,2025-01-18,Table Lamp,Furniture,6.0,1140.65,North,Credit Card,CUST1049
+ORD2089,2025-07-18,Wireless Mouse,Electronics,8.0,629.83,North,UPI,CUST1110
+ORD2437,2025-07-11,Wireless Mouse,Electronics,3.0,636.04,South,Cash,CUST1923
+ORD1903,2025-03-27,Desk Organizer,Stationery,6.0,341.74,North,UPI,CUST1198
+ORD1548,2025-07-26,Water Bottle,Accessories,7.0,327.15,South,Net Banking,CUST1062
+ORD1453,2025-06-28,Desk Organizer,Stationery,6.0,373.44,West,UPI,CUST1991
+ORD2240,2025-03-04,Desk Organizer,Stationery,3.0,366.67,West,UPI,CUST1141
+ORD1598,2025-04-02,Coffee Mug,Kitchen,4.0,185.66,West,Credit Card,CUST1233
+ORD1672,2025-03-08,Notebook Set,Stationery,7.0,145.66,West,Debit Card,CUST1323
+ORD1570,2025-05-31,Coffee Mug,Kitchen,6.0,192.8,East,Credit Card,CUST1291
+ORD1665,2025-04-09,Bluetooth Speaker,Electronics,5.0,1511.06,East,Credit Card,CUST1933
+ORD1061,2025-02-19,Desk Organizer,Stationery,7.0,337.01,North,Cash,CUST1359
+ORD2049,2025-02-28,LED Desk Lamp,Electronics,8.0,875.97,East,Credit Card,CUST1151
+ORD1536,2025-02-27,Desk Organizer,Stationery,3.0,345.6,North,Cash,CUST1020
+ORD2038,2025-05-24,Desk Organizer,Stationery,0.0,353.24,South,UPI,CUST1342
+ORD2037,2025-04-04,Backpack,Accessories,8.0,1329.95,East,Cash,CUST1179
+ORD1244,2025-04-18,USB-C Cable,Electronics,3.0,264.78,South,Cash,CUST1053
+ORD1025,2025-07-16,USB-C Cable,Electronics,3.0,230.49,West,Net Banking,CUST1169
+ORD1222,2025-05-07,Desk Organizer,Stationery,8.0,366.76,West,Net Banking,CUST1658
+ORD1947,2025-06-21,LED Desk Lamp,Electronics,3.0,833.24,North,Credit Card,CUST1147
+ORD1105,2025-02-24,Coffee Mug,Kitchen,6.0,210.85,East,Cash,CUST1901
+ORD1875,2025-07-15,USB-C Cable,Electronics,1.0,233.55,West,Debit Card,CUST1905
+ORD1509,2025-04-29,Wireless Mouse,Electronics,1.0,559.23,West,Debit Card,CUST1508
+ORD1131,2025-04-24,Desk Organizer,Stationery,5.0,326.77,West,Debit Card,CUST1992
+ORD1444,2025-07-29,Water Bottle,Accessories,2.0,295.36,North,UPI,CUST1214
+ORD1668,2025-05-17,USB-C Cable,Electronics,1.0,255.32,South,UPI,CUST1885
+ORD1508,2025-02-20,Bluetooth Speaker,Electronics,8.0,1591.73,North,Cash,CUST1125
+ORD2410,2025-02-28,Wireless Mouse,Electronics,6.0,580.16,South,Net Banking,CUST1055
+ORD1075,2025-03-04,Backpack,Accessories,3.0,1339.54,North,Credit Card,CUST1797
+ORD1036,2025-01-04,USB-C Cable,Electronics,2.0,270.23,South,UPI,CUST1416
+ORD2470,2025-05-16,Bluetooth Speaker,Electronics,,1433.75,South,Net Banking,CUST1403
+ORD1057,2025-03-02,Office Chair,Furniture,3.0,5475.11,South,Debit Card,CUST1025
+ORD1196,2025-03-07,Desk Organizer,Stationery,6.0,380.66,West,Credit Card,CUST1093
+ORD2259,2025-04-14,USB-C Cable,Electronics,7.0,267.53,West,Debit Card,CUST1450
+ORD1734,2025-07-19,LED Desk Lamp,Electronics,7.0,872.59,West,Debit Card,CUST1600
+ORD1866,2025-01-07,Office Chair,Furniture,5.0,5104.58,South,Net Banking,CUST1237
+ORD1687,2025-05-26,Yoga Mat,Fitness,6.0,848.17,West,UPI,CUST1004
+ORD1477,2025-07-26,Notebook Set,Stationery,3.0,150.08,West,Net Banking,CUST1649
+ORD1086,2025-05-20,Table Lamp,Furniture,4.0,1196.18,East,Debit Card,CUST1497
+ORD1561,2025-05-02,Table Lamp,Furniture,5.0,1294.21,North,Cash,CUST1837
+ORD1334,2025-02-19,LED Desk Lamp,Electronics,2.0,868.56,West,Cash,CUST1735
+ORD2048,2025-06-20,Yoga Mat,Fitness,8.0,792.29,South,Cash,CUST1175
+ORD1921,2025-05-24,Yoga Mat,Fitness,2.0,752.11,East,Net Banking,CUST1326
+ORD1933,2025-04-13,Coffee Mug,Kitchen,7.0,188.6,South,Net Banking,CUST1162
+ORD2178,2025-02-03,Coffee Mug,Kitchen,2.0,191.73,West,UPI,CUST1266
+ORD2183,2025-01-14,Office Chair,Furniture,4.0,4682.2,West,Cash,CUST1167
+ORD1538,2025-01-20,Table Lamp,Furniture,2.0,1160.14,West,Credit Card,CUST1441
+ORD1788,2025-03-14,Bluetooth Speaker,Electronics,5.0,1386.59,West,Credit Card,CUST1238
+ORD1656,2025-01-11,Backpack,Accessories,7.0,1241.61,East,UPI,CUST1164
+ORD1418,2025-01-22,Desk Organizer,Stationery,2.0,367.77,East,UPI,CUST1662
+ORD2337,2025-07-04,LED Desk Lamp,Electronics,3.0,870.2,South,UPI,CUST1200
+ORD1169,2025-07-25,Water Bottle,Accessories,2.0,297.11,North,UPI,CUST1772
+ORD2021,2025-06-11,Notebook Set,Stationery,6.0,163.17,South,Cash,CUST1130
+ORD1573,2025-01-03,Desk Organizer,Stationery,8.0,377.72,South,Net Banking,CUST1820
+ORD1660,2025-05-14,Office Chair,Furniture,2.0,5285.2,South,Debit Card,CUST1556
+ORD2289,2025-01-01,Wireless Mouse,Electronics,8.0,654.24,East,UPI,CUST1000
+ORD1332,2025-01-03,Wireless Mouse,Electronics,5.0,607.14,North,Cash,CUST1291
+ORD2197,2025-05-06,LED Desk Lamp,Electronics,7.0,941.41,East,Net Banking,CUST1134
+ORD1574,2025-02-27,Wireless Mouse,Electronics,5.0,611.98,East,Cash,CUST1433
+ORD2304,2025-06-18,Notebook Set,Stationery,3.0,136.05,South,Credit Card,CUST1130
+ORD2113,2025-05-20,USB-C Cable,Electronics,1.0,271.54,North,Debit Card,CUST1901
+ORD2194,2025-07-10,Wireless Mouse,Electronics,2.0,604.65,West,Credit Card,CUST1408
+ORD2386,2025-02-04,Table Lamp,Furniture,6.0,1239.84,West,Debit Card,CUST1472
+ORD2228,2025-06-05,Office Chair,Furniture,8.0,4599.98,West,Debit Card,CUST1310
+ORD2267,2025-03-31,USB-C Cable,Electronics,2.0,267.45,West,Debit Card,CUST1586
+ORD1335,2025-01-04,Office Chair,Furniture,6.0,5289.71,South,UPI,CUST1625
+ORD1008,2025-07-17,Notebook Set,Stationery,5.0,163.46,South,Credit Card,CUST1389
+ORD1955,2025-01-23,Yoga Mat,Fitness,4.0,794.6,North,Net Banking,CUST1817
+ORD2307,2025-06-14,Backpack,Accessories,1.0,1390.93,East,Debit Card,CUST1864
+ORD2226,2025-06-22,Backpack,Accessories,6.0,1375.89,South,Net Banking,CUST1212
+ORD1304,2025-01-19,LED Desk Lamp,Electronics,7.0,899.77,East,Net Banking,CUST1696
+ORD2454,2025-07-03,Backpack,Accessories,1.0,1210.73,East,Debit Card,CUST1784
+ORD1779,2025-03-19,Office Chair,Furniture,1.0,4499.19,South,Cash,CUST1293
+ORD1074,2025-04-27,Bluetooth Speaker,Electronics,7.0,1614.76,South,Debit Card,CUST1506
+ORD1879,2025-04-26,Water Bottle,Accessories,1.0,279.8,South,Debit Card,CUST1092
+ORD1522,2025-01-15,Bluetooth Speaker,Electronics,4.0,1529.48,North,Net Banking,CUST1489
+ORD1335,2025-01-04,Office Chair,Furniture,6.0,5289.71,South,UPI,CUST1625
+ORD1569,2025-03-03,Wireless Mouse,Electronics,6.0,597.66,West,UPI,CUST1983
+ORD1590,2025-06-11,Water Bottle,Accessories,3.0,287.84,North,Credit Card,CUST1462
+ORD1088,2025-02-02,Coffee Mug,Kitchen,1.0,215.2,North,Credit Card,CUST1658
+ORD1755,2025-04-19,Coffee Mug,Kitchen,4.0,195.78,East,Cash,CUST1874
+ORD1217,2025-04-03,Table Lamp,Furniture,2.0,1183.82,North,UPI,CUST1446
+ORD2041,2025-05-05,Coffee Mug,Kitchen,2.0,197.81,,Debit Card,CUST1635
+ORD1173,2025-05-01,Notebook Set,Stationery,1.0,152.56,East,Net Banking,CUST1226
+ORD2400,2025-01-18,Wireless Mouse,Electronics,4.0,588.35,West,Credit Card,CUST1729
+ORD1221,2025-03-07,Office Chair,Furniture,4.0,4672.56,South,Credit Card,CUST1181
+ORD1319,2025-07-17,Desk Organizer,Stationery,5.0,356.68,South,UPI,CUST1285
+ORD2325,2025-07-05,Coffee Mug,Kitchen,8.0,186.5,South,Credit Card,CUST1061
+ORD2362,2025-05-23,Coffee Mug,Kitchen,1.0,194.01,South,Cash,CUST1965
+ORD2460,2025-02-02,Water Bottle,Accessories,6.0,326.15,North,Cash,CUST1063
+ORD1266,2025-03-10,USB-C Cable,Electronics,2.0,260.31,North,Debit Card,CUST1616
+ORD1006,2025-05-18,Coffee Mug,Kitchen,2.0,217.83,West,Credit Card,CUST1565
+ORD1925,2025-06-30,Office Chair,Furniture,8.0,5115.29,East,Cash,CUST1837
+ORD1138,2025-05-05,Table Lamp,Furniture,2.0,1086.02,South,UPI,CUST1318
+ORD1163,2025-03-15,Coffee Mug,Kitchen,4.0,203.26,East,UPI,CUST1651
+ORD2253,2025-07-08,Yoga Mat,Fitness,1.0,791.51,South,Net Banking,CUST1579
+ORD1594,2025-03-24,Wireless Mouse,Electronics,4.0,541.25,North,UPI,CUST1231
+ORD2436,2025-01-29,USB-C Cable,Electronics,8.0,252.34, south ,UPI,CUST1205
+ORD2344,2025-05-30,USB-C Cable,Electronics,8.0,234.52,North,Debit Card,CUST1809
+ORD2104,2025-04-13,Backpack,Accessories,2.0,1361.72,South,Credit Card,CUST1372
+ORD2446,2025-02-01,Yoga Mat,Fitness,5.0,871.08,South,Cash,CUST1462
+ORD1523,2025-03-26,Wireless Mouse,Electronics,4.0,635.71,East,UPI,CUST1940
+ORD1876,2025-07-18,LED Desk Lamp,Electronics,5.0,892.05,West,Cash,CUST1627
+ORD2159,2025-02-17,Desk Organizer,Stationery,8.0,369.31,South,Credit Card,CUST1410
+ORD1578,2025-03-12,Water Bottle,Accessories,6.0,320.62,East,Cash,CUST1192
+ORD2285,2025-06-12,Backpack,Accessories,4.0,1406.49,North,Cash,CUST1567
+ORD1019,2025-07-12,USB-C Cable,Electronics,5.0,262.38,East,Credit Card,CUST1300
+ORD1715,2025-05-14,Notebook Set,Stationery,7.0,158.73,North,UPI,CUST1487
+ORD1633,2025-06-12,Water Bottle,Accessories,5.0,301.85,East,Credit Card,CUST1046
+ORD1782,2025-02-18,Water Bottle,Accessories,7.0,321.85,West,Debit Card,CUST1255
+ORD1618,2025-05-04,Yoga Mat,Fitness,8.0,748.07,West,Cash,CUST1626
+ORD2114,2025-04-09,Bluetooth Speaker,Electronics,8.0,1443.4,West,Debit Card,CUST1470
+ORD1655,2025-02-15,Coffee Mug,Kitchen,2.0,186.54,South,Net Banking,CUST1122
+ORD1838,2025-07-21,LED Desk Lamp,Electronics,7.0,835.71,East,Credit Card,CUST1487
+ORD1768,2025-04-12,Desk Organizer,Stationery,5.0,376.06,East,Net Banking,CUST1533
+ORD1137,2025-02-22,Wireless Mouse,Electronics,5.0,604.9,East,Debit Card,CUST1901
+ORD1557,2025-05-30,Yoga Mat,Fitness,2.0,866.9,North,Cash,CUST1888
+ORD1697,2025-01-11,Water Bottle,Accessories,4.0,314.64,South,Credit Card,CUST1270
+ORD2247,2025-06-09,USB-C Cable,Electronics,8.0,258.83,West,UPI,CUST1902
+ORD2130,2025-01-24,Table Lamp,Furniture,2.0,1221.03,East,Credit Card,CUST1580
+ORD1885,2025-02-21,Office Chair,Furniture,1.0,5121.54,East,Credit Card,CUST1469
+ORD2330,2025-07-21,Notebook Set,Stationery,2.0,144.28,West,Debit Card,CUST1614
+ORD1368,2025-01-21,Desk Organizer,Stationery,8.0,373.23, north ,Net Banking,CUST1741
+ORD2431,2025-06-18,USB-C Cable,Electronics,7.0,253.29,West,Credit Card,CUST1111
+ORD1878,2025-01-29,USB-C Cable,Electronics,3.0,262.88,South,Debit Card,CUST1423
+ORD1327,2025-07-03,Water Bottle,Accessories,8.0,275.11,South,Credit Card,CUST1987
+ORD1317,2025-05-13,Office Chair,Furniture,4.0,5059.87,West,Net Banking,CUST1385
+ORD2157,2025-02-11,Bluetooth Speaker,Electronics,5.0,1500.9,East,Debit Card,CUST1616
+ORD2122,2025-03-04,Desk Organizer,Stationery,4.0,330.48,East,Net Banking,CUST1086
+ORD1528,2025-07-28,Yoga Mat,Fitness,3.0,779.57,East,UPI,CUST1181
+ORD1526,2025-03-19,Water Bottle,Accessories,6.0,277.26,South,Debit Card,CUST1810
+ORD1087,2025-04-10,Wireless Mouse,Electronics,6.0,619.23,West,UPI,CUST1860
+ORD1479,2025-01-23,Notebook Set,Stationery,7.0,137.56,North,Cash,CUST1682
+ORD1338,2025-03-02,Backpack,Accessories,8.0,1364.93,East,Cash,CUST1596
+ORD2008,2025-05-14,LED Desk Lamp,Electronics,8.0,883.18,South,Net Banking,CUST1708
+ORD1657,2025-03-07,Yoga Mat,Fitness,1.0,771.92,South,Credit Card,CUST1157
+ORD1148,2025-02-02,Wireless Mouse,Electronics,6.0,643.29,West,Credit Card,CUST1538
+ORD2231,2025-01-30,Backpack,Accessories,4.0,1200.45,South,Debit Card,CUST1264
+ORD2405,2025-01-04,Table Lamp,Furniture,4.0,1084.19,North,Cash,CUST1242
+ORD1028,2025-01-17,Notebook Set,Stationery,6.0,134.73,South,Net Banking,CUST1225
+ORD1246,2025-03-14,Bluetooth Speaker,Electronics,2.0,1577.88, east ,Debit Card,CUST1927
+ORD1365,2025-03-18,Office Chair,Furniture,7.0,,West,UPI,CUST1869
+ORD1975,2025-01-07,Wireless Mouse,Electronics,2.0,545.91,South,Net Banking,CUST1653
+ORD1840,2025-04-22,USB-C Cable,Electronics,3.0,262.05,West,Net Banking,CUST1202
+ORD2144,2025-07-08,Yoga Mat,Fitness,2.0,802.51,East,Debit Card,CUST1905
+ORD1198,2025-05-31,Wireless Mouse,Electronics,6.0,619.37,West,Cash,CUST1894
+ORD1800,2025-05-02,Table Lamp,Furniture,3.0,1168.16,North,UPI,CUST1161
+ORD2202,2025-05-15,Coffee Mug,Kitchen,2.0,190.67,West,Credit Card,CUST1928
+ORD1404,2025-04-16,LED Desk Lamp,Electronics,7.0,949.19,South,Net Banking,CUST1533
+ORD1817,2025-01-15,Table Lamp,Furniture,5.0,1205.96,North,Cash,CUST1079
+ORD1483,2025-03-09,Bluetooth Speaker,Electronics,2.0,1497.85,East,Credit Card,CUST1511
+ORD1158,2025-01-03,Desk Organizer,Stationery,8.0,377.0,South,Credit Card,CUST1452
+ORD1315,2025-01-29,Table Lamp,Furniture,4.0,1083.64,East,Debit Card,CUST1155
+ORD1256,2025-01-22,Desk Organizer,Stationery,6.0,318.82,North,Debit Card,CUST1894
+ORD1007,2025-06-10,LED Desk Lamp,Electronics,6.0,912.91,North,Credit Card,CUST1677
+ORD2374,2025-03-21,Yoga Mat,Fitness,4.0,799.4,West,Cash,CUST1206
+ORD1384,2025-05-09,Wireless Mouse,Electronics,7.0,635.68,South,Credit Card,CUST1940
+ORD1177,2025-07-10,Yoga Mat,Fitness,3.0,860.59,North,Debit Card,CUST1630
+ORD1851,2025-06-08,Table Lamp,Furniture,5.0,1091.83,North,Credit Card,CUST1397
+ORD1314,2025-06-08,Table Lamp,Furniture,7.0,1114.54,South,Credit Card,CUST1586
+ORD1357,2025-07-15,Table Lamp,Furniture,2.0,1086.83,West,Net Banking,CUST1784
+ORD1298,2025-02-10,Notebook Set,Stationery,6.0,161.93,East,UPI,CUST1781
+ORD1455,2025-02-03,Yoga Mat,Fitness,8.0,845.07,North,Credit Card,CUST1101
+ORD1543,2025-03-16,Desk Organizer,Stationery,2.0,347.16,,Cash,CUST1803
+ORD1662,2025-03-17,Water Bottle,Accessories,4.0,325.93,West,Net Banking,CUST1843
+ORD1596,2025-02-12,LED Desk Lamp,Electronics,2.0,957.23,East,Cash,CUST1466
+ORD1868,2025-05-01,Yoga Mat,Fitness,6.0,748.5,West,Debit Card,CUST1485
+ORD1928,2025-02-27,Notebook Set,Stationery,3.0,159.76,East,Cash,CUST1401
+ORD1527,2025-05-05,Desk Organizer,Stationery,6.0,326.26,East,UPI,CUST1681
+ORD2273,2025-06-14,Bluetooth Speaker,Electronics,2.0,1406.79,North,Net Banking,CUST1534
+ORD1159,2025-05-31,Water Bottle,Accessories,5.0,307.31,West,Cash,CUST1467
+ORD2298,2025-07-28,Wireless Mouse,Electronics,8.0,619.64,East,Debit Card,CUST1847
+ORD1360,2025-05-19,Notebook Set,Stationery,4.0,156.58,North,UPI,CUST1515
+ORD2340,2025-04-05,Notebook Set,Stationery,6.0,153.8,West,Credit Card,CUST1121
+ORD1202,2025-05-27,LED Desk Lamp,Electronics,4.0,954.24,North,Net Banking,CUST1951
+ORD2263,2025-01-29,Backpack,Accessories,2.0,1265.12,East,Credit Card,CUST1535
+ORD1797,2025-03-18,Desk Organizer,Stationery,4.0,339.26,North,UPI,CUST1996
+ORD1112,2025-07-10,Bluetooth Speaker,Electronics,3.0,1406.52,West,Cash,CUST1741
+ORD2237,2025-04-04,Desk Organizer,Stationery,6.0,371.28,North,UPI,CUST1449
+ORD1307,2025-05-09,Backpack,Accessories,1.0,1180.87,South,Cash,CUST1823
+ORD1948,2025-05-05,Table Lamp,Furniture,7.0,1312.9,South,Credit Card,CUST1140
+ORD1422,2025-04-17,LED Desk Lamp,Electronics,2.0,829.97,,Cash,CUST1319
+ORD2018,2025-03-02,Bluetooth Speaker,Electronics,7.0,1609.89,West,UPI,CUST1075
+ORD2125,2025-03-10,Backpack,Accessories,1.0,1349.91,North,Cash,CUST1386
+ORD1971,2025-04-11,Yoga Mat,Fitness,8.0,842.65,South,Net Banking,CUST1788
+ORD1459,2025-06-10,Backpack,Accessories,0.0,1357.71,South,Debit Card,CUST1671
+ORD2428,2025-04-27,Yoga Mat,Fitness,3.0,759.74,South,Credit Card,CUST1119
+ORD2314,2025-03-27,Desk Organizer,Stationery,5.0,331.35,West,UPI,CUST1981
+ORD1762,2025-05-24,Water Bottle,Accessories,5.0,289.68,West,Credit Card,CUST1359
+ORD2047,2025-05-14,Notebook Set,Stationery,6.0,146.37,East,Cash,CUST1497
+ORD1945,2025-04-14,Backpack,Accessories,7.0,1282.16,South,UPI,CUST1486
+ORD1449,2025-02-02,Desk Organizer,Stationery,3.0,331.53,East,UPI,CUST1779
+ORD2189,2025-06-23,Coffee Mug,Kitchen,2.0,214.42,North,Cash,CUST1697
+ORD1679,2025-02-06,USB-C Cable,Electronics,2.0,226.18,West,,CUST1560
+ORD1692,2025-05-10,Wireless Mouse,Electronics,1.0,636.45,West,Net Banking,CUST1217
+ORD2320,2025-07-12,Yoga Mat,Fitness,7.0,756.35,North,Debit Card,CUST1393
+ORD1080,2025-05-05,USB-C Cable,Electronics,4.0,237.77,North,Cash,CUST1240
+ORD2329,2025-07-29,USB-C Cable,Electronics,1.0,245.12,South,UPI,CUST1655
+ORD2015,2025-01-14,Table Lamp,Furniture,3.0,1117.0,North,Debit Card,CUST1527
+ORD1802,2025-02-09,Desk Organizer,Stationery,2.0,322.88,South,Cash,CUST1571
+ORD1215,2025-01-20,Coffee Mug,Kitchen,6.0,202.02,West,Debit Card,CUST1296
+ORD1982,2025-06-15,Office Chair,Furniture,8.0,4607.51,West,UPI,CUST1628
+ORD1030,2025-03-02,USB-C Cable,Electronics,5.0,257.42,South,Net Banking,CUST1135
+ORD1242,2025-03-03,USB-C Cable,Electronics,5.0,272.19,West,UPI,CUST1376
+ORD2192,2025-06-02,LED Desk Lamp,Electronics,1.0,868.33,North,Net Banking,CUST1973
+ORD1641,2025-06-03,Desk Organizer,Stationery,6.0,349.29,West,Debit Card,CUST1623
+ORD1696,2025-02-10,Coffee Mug,Kitchen,3.0,201.64,South,Debit Card,CUST1961
+ORD1209,2025-05-05,Backpack,Accessories,8.0,1276.7,South,Net Banking,CUST1116
+ORD1856,2025-07-10,Backpack,Accessories,3.0,1173.87,East,Cash,CUST1640
+ORD1770,2025-06-19,Notebook Set,Stationery,5.0,162.13,North,UPI,CUST1170
+ORD1752,2025-06-28,Bluetooth Speaker,Electronics,8.0,1443.73,North,Credit Card,CUST1690
+ORD2324,2025-05-27,Notebook Set,Stationery,3.0,153.09,East,Cash,CUST1431
+ORD1435,2025-04-09,Yoga Mat,Fitness,7.0,748.78,South,Net Banking,CUST1170
+ORD2332,2025-04-27,Bluetooth Speaker,Electronics,1.0,1497.78,North,UPI,CUST1709
+ORD2424,2025-01-10,Backpack,Accessories,2.0,1269.08,South,UPI,CUST1781
+ORD2171,2025-03-09,LED Desk Lamp,Electronics,4.0,920.16,South,Cash,CUST1596
+ORD2387,2025-01-22,Bluetooth Speaker,Electronics,4.0,1563.03,West,UPI,CUST1482
+ORD1688,2025-03-05,Water Bottle,Accessories,4.0,311.69,West,Cash,CUST1860
+ORD1551,2025-07-24,USB-C Cable,Electronics,3.0,230.09,West,UPI,CUST1971
+ORD1544,2025-05-01,Backpack,Accessories,8.0,1401.59,East,Credit Card,CUST1657
+ORD2364,2025-04-19,Backpack,Accessories,7.0,1367.29,East,Cash,CUST1601
+ORD2353,2025-01-07,Backpack,Accessories,3.0,1283.85,East,Credit Card,CUST1367
+ORD1888,2025-01-02,Yoga Mat,Fitness,4.0,,East,Net Banking,CUST1643
+ORD2022,2025-06-27,Wireless Mouse,Electronics,1.0,572.72,North,Debit Card,CUST1469
+ORD1403,2025-04-01,Bluetooth Speaker,Electronics,2.0,1528.06,East,Debit Card,CUST1012
+ORD2264,2025-01-31,Office Chair,Furniture,6.0,4803.96,East,Cash,CUST1301
+ORD1362,2025-06-19,Office Chair,Furniture,4.0,4912.58,East,Credit Card,CUST1570
+ORD1271,2025-06-23,Table Lamp,Furniture,3.0,1307.58,South,Net Banking,CUST1694
+ORD1466,2025-06-07,Backpack,Accessories,8.0,1392.52,North,Credit Card,CUST1143
+ORD2357,2025-02-05,Yoga Mat,Fitness,5.0,720.46,East,Cash,CUST1842
+ORD2117,2025-05-06,Desk Organizer,Stationery,8.0,347.32,South,Net Banking,CUST1057
+ORD1964,2025-06-02,Office Chair,Furniture,3.0,5336.55,West,Debit Card,CUST1243
+ORD1277,2025-03-15,Yoga Mat,Fitness,8.0,751.09,South,Credit Card,CUST1462
+ORD2355,2025-04-03,Bluetooth Speaker,Electronics,1.0,1512.8,East,UPI,CUST1691
+ORD2442,2025-07-22,USB-C Cable,Electronics,1.0,242.81,East,Debit Card,CUST1484
+ORD2389,2025-05-17,Bluetooth Speaker,Electronics,7.0,1399.6,North,Cash,CUST1157
+ORD1441,2025-05-21,Coffee Mug,Kitchen,2.0,201.89,East,Net Banking,CUST1843
+ORD2016,2025-01-19,Bluetooth Speaker,Electronics,4.0,1565.38,East,Debit Card,CUST1203
+ORD1786,2025-01-29,LED Desk Lamp,Electronics,8.0,920.17,East,Net Banking,CUST1503
+ORD2168,2025-02-22,Table Lamp,Furniture,-1.0,1305.96,East,Cash,CUST1764
+ORD1442,2025-05-19,Water Bottle,Accessories,1.0,314.55,West,Net Banking,CUST1223
+ORD1299,2025-05-08,Office Chair,Furniture,8.0,4997.76,East,Debit Card,CUST1023
+ORD1967,2025-05-02,LED Desk Lamp,Electronics,4.0,877.39,West,Debit Card,CUST1268
+ORD1375,2025-04-05,Notebook Set,Stationery,6.0,146.44,South,UPI,CUST1016
+ORD2039,2025-05-19,Notebook Set,Stationery,2.0,153.44,South,UPI,CUST1328
+ORD2494,2025-03-08,LED Desk Lamp,Electronics,7.0,925.93,South,Debit Card,CUST1467
+ORD1960,2025-05-05,LED Desk Lamp,Electronics,2.0,831.9,North,Cash,CUST1258
+ORD2027,2025-02-08,Yoga Mat,Fitness,1.0,785.86,North,Credit Card,CUST1481
+ORD2017,2025-06-23,Table Lamp,Furniture,6.0,1134.27,North,Cash,CUST1233
+ORD1472,2025-01-04,USB-C Cable,Electronics,6.0,270.61, south ,Debit Card,CUST1881
+ORD2396,2025-07-28,Bluetooth Speaker,Electronics,6.0,1445.84,South,Net Banking,CUST1212
+ORD1563,2025-07-10,LED Desk Lamp,Electronics,8.0,948.27,East,Cash,CUST1746
+ORD2379,2025-06-08,Office Chair,Furniture,7.0,4956.84,South,Net Banking,CUST1097
+ORD1750,2025-03-13,USB-C Cable,Electronics,7.0,235.16,South,Credit Card,CUST1538
+ORD1388,2025-04-08,Backpack,Accessories,7.0,1312.69,North,Credit Card,CUST1719
+ORD1022,2025-02-09,Notebook Set,Stationery,6.0,156.82,North,Net Banking,CUST1331
+ORD2349,2025-03-20,Notebook Set,Stationery,7.0,160.58,South,Cash,CUST1260
+ORD1124,2025-06-29,LED Desk Lamp,Electronics,8.0,821.9,South,Cash,CUST1806
+ORD1423,2025-04-27,Water Bottle,Accessories,4.0,300.26,East,Debit Card,
+ORD1773,2025-02-09,Yoga Mat,Fitness,2.0,823.74,West,Cash,CUST1234
+ORD2365,2025-05-26,Wireless Mouse,Electronics,1.0,649.57,South,Cash,CUST1581
+ORD1470,2025-06-05,USB-C Cable,Electronics,4.0,261.34,East,Credit Card,CUST1802
+ORD1721,2025-07-01,Wireless Mouse,Electronics,1.0,608.34,North,Net Banking,CUST1007
+ORD2044,2025-01-29,LED Desk Lamp,Electronics,3.0,898.34,South,Net Banking,CUST1974
+ORD2279,2025-03-15,Office Chair,Furniture,3.0,4681.73,North,UPI,CUST1314
+ORD1142,2025-04-09,Office Chair,Furniture,4.0,5420.78,South,Credit Card,CUST1282
+ORD1050,2025-03-14,LED Desk Lamp,Electronics,4.0,938.13,South,Cash,CUST1517
+ORD2419,2025-04-20,Backpack,Accessories,2.0,1366.25,East,Net Banking,
+ORD2229,2025-02-23,Notebook Set,Stationery,1.0,163.88,East,Cash,CUST1365
+ORD1623,2025-06-23,Desk Organizer,Stationery,7.0,324.48,North,Credit Card,CUST1658
+ORD2142,2025-01-15,Wireless Mouse,Electronics,2.0,576.71,East,Credit Card,CUST1922
+ORD1081,2025-03-27,LED Desk Lamp,Electronics,6.0,969.67,North,UPI,CUST1154
+ORD1703,2025-07-29,Water Bottle,Accessories,6.0,298.21,West,Net Banking,CUST1006
+ORD1482,2025-07-17,Bluetooth Speaker,Electronics,1.0,1449.54,West,Cash,CUST1536
+ORD1321,2025-06-26,Notebook Set,Stationery,8.0,143.55,East,Net Banking,CUST1956
+ORD2269,2025-06-05,Table Lamp,Furniture,3.0,1261.82,West,Debit Card,CUST1683
+ORD1505,2025-04-26,Backpack,Accessories,4.0,1193.71,North,UPI,CUST1124
+ORD2445,2025-07-26,Water Bottle,Accessories,2.0,269.28,West,UPI,CUST1026
+ORD1841,2025-04-12,Coffee Mug,Kitchen,4.0,201.43,South,UPI,CUST1073
+ORD1066,2025-06-20,Bluetooth Speaker,Electronics,6.0,1535.92,North,Cash,CUST1519
+ORD2300,2025-02-19,Water Bottle,Accessories,8.0,269.66,North,Cash,CUST1696
+ORD2193,2025-03-25,Coffee Mug,Kitchen,3.0,187.51,North,Cash,CUST1330
+ORD2346,2025-05-13,Coffee Mug,Kitchen,8.0,186.22,East,Net Banking,CUST1711
+ORD1801,2025-01-24,Coffee Mug,Kitchen,6.0,216.15,North,Credit Card,CUST1364
+ORD2463,2025-05-18,Wireless Mouse,Electronics,8.0,576.95,East,UPI,CUST1511
+ORD1031,2025-05-27,Table Lamp,Furniture,8.0,1137.37,West,Debit Card,CUST1194
+ORD1795,2025-05-02,Notebook Set,Stationery,7.0,154.41,East,Cash,CUST1162
+ORD1417,2025-05-10,USB-C Cable,Electronics,7.0,251.17,East,Net Banking,CUST1608
+ORD1632,2025-01-30,Coffee Mug,Kitchen,2.0,209.32,South,Credit Card,CUST1349
+ORD2264,2025-01-31,Office Chair,Furniture,6.0,4803.96,East,Cash,CUST1301
+ORD2090,2025-07-23,Wireless Mouse,Electronics,1.0,595.3,East,Credit Card,CUST1067
+ORD1064,2025-04-22,Water Bottle,Accessories,2.0,292.13,South,Cash,CUST1045
+ORD1139,2025-01-04,USB-C Cable,Electronics,7.0,228.74, north ,Debit Card,CUST1969
+ORD2224,2025-03-01,Coffee Mug,Kitchen,4.0,202.49,East,Net Banking,CUST1873
+ORD2218,2025-01-27,Wireless Mouse,Electronics,7.0,656.44,West,Net Banking,CUST1610
+ORD1077,2025-02-01,Notebook Set,Stationery,8.0,138.07,West,Net Banking,CUST1572
+ORD1491,2025-03-16,Notebook Set,Stationery,5.0,156.14,South,Debit Card,CUST1377
+ORD2074,2025-06-26,Coffee Mug,Kitchen,4.0,180.23,East,Debit Card,CUST1993
+ORD2153,2025-04-24,Notebook Set,Stationery,7.0,134.33,West,Cash,CUST1308
+ORD1532,2025-07-30,Bluetooth Speaker,Electronics,6.0,1483.0,East,UPI,CUST1255
+ORD1065,2025-04-22,Table Lamp,Furniture,1.0,1203.78,South,Cash,CUST1441
+ORD2281,2025-01-15,Table Lamp,Furniture,5.0,,East,UPI,CUST1422
+ORD1935,2025-05-20,Water Bottle,Accessories,4.0,279.45,North,Net Banking,CUST1856
+ORD2276,2025-05-29,Table Lamp,Furniture,8.0,1099.4,East,Debit Card,CUST1603
+ORD1296,2025-01-28,USB-C Cable,Electronics,6.0,236.14,North,Cash,CUST1460
+ORD1591,2025-02-23,LED Desk Lamp,Electronics,3.0,912.71,South,Debit Card,CUST1804
+ORD1419,2025-01-12,Yoga Mat,Fitness,7.0,873.6,East,Debit Card,CUST1108
+ORD1767,2025-02-28,Water Bottle,Accessories,6.0,288.05,East,Cash,CUST1619
+ORD1892,2025-06-06,LED Desk Lamp,Electronics,3.0,982.84,East,Credit Card,CUST1095
+ORD1438,2025-05-07,Desk Organizer,Stationery,7.0,361.89,West,Debit Card,CUST1500
+ORD1261,2025-01-10,Coffee Mug,Kitchen,5.0,187.12,South,Credit Card,CUST1323
+ORD2409,2025-06-14,Water Bottle,Accessories,1.0,300.25, west ,Cash,CUST1768
+ORD1724,2025-04-19,USB-C Cable,Electronics,6.0,254.57,West,UPI,CUST1423
+ORD2408,2025-06-03,Table Lamp,Furniture,8.0,1256.37,East,UPI,CUST1284
+ORD1281,2025-01-07,Coffee Mug,Kitchen,6.0,201.15,East,Debit Card,CUST1822
+ORD1626,2025-05-21,Notebook Set,Stationery,7.0,146.12,South,Credit Card,CUST1470
+ORD2403,2025-07-14,Desk Organizer,Stationery,6.0,382.37,West,Credit Card,CUST1343
+ORD2069,2025-06-13,Backpack,Accessories,5.0,1276.79,West,Net Banking,CUST1773
+ORD2472,2025-02-11,Desk Organizer,Stationery,3.0,344.94,West,Cash,CUST1918
+ORD1188,2025-05-12,Water Bottle,Accessories,2.0,296.13,South,Net Banking,CUST1044
+ORD2236,2025-07-01,LED Desk Lamp,Electronics,8.0,946.1,West,Credit Card,CUST1157
+ORD1251,2025-05-01,Table Lamp,Furniture,8.0,1226.66,North,Credit Card,CUST1262
+ORD1583,2025-06-18,Office Chair,Furniture,3.0,4792.83,West,UPI,CUST1758
+ORD2051,2025-02-14,Office Chair,Furniture,3.0,4660.32,North,Credit Card,CUST1324
+ORD2376,2025-05-15,Notebook Set,Stationery,6.0,161.23, west ,Debit Card,CUST1473
+ORD1993,2025-02-19,Wireless Mouse,Electronics,1.0,625.32,South,Debit Card,CUST1398
+ORD1514,2025-04-02,Table Lamp,Furniture,8.0,1209.68,West,Cash,CUST1934
+ORD1951,2025-02-17,Notebook Set,Stationery,7.0,152.12,West,UPI,CUST1729
+ORD1976,2025-07-01,Bluetooth Speaker,Electronics,2.0,1375.0,South,Debit Card,CUST1672
+ORD2438,2025-04-23,Backpack,Accessories,2.0,1394.7,South,Credit Card,CUST1300
+ORD1706,2025-06-19,Bluetooth Speaker,Electronics,4.0,1473.4,East,Credit Card,CUST1493
+ORD1487,2025-05-22,Wireless Mouse,Electronics,7.0,566.0,South,Debit Card,CUST1937
+ORD1663,2025-01-03,Desk Organizer,Stationery,2.0,360.79,West,UPI,CUST1926
+ORD2152,2025-03-21,Backpack,Accessories,6.0,1403.74,North,Net Banking,CUST1887
+ORD2160,2025-06-10,Notebook Set,Stationery,5.0,143.45,North,Credit Card,CUST1161
+ORD1273,2025-01-09,Yoga Mat,Fitness,3.0,827.61,East,Cash,CUST1454
+ORD1685,2025-03-02,Desk Organizer,Stationery,2.0,334.0,North,UPI,CUST1325
+ORD2139,2025-03-04,Wireless Mouse,Electronics,5.0,594.71,West,Debit Card,CUST1662
+ORD2265,2025-01-08,Coffee Mug,Kitchen,3.0,184.76,West,Credit Card,CUST1959
+ORD1877,2025-06-26,Wireless Mouse,Electronics,3.0,594.64,West,Credit Card,CUST1739
+ORD2180,2025-04-21,Water Bottle,Accessories,5.0,323.09,East,Net Banking,CUST1849
+ORD2371,2025-05-13,Water Bottle,Accessories,1.0,279.38,West,Debit Card,CUST1160
+ORD1448,2025-05-12,LED Desk Lamp,Electronics,2.0,833.48,West,Credit Card,CUST1283
+ORD1411,2025-04-12,Office Chair,Furniture,6.0,4790.49,West,Net Banking,CUST1800
+ORD1458,2025-01-24,LED Desk Lamp,Electronics,6.0,854.12,East,UPI,CUST1053
+ORD1376,2025-05-22,LED Desk Lamp,Electronics,7.0,862.18,South,Cash,CUST1235
+ORD2328,2025-04-05,LED Desk Lamp,Electronics,1.0,902.18,South,Credit Card,CUST1243
+ORD1667,2025-06-16,LED Desk Lamp,Electronics,4.0,866.69,North,Credit Card,CUST1171
+ORD2260,2025-05-06,Table Lamp,Furniture,7.0,1276.65,South,Net Banking,CUST1130
+ORD1149,2025-01-04,Coffee Mug,Kitchen,3.0,195.42,South,Credit Card,CUST1480
+ORD1956,2025-03-21,Yoga Mat,Fitness,1.0,863.49,North,Debit Card,CUST1464
+ORD2216,2025-02-09,Office Chair,Furniture,8.0,5462.77,West,Credit Card,CUST1880
+ORD1733,2025-01-10,Desk Organizer,Stationery,6.0,330.8,North,UPI,CUST1088
+ORD1218,2025-04-13,Yoga Mat,Fitness,2.0,782.34,East,Cash,CUST1226
+ORD1239,2025-05-10,Bluetooth Speaker,Electronics,1.0,1547.55,South,Net Banking,CUST1385
+ORD2150,2025-07-03,Coffee Mug,Kitchen,6.0,211.79,North,Net Banking,CUST1035
+ORD1867,2025-06-25,Notebook Set,Stationery,1.0,144.81,West,UPI,CUST1514
+ORD1725,2025-07-20,USB-C Cable,Electronics,8.0,233.0,West,Cash,CUST1314
+ORD1192,2025-05-21,Yoga Mat,Fitness,6.0,779.97,East,Debit Card,CUST1517
+ORD1792,2025-02-19,Office Chair,Furniture,5.0,5316.19,North,Credit Card,CUST1997
+ORD1191,2025-03-24,Bluetooth Speaker,Electronics,3.0,1368.79,East,Net Banking,CUST1648
+ORD1961,2025-06-07,Office Chair,Furniture,5.0,4774.26,East,Credit Card,CUST1759
+ORD2215,2025-03-19,Bluetooth Speaker,Electronics,8.0,1393.52,West,Credit Card,CUST1119
+ORD2360,2025-02-23,Table Lamp,Furniture,8.0,1135.15,West,Debit Card,CUST1348
+ORD1644,2025-07-02,Water Bottle,Accessories,4.0,281.11,East,Cash,CUST1943
+ORD1359,2025-06-30,Desk Organizer,Stationery,1.0,331.18,North,Debit Card,CUST1449
+ORD1986,2025-03-26,Table Lamp,Furniture,7.0,1216.9,West,Debit Card,CUST1446
+ORD2474,2025-05-28,Table Lamp,Furniture,2.0,1241.76,South,Debit Card,CUST1973
+ORD1016,2025-05-11,Office Chair,Furniture,8.0,4589.99,North,Credit Card,CUST1156
+ORD1333,2025-06-14,Coffee Mug,Kitchen,8.0,214.49,South,Net Banking,CUST1479
+ORD2225,2025-06-18,Table Lamp,Furniture,8.0,1110.55,East,Debit Card,CUST1982
+ORD1582,2025-02-26,Table Lamp,Furniture,8.0,1296.49,East,Net Banking,CUST1307
+ORD2443,2025-06-04,Water Bottle,Accessories,7.0,289.23,East,Cash,CUST1836
+ORD2087,2025-02-26,Bluetooth Speaker,Electronics,3.0,1605.97,South,UPI,CUST1314
+ORD1839,2025-07-10,Yoga Mat,Fitness,1.0,806.69,East,Credit Card,CUST1408
+ORD1627,2025-07-25,Coffee Mug,Kitchen,8.0,182.6,West,Debit Card,CUST1323
+ORD2413,2025-01-14,Notebook Set,Stationery,3.0,162.06,South,Credit Card,CUST1177
+ORD1323,2025-07-17,Water Bottle,Accessories,3.0,286.47,East,Credit Card,CUST1354
+ORD1824,2025-03-24,Table Lamp,Furniture,4.0,1214.14,South,Debit Card,CUST1784
+ORD2245,2025-06-29,Desk Organizer,Stationery,5.0,364.46,East,Cash,CUST1008
+ORD1631,2025-04-27,Notebook Set,Stationery,6.0,150.79,West,Cash,CUST1733
+ORD2106,2025-07-05,Backpack,Accessories,8.0,1241.46,East,Debit Card,CUST1364
+ORD2195,2025-02-15,LED Desk Lamp,Electronics,4.0,982.62,West,Credit Card,CUST1021
+ORD1778,2025-02-28,USB-C Cable,Electronics,2.0,246.1,East,Debit Card,CUST1266
+ORD2053,2025-01-09,Table Lamp,Furniture,6.0,1313.63,South,Cash,CUST1459
+ORD1939,2025-07-27,Desk Organizer,Stationery,1.0,366.94,South,Debit Card,CUST1544
+ORD1855,2025-01-06,Table Lamp,Furniture,1.0,1138.42,East,Cash,CUST1501
+ORD1437,2025-01-03,Water Bottle,Accessories,8.0,277.26, west ,Net Banking,CUST1517
+ORD1119,2025-05-23,Bluetooth Speaker,Electronics,7.0,1530.87,South,Net Banking,CUST1389
+ORD2073,2025-06-13,LED Desk Lamp,Electronics,8.0,831.43,East,Debit Card,CUST1183
+ORD2182,2025-07-15,Coffee Mug,Kitchen,3.0,201.22,West,Credit Card,CUST1193
+ORD1790,2025-04-06,Coffee Mug,Kitchen,8.0,206.84,North,Cash,CUST1082
+ORD1341,2025-07-17,Table Lamp,Furniture,5.0,1244.63,East,Cash,CUST1629
+ORD1815,2025-06-05,Notebook Set,Stationery,2.0,134.49,South,Debit Card,CUST1950
+ORD1002,2025-03-01,Notebook Set,Stationery,1.0,150.83,West,UPI,CUST1459
+ORD1229,2025-04-26,Wireless Mouse,Electronics,2.0,636.25,East,Credit Card,CUST1516
+ORD2140,2025-02-21,Wireless Mouse,Electronics,3.0,,North,Cash,CUST1808
+ORD2464,2025-04-27,Desk Organizer,Stationery,3.0,356.08,South,Credit Card,CUST1613
+ORD1076,2025-02-26,Backpack,Accessories,3.0,1378.01,West,Credit Card,
+ORD2407,2025-03-17,Coffee Mug,Kitchen,4.0,185.14,South,Credit Card,CUST1243
+ORD1900,2025-04-17,Yoga Mat,Fitness,7.0,726.37,East,Net Banking,CUST1825
+ORD2227,2025-06-26,LED Desk Lamp,Electronics,2.0,929.04,South,UPI,CUST1204
+ORD1371,2025-02-24,Wireless Mouse,Electronics,4.0,654.36,North,Debit Card,CUST1936
+ORD1180,2025-04-02,Desk Organizer,Stationery,1.0,341.89, south ,Credit Card,CUST1971
+ORD2261,2025-07-02,Coffee Mug,Kitchen,8.0,184.25,North,UPI,CUST1466
+ORD2495,2025-03-07,Bluetooth Speaker,Electronics,7.0,1630.97,South,Net Banking,CUST1208
+ORD1941,2025-03-19,Desk Organizer,Stationery,7.0,364.2,East,Credit Card,CUST1596
+ORD1577,2025-05-24,Water Bottle,Accessories,5.0,286.95,North,Debit Card,CUST1065
+ORD1978,2025-06-19,Coffee Mug,Kitchen,2.0,204.52,East,Debit Card,CUST1708
+ORD1819,2025-02-19,Notebook Set,Stationery,4.0,151.09,South,Net Banking,CUST1767
+ORD2132,2025-04-21,LED Desk Lamp,Electronics,6.0,845.07,West,Cash,CUST1639
+ORD2295,2025-06-03,Coffee Mug,Kitchen,6.0,179.73,South,Credit Card,CUST1623
+ORD2308,2025-03-12,Backpack,Accessories,2.0,1345.81,West,Debit Card,CUST1370
+ORD2299,2025-04-02,Yoga Mat,Fitness,7.0,747.41,North,Credit Card,CUST1473
+ORD1062,2025-05-11,Desk Organizer,Stationery,7.0,361.53,East,Credit Card,CUST1118
+ORD1589,2025-04-15,Water Bottle,Accessories,8.0,277.66,South,Credit Card,CUST1499
+ORD1886,2025-05-08,Coffee Mug,Kitchen,1.0,203.3,West,UPI,CUST1222
+ORD1968,2025-05-16,Office Chair,Furniture,7.0,4510.96,West,Debit Card,CUST1694
+ORD2138,2025-03-07,Office Chair,Furniture,4.0,4904.88,North,UPI,CUST1196
+ORD1785,2025-05-17,Table Lamp,Furniture,5.0,1178.11,North,UPI,CUST1139
+ORD2164,2025-01-06,Wireless Mouse,Electronics,4.0,647.74,West,UPI,CUST1268
+ORD1311,2025-04-05,Wireless Mouse,Electronics,6.0,619.82,West,Net Banking,CUST1315
+ORD2483,2025-07-02,Bluetooth Speaker,Electronics,3.0,1470.62,North,Debit Card,CUST1569
+ORD1301,2025-01-13,Wireless Mouse,Electronics,5.0,598.39,West,Cash,CUST1549
+ORD1722,2025-06-17,Backpack,Accessories,4.0,1347.78,East,Debit Card,CUST1370
+ORD1689,2025-02-04,Water Bottle,Accessories,6.0,321.6,West,Debit Card,CUST1367
+ORD1812,2025-06-18,USB-C Cable,Electronics,2.0,226.28,South,UPI,CUST1894
+ORD1037,2025-05-04,Coffee Mug,Kitchen,4.0,213.51,North,UPI,CUST1388
+ORD1353,2025-04-25,Backpack,Accessories,7.0,1266.69,South,Cash,CUST1121
+ORD2399,2025-04-28,Notebook Set,Stationery,4.0,136.07,East,Net Banking,CUST1377
+ORD1714,2025-01-18,Yoga Mat,Fitness,4.0,779.54,South,Credit Card,CUST1016
+ORD1980,2025-04-08,Wireless Mouse,Electronics,7.0,578.95,North,Cash,CUST1978
+ORD1236,2025-06-21,Office Chair,Furniture,2.0,5145.0,West,Net Banking,CUST1370
+ORD2028,2025-07-16,Table Lamp,Furniture,1.0,1181.18,West,Debit Card,CUST1829
+ORD1499,2025-03-25,Table Lamp,Furniture,6.0,1187.67,South,Credit Card,CUST1966
+ORD2257,2025-07-02,Office Chair,Furniture,7.0,5327.37,North,Credit Card,CUST1063
+ORD1794,2025-02-20,Wireless Mouse,Electronics,8.0,627.19, north ,Net Banking,CUST1681
+ORD2158,2025-07-28,Table Lamp,Furniture,6.0,1187.79,North,Credit Card,CUST1656
+ORD1990,2025-01-21,Water Bottle,Accessories,8.0,314.58,East,UPI,CUST1180
+ORD2252,2025-03-08,Water Bottle,Accessories,6.0,276.5,North,Debit Card,CUST1305
+ORD1934,2025-04-09,Coffee Mug,Kitchen,2.0,192.66,West,Debit Card,CUST1580
+ORD1387,2025-02-27,Table Lamp,Furniture,5.0,1243.13,North,Credit Card,CUST1095
+ORD1390,2025-05-16,Bluetooth Speaker,Electronics,1.0,1417.98,West,Cash,CUST1047
+ORD1743,2025-01-03,USB-C Cable,Electronics,5.0,236.46,North,Debit Card,CUST1689
+ORD1352,2025-04-15,LED Desk Lamp,Electronics,0.0,947.36,West,Cash,CUST1912
+ORD1235,2025-07-01,Yoga Mat,Fitness,2.0,768.57,West,Cash,CUST1832
+ORD2291,2025-02-24,Desk Organizer,Stationery,5.0,317.27,North,Cash,CUST1091
+ORD1480,2025-06-18,Table Lamp,Furniture,3.0,1107.74,South,Credit Card,CUST1167
+ORD1567,2025-01-15,Notebook Set,Stationery,4.0,135.09, north ,Cash,CUST1721
+ORD2275,2025-02-16,USB-C Cable,Electronics,1.0,237.79,South,UPI,CUST1849
+ORD2411,2025-03-05,Desk Organizer,Stationery,4.0,356.54,West,Net Banking,CUST1329
+ORD2338,2025-02-15,Wireless Mouse,Electronics,5.0,648.2,North,UPI,CUST1388
+ORD1120,2025-04-24,Coffee Mug,Kitchen,5.0,213.33,West,Cash,CUST1582
+ORD2305,2025-05-26,LED Desk Lamp,Electronics,4.0,967.5,East,UPI,CUST1868
+ORD2024,2025-06-06,Desk Organizer,Stationery,3.0,354.45,South,Credit Card,CUST1421
+ORD1926,2025-07-02,Notebook Set,Stationery,2.0,163.12,West,Net Banking,CUST1134
+ORD1515,2025-05-09,Yoga Mat,Fitness,6.0,781.16,South,Credit Card,CUST1326
+ORD1223,2025-06-09,Desk Organizer,Stationery,6.0,374.42,East,UPI,CUST1450
+ORD2118,2025-03-09,Backpack,Accessories,8.0,1322.65,West,Net Banking,CUST1692
+ORD1613,2025-01-03,Wireless Mouse,Electronics,3.0,618.57,South,Cash,CUST1366
+ORD1843,2025-04-19,Backpack,Accessories,6.0,1259.59,East,Cash,CUST1608
+ORD1052,2025-03-27,Wireless Mouse,Electronics,3.0,615.43, east ,UPI,CUST1759
+ORD2395,2025-07-24,Bluetooth Speaker,Electronics,3.0,1566.16,North,Debit Card,CUST1524
+ORD1485,2025-01-30,Table Lamp,Furniture,4.0,1256.74, north ,Credit Card,CUST1879
+ORD2447,2025-06-25,Yoga Mat,Fitness,8.0,801.38,South,Credit Card,CUST1653
+ORD1818,2025-05-13,Notebook Set,Stationery,2.0,137.12,South,Net Banking,CUST1394
+ORD1155,2025-05-16,Notebook Set,Stationery,7.0,150.96,South,UPI,CUST1179
+ORD1600,2025-02-01,Office Chair,Furniture,6.0,5210.07,North,Debit Card,CUST1897
+ORD2242,2025-07-17,Office Chair,Furniture,1.0,5216.58,North,Credit Card,CUST1346
+ORD1248,2025-01-07,Water Bottle,Accessories,7.0,272.28,East,UPI,CUST1395
+ORD1761,2025-05-02,LED Desk Lamp,Electronics,2.0,889.98,East,Cash,CUST1369
+ORD2383,2025-04-15,Water Bottle,Accessories,8.0,278.96,South,Net Banking,CUST1045
+ORD1542,2025-03-17,Bluetooth Speaker,Electronics,8.0,1408.96,North,UPI,CUST1174
+ORD1793,2025-03-05,Table Lamp,Furniture,7.0,1264.04,West,UPI,CUST1755
+ORD2102,2025-07-25,Bluetooth Speaker,Electronics,8.0,1630.64,East,UPI,CUST1013
+ORD1628,2025-05-08,Bluetooth Speaker,Electronics,1.0,1379.87,West,Credit Card,CUST1570
+ORD1150,2025-03-28,LED Desk Lamp,Electronics,7.0,925.94,East,Net Banking,CUST1389
+ORD1291,2025-06-14,Wireless Mouse,Electronics,5.0,617.11,West,Net Banking,CUST1654
+ORD1381,2025-03-01,Desk Organizer,Stationery,2.0,363.46,North,UPI,CUST1517
+ORD1686,2025-04-26,Coffee Mug,Kitchen,6.0,203.63,East,Net Banking,CUST1156
+ORD1897,2025-03-08,Water Bottle,Accessories,6.0,324.54,West,Net Banking,CUST1746
+ORD1854,2025-05-17,Yoga Mat,Fitness,2.0,748.89,West,Net Banking,CUST1948
+ORD2071,2025-07-30,Wireless Mouse,Electronics,5.0,639.08,East,Debit Card,CUST1572
+ORD2220,2025-07-05,Yoga Mat,Fitness,8.0,756.16,North,Net Banking,CUST1019
+ORD2173,2025-06-27,Water Bottle,Accessories,7.0,310.17,West,Debit Card,CUST1753
+ORD2280,2025-06-23,Backpack,Accessories,3.0,1184.41,East,UPI,CUST1027
+ORD1891,2025-01-13,Bluetooth Speaker,Electronics,2.0,1474.1,South,UPI,CUST1688
+ORD2126,2025-04-10,Yoga Mat,Fitness,6.0,810.59,West,Credit Card,CUST1707
+ORD1615,2025-02-16,Water Bottle,Accessories,2.0,293.07,West,Cash,CUST1855
+ORD1154,2025-07-23,Water Bottle,Accessories,1.0,286.64,East,Debit Card,CUST1149
+ORD1685,2025-03-02,Desk Organizer,Stationery,2.0,334.0,North,UPI,CUST1325
+ORD1322,2025-03-12,Table Lamp,Furniture,5.0,1108.33, west ,Debit Card,CUST1838
+ORD2170,2025-07-06,LED Desk Lamp,Electronics,4.0,884.32,West,UPI,CUST1029
+ORD1082,2025-04-09,Notebook Set,Stationery,3.0,155.15,North,Debit Card,CUST1417
+ORD1512,2025-05-21,Backpack,Accessories,8.0,1184.94,East,Debit Card,CUST1140
+ORD2449,2025-05-05,Yoga Mat,Fitness,7.0,837.22,North,Cash,CUST1438
+ORD1929,2025-06-29,Office Chair,Furniture,6.0,5287.72,East,Debit Card,CUST1499
+ORD2238,2025-07-16,Backpack,Accessories,1.0,1232.83,West,Cash,CUST1293
+ORD1010,2025-06-29,LED Desk Lamp,Electronics,2.0,918.62,South,Net Banking,CUST1746
+ORD1831,2025-07-07,Notebook Set,Stationery,2.0,155.66,West,UPI,CUST1499
+ORD1032,2025-01-25,Bluetooth Speaker,Electronics,7.0,1455.32,West,Debit Card,CUST1884
+ORD1413,2025-02-21,Yoga Mat,Fitness,3.0,828.04,,Debit Card,CUST1965
+ORD1580,2025-07-04,Office Chair,Furniture,1.0,5154.37,East,Cash,CUST1928
+ORD2172,2025-06-15,Desk Organizer,Stationery,8.0,320.08,West,UPI,CUST1892
+ORD2440,2025-05-03,Notebook Set,Stationery,8.0,154.15,North,Credit Card,CUST1062
+ORD1614,2025-06-09,Coffee Mug,Kitchen,5.0,214.06,North,Cash,CUST1834
+ORD2045,2025-01-06,Desk Organizer,Stationery,5.0,343.17,South,Debit Card,CUST1355
+ORD2014,2025-03-06,Backpack,Accessories,6.0,1329.35,West,Credit Card,CUST1106
+ORD1089,2025-02-04,Backpack,Accessories,8.0,1216.31,East,Debit Card,CUST1335
+ORD2286,2025-06-22,Yoga Mat,Fitness,2.0,758.46,South,Cash,CUST1581
+ORD1601,2025-03-07,Desk Organizer,Stationery,1.0,355.56,North,Credit Card,CUST1669
+ORD1133,2025-03-26,Office Chair,Furniture,7.0,5192.63,East,Debit Card,CUST1833
+ORD1555,2025-05-14,LED Desk Lamp,Electronics,8.0,974.01,North,Net Banking,CUST1601
+ORD2031,2025-06-15,Notebook Set,Stationery,2.0,134.57,East,UPI,CUST1720
+ORD2186,2025-01-24,Water Bottle,Accessories,4.0,321.02,South,UPI,CUST1767
+ORD1320,2025-03-18,USB-C Cable,Electronics,4.0,270.99,East,Cash,CUST1721
+ORD2336,2025-01-12,Water Bottle,Accessories,,281.01,East,UPI,CUST1224
+ORD2313,2025-01-25,Desk Organizer,Stationery,1.0,347.6,North,Net Banking,CUST1816
+ORD1634,2025-05-07,Office Chair,Furniture,3.0,5320.77,West,Credit Card,CUST1260
+ORD1552,2025-02-24,Office Chair,Furniture,4.0,4625.26,West,Credit Card,CUST1699
+ORD2055,2025-07-16,Coffee Mug,Kitchen,3.0,216.82,East,UPI,CUST1004
+ORD2179,2025-03-22,Bluetooth Speaker,Electronics,1.0,1642.46,West,Cash,CUST1765
+ORD1796,2025-07-06,Desk Organizer,Stationery,1.0,366.08,North,Cash,CUST1492
+ORD2262,2025-01-09,Coffee Mug,Kitchen,3.0,216.67,East,Credit Card,CUST1616
+ORD2293,2025-05-10,Yoga Mat,Fitness,6.0,860.35,East,Cash,CUST1770
+ORD1174,2025-01-17,Desk Organizer,Stationery,8.0,377.58,East,Debit Card,CUST1119
+ORD1766,2025-04-18,Water Bottle,Accessories,7.0,319.86,North,Credit Card,CUST1165
+ORD1245,2025-05-04,Desk Organizer,Stationery,6.0,352.81,North,Net Banking,CUST1871
+ORD2080,2025-05-20,Office Chair,Furniture,6.0,,East,Cash,CUST1701
+ORD2312,2025-03-05,Bluetooth Speaker,Electronics,4.0,1398.41,East,Credit Card,CUST1641
+ORD1145,2025-03-27,Water Bottle,Accessories,7.0,296.33,East,UPI,CUST1714
+ORD1090,2025-04-27,Notebook Set,Stationery,6.0,144.16,West,Cash,CUST1770
+ORD1682,2025-02-19,LED Desk Lamp,Electronics,2.0,841.71,North,Net Banking,CUST1472
+ORD1310,2025-05-11,USB-C Cable,Electronics,8.0,259.4,East,Debit Card,CUST1835
+ORD1093,2025-06-09,Wireless Mouse,Electronics,3.0,567.68,West,Credit Card,CUST1577
+ORD2188,2025-05-15,Wireless Mouse,Electronics,3.0,588.99,North,UPI,CUST1786
+ORD1924,2025-01-13,Desk Organizer,Stationery,2.0,340.88,North,Debit Card,CUST1401
+ORD2279,2025-03-15,Office Chair,Furniture,3.0,4681.73,North,UPI,CUST1314
+ORD2035,2025-04-20,LED Desk Lamp,Electronics,5.0,934.61,South,Credit Card,CUST1635
+ORD1243,2025-05-27,Desk Organizer,Stationery,8.0,346.33,East,Debit Card,CUST1514
+ORD2111,2025-06-09,Yoga Mat,Fitness,2.0,840.58,West,Debit Card,CUST1206
+ORD1214,2025-05-09,Notebook Set,Stationery,6.0,136.25,North,Debit Card,CUST1019
+ORD1998,2025-01-12,Yoga Mat,Fitness,4.0,831.17,,Credit Card,CUST1176
+ORD1853,2025-04-09,Desk Organizer,Stationery,4.0,382.49,North,Cash,CUST1496
+ORD1425,2025-01-30,Table Lamp,Furniture,1.0,1282.73,North,UPI,CUST1952
+ORD2331,2025-03-26,Table Lamp,Furniture,6.0,1226.84,West,Cash,CUST1166
+ORD1226,2025-03-15,Water Bottle,Accessories,2.0,307.65,North,Net Banking,CUST1608
+ORD2296,2025-01-02,Coffee Mug,Kitchen,1.0,205.87,West,Net Banking,
+ORD1000,2025-01-29,Desk Organizer,Stationery,1.0,365.86,South,UPI,CUST1142
+ORD1401,2025-01-02,Bluetooth Speaker,Electronics,5.0,1482.43,East,Credit Card,CUST1135
+ORD2103,2025-05-06,Desk Organizer,Stationery,2.0,341.77,North,Credit Card,CUST1146
+ORD1084,2025-06-28,Yoga Mat,Fitness,1.0,856.01,West,Debit Card,CUST1006
+ORD1162,2025-04-12,Desk Organizer,Stationery,5.0,314.67,North,Net Banking,CUST1763
+ORD1114,2025-02-15,Water Bottle,Accessories,5.0,269.95,South,Cash,CUST1046
+ORD1670,2025-02-09,Desk Organizer,Stationery,1.0,346.15,East,Credit Card,CUST1089
+ORD2156,2025-05-01,Coffee Mug,Kitchen,7.0,215.97,East,Debit Card,CUST1897
+ORD1889,2025-07-29,USB-C Cable,Electronics,4.0,226.54,South,Credit Card,CUST1668
+ORD1625,2025-03-24,Coffee Mug,Kitchen,4.0,192.27,East,Credit Card,CUST1519
+ORD2482,2025-05-04,Backpack,Accessories,7.0,1246.61,South,Credit Card,CUST1333
+ORD1952,2025-03-10,USB-C Cable,Electronics,7.0,270.24,East,Credit Card,CUST1038
+ORD1807,2025-05-22,Yoga Mat,Fitness,3.0,730.11,South,Debit Card,CUST1302
+ORD1258,2025-03-30,Bluetooth Speaker,Electronics,4.0,1568.84,North,Net Banking,CUST1752
+ORD1624,2025-05-10,Office Chair,Furniture,8.0,5350.8,South,Credit Card,CUST1769
+ORD1826,2025-01-01,Backpack,Accessories,0.0,1424.47,North,Net Banking,CUST1138
+ORD1234,2025-06-19,Yoga Mat,Fitness,3.0,865.6,East,Debit Card,CUST1132
+ORD1135,2025-05-12,Backpack,Accessories,1.0,1339.96,West,Debit Card,CUST1055
+ORD1616,2025-06-26,Backpack,Accessories,8.0,1376.91,South,Credit Card,CUST1135
+ORD1836,2025-02-08,Yoga Mat,Fitness,6.0,799.38,South,UPI,CUST1051
+ORD1842,2025-07-18,LED Desk Lamp,Electronics,7.0,867.25,North,Credit Card,CUST1687
+ORD1959,2025-05-29,Coffee Mug,Kitchen,3.0,201.9,East,Net Banking,CUST1027
+ORD1592,2025-02-03,Bluetooth Speaker,Electronics,7.0,1539.02,West,Debit Card,CUST1988
+ORD1343,2025-06-29,Backpack,Accessories,8.0,1365.86,South,UPI,CUST1696
+ORD2251,2025-07-05,LED Desk Lamp,Electronics,7.0,986.55,North,Credit Card,CUST1861
+ORD1293,2025-04-14,Desk Organizer,Stationery,5.0,345.76,North,UPI,CUST1450
+ORD1364,2025-03-30,Wireless Mouse,Electronics,7.0,633.24,East,Debit Card,CUST1418
+ORD1178,2025-03-13,Backpack,Accessories,1.0,1348.43,South,Debit Card,CUST1455
+ORD1659,2025-05-21,Yoga Mat,Fitness,6.0,730.75,East,Net Banking,CUST1225
+ORD1996,2025-07-26,Notebook Set,Stationery,8.0,162.11,South,Net Banking,CUST1238
+ORD1014,2025-04-28,Desk Organizer,Stationery,3.0,332.59,South,Net Banking,CUST1551
+ORD2110,2025-02-15,Wireless Mouse,Electronics,7.0,611.53,East,UPI,CUST1310
+ORD1165,2025-06-15,Desk Organizer,Stationery,1.0,335.66,West,Credit Card,CUST1593
+ORD2423,2025-04-12,Backpack,Accessories,6.0,1268.87,East,Net Banking,CUST1072
+ORD1059,2025-07-21,Office Chair,Furniture,2.0,4881.57,North,Debit Card,CUST1227
+ORD1709,2025-01-11,USB-C Cable,Electronics,3.0,226.88,East,UPI,CUST1529
+ORD1676,2025-01-08,Desk Organizer,Stationery,8.0,325.01,South,UPI,CUST1764
+ORD1780,2025-05-17,Coffee Mug,Kitchen,1.0,206.47,West,Debit Card,CUST1306
+ORD1424,2025-07-04,Coffee Mug,Kitchen,8.0,191.79,East,Credit Card,CUST1829
+ORD1292,2025-05-08,Wireless Mouse,Electronics,5.0,616.0,East,Debit Card,CUST1250
+ORD2065,2025-03-20,Water Bottle,Accessories,8.0,321.38,North,UPI,CUST1745
+ORD2354,2025-03-17,Bluetooth Speaker,Electronics,2.0,1584.7,South,Credit Card,CUST1121
+ORD1329,2025-07-13,Notebook Set,Stationery,5.0,143.67,North,Credit Card,CUST1667
+ORD1429,2025-02-24,Table Lamp,Furniture,4.0,1145.85,North,Net Banking,CUST1104
+ORD2012,2025-01-29,Notebook Set,Stationery,3.0,154.52,West,Debit Card,CUST1180
+ORD1079,2025-07-10,Office Chair,Furniture,8.0,4949.08,South,Cash,CUST1784
+ORD2052,2025-02-02,Yoga Mat,Fitness,8.0,760.71,South,UPI,CUST1575
+ORD1937,2025-04-14,LED Desk Lamp,Electronics,2.0,916.67,West,Cash,CUST1506
+ORD1834,2025-04-17,Backpack,Accessories,2.0,1395.07,South,Net Banking,CUST1950
+ORD1749,2025-03-22,Yoga Mat,Fitness,8.0,862.62,East,Debit Card,CUST1187
+ORD1890,2025-01-10,Water Bottle,Accessories,3.0,320.16,East,Cash,CUST1942
+ORD1254,2025-06-02,Coffee Mug,Kitchen,1.0,204.25,South,UPI,CUST1298
+ORD2453,2025-05-19,Desk Organizer,Stationery,4.0,331.09,South,Credit Card,CUST1108
+ORD2481,2025-05-27,Yoga Mat,Fitness,8.0,762.84,North,Net Banking,CUST1185
+ORD2108,2025-01-28,Coffee Mug,Kitchen,2.0,189.08,West,UPI,CUST1643
+ORD1136,2025-05-13,Notebook Set,Stationery,6.0,152.65,West,Debit Card,CUST1778
+ORD2135,2025-01-16,Desk Organizer,Stationery,4.0,339.53,South,UPI,CUST1154
+ORD1852,2025-03-11,Desk Organizer,Stationery,6.0,374.43,North,Cash,CUST1888
+ORD1723,2025-02-09,Bluetooth Speaker,Electronics,7.0,1544.44, east ,Cash,CUST1875
+ORD1859,2025-01-23,Office Chair,Furniture,7.0,5019.71,South,Debit Card,CUST1246
+ORD1969,2025-05-16,Water Bottle,Accessories,1.0,274.92,East,Debit Card,CUST1625
+ORD1496,2025-04-06,Table Lamp,Furniture,8.0,1312.8,North,Net Banking,CUST1097
+ORD1950,2025-05-11,Coffee Mug,Kitchen,7.0,201.07,West,Debit Card,CUST1363
+ORD1805,2025-04-23,Table Lamp,Furniture,5.0,1209.25,West,UPI,CUST1580
+ORD1129,2025-06-04,Water Bottle,Accessories,5.0,270.65,South,Net Banking,CUST1601
+ORD1337,2025-02-17,Bluetooth Speaker,Electronics,3.0,1492.24,South,Credit Card,CUST1267
+ORD1181,2025-01-24,Coffee Mug,Kitchen,4.0,204.64,North,Credit Card,CUST1805
+ORD1608,2025-03-26,Coffee Mug,Kitchen,4.0,179.21,North,Credit Card,CUST1855
+ORD2148,2025-05-31,LED Desk Lamp,Electronics,1.0,897.27,East,Credit Card,CUST1324
+ORD1195,2025-04-13,Coffee Mug,Kitchen,7.0,208.14,East,Debit Card,CUST1320
+ORD2497,2025-06-15,Desk Organizer,Stationery,3.0,343.39,South,Cash,CUST1806
+ORD1909,2025-05-27,Office Chair,Furniture,7.0,4686.44,North,Cash,CUST1722
+ORD1584,2025-07-05,LED Desk Lamp,Electronics,3.0,979.36,East,Credit Card,CUST1227
+ORD1103,2025-01-23,Notebook Set,Stationery,5.0,160.37,South,Debit Card,CUST1583
+ORD2401,2025-07-22,USB-C Cable,Electronics,3.0,236.65,North,Net Banking,CUST1332
+ORD2469,2025-03-28,Backpack,Accessories,7.0,1345.22,East,Debit Card,CUST1400
+ORD1719,2025-07-25,Yoga Mat,Fitness,2.0,787.09,East,Debit Card,CUST1784
+ORD1884,2025-03-21,LED Desk Lamp,Electronics,8.0,861.02,South,Credit Card,CUST1920
+ORD1776,2025-03-11,USB-C Cable,Electronics,8.0,230.83,South,Net Banking,CUST1611
+ORD1849,2025-07-12,USB-C Cable,Electronics,5.0,251.43,South,Credit Card,CUST1385
+ORD1894,2025-01-17,USB-C Cable,Electronics,5.0,247.55,North,Cash,CUST1337
+ORD1227,2025-04-09,USB-C Cable,Electronics,8.0,253.0,North,Debit Card,CUST1930
+ORD2425,2025-03-07,Backpack,Accessories,6.0,1301.5,West,Cash,CUST1713
+ORD1126,2025-02-06,LED Desk Lamp,Electronics,2.0,819.82,East,Net Banking,CUST1766
+ORD1405,2025-06-25,Office Chair,Furniture,7.0,4668.57,East,Cash,CUST1274
+ORD1775,2025-01-08,Office Chair,Furniture,1.0,5162.52,East,Debit Card,CUST1478
+ORD1821,2025-04-20,Desk Organizer,Stationery,2.0,325.74,South,Net Banking,CUST1411
+ORD1711,2025-06-05,Coffee Mug,Kitchen,8.0,213.62,South,UPI,CUST1850
+ORD2429,2025-06-14,Bluetooth Speaker,Electronics,7.0,1468.32,North,Net Banking,CUST1931
+ORD2060,2025-03-25,Bluetooth Speaker,Electronics,1.0,1531.42,South,Net Banking,CUST1539
+ORD2163,2025-04-17,Bluetooth Speaker,Electronics,6.0,1403.63,West,Net Banking,CUST1229
+ORD1303,2025-04-04,Backpack,Accessories,1.0,1273.17,South,Cash,CUST1566
+ORD1267,2025-05-20,Office Chair,Furniture,5.0,4820.25, north ,Cash,CUST1676
+ORD1545,2025-04-10,USB-C Cable,Electronics,3.0,242.58,West,Cash,CUST1191
+ORD1212,2025-02-24,LED Desk Lamp,Electronics,3.0,946.5,East,Cash,CUST1122
+ORD1896,2025-06-11,Table Lamp,Furniture,2.0,1195.08,East,Debit Card,CUST1623
+ORD2222,2025-01-30,Coffee Mug,Kitchen,8.0,203.88,East,Debit Card,CUST1714
+ORD1916,2025-05-14,Table Lamp,Furniture,2.0,1080.09,North,Net Banking,CUST1892
+ORD1675,2025-03-19,Desk Organizer,Stationery,2.0,333.75,West,Debit Card,CUST1404
+ORD1814,2025-04-10,Desk Organizer,Stationery,8.0,350.8,East,Credit Card,CUST1375
+ORD1342,2025-02-26,Notebook Set,Stationery,3.0,148.35,West,Net Banking,CUST1382
+ORD1549,2025-07-29,Backpack,Accessories,7.0,1419.97,West,Net Banking,CUST1902
+ORD2214,2025-06-16,Coffee Mug,Kitchen,3.0,204.96,West,Net Banking,CUST1195
+ORD1966,2025-07-13,LED Desk Lamp,Electronics,2.0,818.54,West,Debit Card,CUST1487
+ORD2230,2025-02-10,Desk Organizer,Stationery,3.0,371.89,North,Credit Card,CUST1345
+ORD1295,2025-03-23,Table Lamp,Furniture,6.0,1312.99,South,Cash,CUST1527
+ORD1695,2025-01-03,USB-C Cable,Electronics,4.0,266.33,South,Net Banking,CUST1143
+ORD1073,2025-02-07,Notebook Set,Stationery,1.0,135.48,West,Net Banking,CUST1870
+ORD1605,2025-05-11,Bluetooth Speaker,Electronics,2.0,1433.86,North,Debit Card,CUST1203
+ORD1104,2025-06-21,Yoga Mat,Fitness,7.0,772.86,West,Cash,CUST1186
+ORD1645,2025-02-03,Desk Organizer,Stationery,3.0,349.27,East,Credit Card,CUST1779
+ORD2485,2025-01-31,Desk Organizer,Stationery,3.0,374.27,South,Credit Card,CUST1568
+ORD2040,2025-03-10,Water Bottle,Accessories,7.0,285.67,North,Cash,CUST1353
+ORD1439,2025-01-22,Office Chair,Furniture,1.0,5294.82,,Cash,CUST1033
+ORD2019,2025-05-30,Coffee Mug,Kitchen,8.0,181.26,West,UPI,CUST1221
+ORD1091,2025-03-06,Backpack,Accessories,2.0,1291.29,North,Cash,CUST1229
+ORD2112,2025-06-19,LED Desk Lamp,Electronics,8.0,897.25,East,Net Banking,CUST1351
+ORD2327,2025-07-18,USB-C Cable,Electronics,3.0,231.44,East,Net Banking,CUST1351
+ORD1908,2025-03-13,Office Chair,Furniture,1.0,4838.18,West,Net Banking,CUST1862
+ORD1102,2025-07-18,USB-C Cable,Electronics,8.0,247.25, east ,Cash,CUST1872
+ORD1238,2025-02-19,Coffee Mug,Kitchen,4.0,218.9,South,Credit Card,CUST1302
+ORD2333,2025-04-30,Notebook Set,Stationery,4.0,141.22,East,Debit Card,CUST1210
+ORD1942,2025-06-06,Wireless Mouse,Electronics,7.0,640.65,East,Credit Card,CUST1378
+ORD1938,2025-06-19,Desk Organizer,Stationery,1.0,320.42,South,Net Banking,CUST1924
+ORD2181,2025-05-13,LED Desk Lamp,Electronics,6.0,887.45,South,Cash,CUST1754
+ORD1005,2025-01-25,Backpack,Accessories,6.0,1389.28,East,Credit Card,CUST1747
+ORD2375,2025-02-06,Wireless Mouse,Electronics,8.0,546.76,West,Net Banking,CUST1826
+ORD1965,2025-04-23,Desk Organizer,Stationery,3.0,328.82,East,Credit Card,CUST1657
+ORD1018,2025-05-16,Coffee Mug,Kitchen,5.0,217.75,North,Credit Card,CUST1698
+ORD1121,2025-01-16,Yoga Mat,Fitness,2.0,870.52,South,UPI,CUST1270
+ORD1661,2025-04-14,USB-C Cable,Electronics,2.0,241.5,South,Cash,CUST1339
+ORD2278,2025-03-23,USB-C Cable,Electronics,7.0,236.91,North,Credit Card,CUST1554
+ORD1274,2025-05-27,Bluetooth Speaker,Electronics,3.0,1507.83, west ,Cash,CUST1665
+ORD1433,2025-06-22,Bluetooth Speaker,Electronics,3.0,1442.99,South,,CUST1119
+ORD1811,2025-03-14,Yoga Mat,Fitness,6.0,784.59,East,Credit Card,CUST1098
+ORD2416,2025-03-05,Yoga Mat,Fitness,5.0,764.7,West,UPI,CUST1278
+ORD2430,2025-04-19,Notebook Set,Stationery,3.0,158.83,East,Cash,CUST1512
+ORD1181,2025-01-24,Coffee Mug,Kitchen,4.0,204.64,North,Credit Card,CUST1805
+ORD1184,2025-07-21,Office Chair,Furniture,1.0,4776.32,South,UPI,CUST1553
+ORD1406,2025-02-07,Coffee Mug,Kitchen,2.0,185.75,East,Debit Card,CUST1306
+ORD1865,2025-07-10,Coffee Mug,Kitchen,5.0,185.15,South,Credit Card,CUST1134
+ORD1520,2025-01-08,Yoga Mat,Fitness,6.0,870.52,South,Net Banking,CUST1971
+ORD2003,2025-07-15,Notebook Set,Stationery,1.0,151.77,East,Credit Card,CUST1123
+ORD1380,2025-07-29,Bluetooth Speaker,Electronics,1.0,1578.25,West,UPI,CUST1862
+ORD1427,2025-03-01,Coffee Mug,Kitchen,7.0,204.16,South,Debit Card,CUST1405
+ORD1078,2025-03-23,Yoga Mat,Fitness,8.0,817.0,West,Net Banking,CUST1456
+ORD2009,2025-06-02,Wireless Mouse,Electronics,3.0,625.02,North,Cash,CUST1356
+ORD2493,2025-02-25,USB-C Cable,Electronics,6.0,237.91,West,Credit Card,CUST1563
+ORD1607,2025-03-17,Backpack,Accessories,3.0,1179.34,West,UPI,
+ORD2348,2025-02-23,Wireless Mouse,Electronics,4.0,646.31,West,UPI,CUST1405
+ORD2165,2025-02-13,Table Lamp,Furniture,1.0,1175.27,West,Net Banking,CUST1266
+ORD2381,2025-05-18,Desk Organizer,Stationery,5.0,360.63,North,UPI,CUST1930
+ORD2057,2025-07-13,LED Desk Lamp,Electronics,3.0,952.86,West,Cash,CUST1705
+ORD2091,2025-06-20,LED Desk Lamp,Electronics,1.0,944.77,North,Net Banking,CUST1210
+ORD2101,2025-04-15,USB-C Cable,Electronics,5.0,273.15,West,UPI,CUST1877
+ORD2129,2025-03-09,LED Desk Lamp,Electronics,1.0,862.56,West,UPI,CUST1639
+ORD2235,2025-06-11,Office Chair,Furniture,2.0,5369.8, east ,UPI,CUST1745
+ORD2334,2025-02-17,Backpack,Accessories,1.0,1263.36,North,Cash,CUST1030
+ORD1958,2025-06-27,Wireless Mouse,Electronics,5.0,626.19,East,Credit Card,CUST1644
+ORD1559,2025-01-10,Coffee Mug,Kitchen,3.0,190.06,South,Net Banking,CUST1623
+ORD1846,2025-02-09,Water Bottle,Accessories,2.0,275.82,North,UPI,CUST1971
+ORD1690,2025-05-05,LED Desk Lamp,Electronics,2.0,840.7,North,Cash,CUST1879
+ORD2467,2025-02-23,Table Lamp,Furniture,4.0,1247.06,North,UPI,CUST1877
+ORD2414,2025-05-21,Yoga Mat,Fitness,4.0,756.86,North,Debit Card,CUST1742
+ORD1436,2025-03-15,Coffee Mug,Kitchen,3.0,186.55,West,Net Banking,CUST1054
+ORD1490,2025-03-14,Coffee Mug,Kitchen,5.0,192.13,West,,CUST1377
+ORD1101,2025-04-22,Office Chair,Furniture,3.0,5232.75,East,Net Banking,CUST1827
+ORD2392,2025-04-24,LED Desk Lamp,Electronics,1.0,916.66,North,Debit Card,CUST1785
+ORD1069,2025-04-14,LED Desk Lamp,Electronics,1.0,863.74,South,Debit Card,CUST1804
+ORD1808,2025-05-19,LED Desk Lamp,Electronics,6.0,890.74,West,UPI,CUST1904
+ORD2184,2025-04-30,Table Lamp,Furniture,7.0,1106.92,West,Credit Card,CUST1452
+ORD1011,2025-02-11,Notebook Set,Stationery,8.0,145.41,South,Cash,CUST1863
+ORD1144,2025-05-29,Yoga Mat,Fitness,8.0,857.37, west ,Net Banking,CUST1495
+ORD1917,2025-03-27,Bluetooth Speaker,Electronics,8.0,1615.68,North,Net Banking,CUST1784
+ORD1639,2025-05-22,Wireless Mouse,Electronics,7.0,639.59,West,Net Banking,CUST1799
+ORD1176,2025-05-18,Notebook Set,Stationery,3.0,145.68,East,Net Banking,CUST1429
+ORD1994,2025-07-22,Bluetooth Speaker,Electronics,5.0,1498.91,West,Credit Card,CUST1037
+ORD1440,2025-02-27,LED Desk Lamp,Electronics,5.0,839.34,West,Net Banking,CUST1760
+ORD1521,2025-07-27,Notebook Set,Stationery,8.0,150.26,South,Debit Card,CUST1038
+ORD2499,2025-05-17,Bluetooth Speaker,Electronics,2.0,1554.16,West,Credit Card,CUST1337
+ORD2004,2025-02-06,LED Desk Lamp,Electronics,7.0,839.32,East,Net Banking,CUST1168
+ORD2255,2025-07-02,Office Chair,Furniture,7.0,5018.66,South,Credit Card,CUST1335
+ORD2234,2025-01-28,Bluetooth Speaker,Electronics,,1596.02, north ,Net Banking,CUST1107
+ORD1143,2025-03-29,Backpack,Accessories,5.0,1382.28,East,Cash,CUST1857
+ORD1753,2025-04-08,Notebook Set,Stationery,2.0,143.8,East,UPI,CUST1561
+ORD1519,2025-04-01,Backpack,Accessories,3.0,1214.85,East,Cash,CUST1935
+ORD2322,2025-07-20,Desk Organizer,Stationery,1.0,345.79,East,Net Banking,CUST1197
+ORD1822,2025-03-28,USB-C Cable,Electronics,3.0,250.69,West,Cash,CUST1924
+ORD1428,2025-07-08,Wireless Mouse,Electronics,4.0,592.96,West,,CUST1004
+ORD1612,2025-04-03,LED Desk Lamp,Electronics,6.0,885.69,North,Credit Card,CUST1871
+ORD2032,2025-05-27,Coffee Mug,Kitchen,1.0,217.96,West,UPI,CUST1895
+ORD1156,2025-06-06,Bluetooth Speaker,Electronics,7.0,1534.89,South,Debit Card,CUST1934
+ORD1539,2025-02-12,Desk Organizer,Stationery,7.0,325.07,North,Cash,CUST1210
+ORD2290,2025-05-04,Wireless Mouse,Electronics,5.0,610.72,West,Cash,CUST1862
+ORD1461,2025-02-27,Yoga Mat,Fitness,8.0,720.58,East,Credit Card,CUST1880
+ORD1576,2025-06-09,USB-C Cable,Electronics,7.0,253.21,North,Net Banking,CUST1678
+ORD1255,2025-01-01,Backpack,Accessories,6.0,1231.6,West,UPI,CUST1680
+ORD1979,2025-07-17,Desk Organizer,Stationery,6.0,332.06,North,Cash,CUST1795
+ORD2185,2025-07-01,Water Bottle,Accessories,8.0,296.47,North,UPI,CUST1126
+ORD2006,2025-01-21,Coffee Mug,Kitchen,1.0,179.39,North,Net Banking,CUST1908
+ORD1560,2025-06-27,Desk Organizer,Stationery,7.0,316.81,East,UPI,CUST1050
+ORD1208,2025-07-13,Office Chair,Furniture,1.0,5172.93,East,Debit Card,CUST1677
+ORD1910,2025-07-01,Water Bottle,Accessories,1.0,285.34,North,Debit Card,CUST1898
+ORD2311,2025-05-27,Bluetooth Speaker,Electronics,1.0,1645.98,South,Debit Card,CUST1980
+ORD1001,2025-01-27,Table Lamp,Furniture,2.0,1220.7,North,Credit Card,CUST1095
+ORD1269,2025-03-31,Coffee Mug,Kitchen,8.0,180.79,East,Net Banking,CUST1445
+ORD1265,2025-03-28,Backpack,Accessories,3.0,1298.01,West,Cash,CUST1946
+ORD1914,2025-07-07,Coffee Mug,Kitchen,5.0,209.97,South,Credit Card,CUST1841
+ORD1230,2025-02-14,Desk Organizer,Stationery,1.0,331.39,West,Debit Card,CUST1536
+ORD2496,2025-06-11,Bluetooth Speaker,Electronics,5.0,1647.51,South,Cash,CUST1577
+ORD2119,2025-07-16,Water Bottle,Accessories,5.0,288.26,North,Net Banking,CUST1046
+ORD2491,2025-02-23,USB-C Cable,Electronics,2.0,257.1,,UPI,CUST1037
+ORD1864,2025-07-06,Office Chair,Furniture,1.0,5264.38,West,Debit Card,
+ORD2066,2025-07-09,Coffee Mug,Kitchen,7.0,211.09,East,UPI,CUST1825
+ORD1873,2025-07-10,Yoga Mat,Fitness,1.0,802.3,West,Debit Card,CUST1846
+ORD2358,2025-07-20,Water Bottle,Accessories,7.0,325.66,North,Debit Card,CUST1669
+ORD1398,2025-04-21,Backpack,Accessories,3.0,1345.68,West,Credit Card,CUST1790
+ORD2384,2025-01-07,Coffee Mug,Kitchen,2.0,204.53,West,Debit Card,CUST1351
+ORD1045,2025-03-18,Desk Organizer,Stationery,8.0,336.17,North,Credit Card,CUST1469
+ORD1161,2025-04-02,Yoga Mat,Fitness,5.0,877.73,East,Credit Card,CUST1849
+ORD1991,2025-01-11,USB-C Cable,Electronics,7.0,257.0,East,Debit Card,CUST1917
+ORD1727,2025-02-11,Table Lamp,Furniture,2.0,1130.53,West,Cash,CUST1820
+ORD1629,2025-01-01,USB-C Cable,Electronics,2.0,263.53,East,Net Banking,CUST1575
+ORD1288,2025-06-12,Notebook Set,Stationery,5.0,137.83,East,Net Banking,CUST1546
+ORD2059,2025-01-07,LED Desk Lamp,Electronics,7.0,920.13,South,Debit Card,CUST1365
+ORD2479,2025-07-29,Coffee Mug,Kitchen,7.0,190.05,West,Cash,CUST1011
+ORD1575,2025-03-31,Backpack,Accessories,8.0,1234.57,West,Cash,CUST1693
+ORD1850,2025-06-19,Yoga Mat,Fitness,1.0,759.92,North,Cash,CUST1205
+ORD2339,2025-07-21,Desk Organizer,Stationery,2.0,337.72,South,Cash,CUST1467
+ORD1911,2025-04-06,Notebook Set,Stationery,8.0,158.82,East,UPI,CUST1537
+ORD2254,2025-06-10,Table Lamp,Furniture,4.0,1163.11,East,Net Banking,CUST1688
+ORD2377,2025-01-11,Yoga Mat,Fitness,2.0,765.11,West,Cash,CUST1717
+ORD1932,2025-07-29,Backpack,Accessories,2.0,1253.76,North,Cash,CUST1545
+ORD2100,2025-01-30,Coffee Mug,Kitchen,7.0,190.39,East,Debit Card,CUST1231
+ORD2207,2025-04-11,Office Chair,Furniture,1.0,4582.37,East,Cash,CUST1601
+ORD1247,2025-02-07,USB-C Cable,Electronics,7.0,228.67,South,Debit Card,CUST1905
+ORD1476,2025-01-22,Backpack,Accessories,3.0,1241.19,East,Credit Card,CUST1523
+ORD1085,2025-03-18,Water Bottle,Accessories,7.0,320.14,West,Net Banking,CUST1765
+ORD1469,2025-07-04,Yoga Mat,Fitness,5.0,843.58,North,Cash,CUST1210
+ORD1225,2025-05-10,Water Bottle,Accessories,2.0,287.66,West,Credit Card,CUST1058
+ORD1774,2025-07-08,Notebook Set,Stationery,5.0,147.31,South,UPI,CUST1539
+ORD1331,2025-01-10,Office Chair,Furniture,7.0,5286.9,South,Cash,CUST1897
+ORD1233,2025-05-23,Bluetooth Speaker,Electronics,7.0,1434.29,South,Cash,CUST1083
+ORD1588,2025-04-08,Desk Organizer,Stationery,5.0,342.93,South,UPI,CUST1205
+ORD1475,2025-07-22,Wireless Mouse,Electronics,7.0,599.79, west ,Debit Card,CUST1718
+ORD2284,2025-03-23,Wireless Mouse,Electronics,8.0,,North,Debit Card,CUST1029
+ORD1599,2025-07-06,Notebook Set,Stationery,3.0,140.39,North,Net Banking,CUST1516
+ORD1421,2025-04-29,Backpack,Accessories,3.0,1258.72,North,Debit Card,CUST1107
+ORD1182,2025-03-04,Water Bottle,Accessories,3.0,316.16,South,Credit Card,CUST1849
+ORD1988,2025-07-29,Table Lamp,Furniture,8.0,1108.16,East,Cash,CUST1698
+ORD2000,2025-06-01,Office Chair,Furniture,2.0,5316.74,North,Credit Card,CUST1509
+ORD2356,2025-03-06,Water Bottle,Accessories,5.0,313.66,East,UPI,CUST1722
+ORD1049,2025-01-27,Desk Organizer,Stationery,3.0,,North,Net Banking,CUST1159
+ORD2421,2025-04-07,LED Desk Lamp,Electronics,8.0,822.03,South,Debit Card,CUST1200
+ORD2029,2025-07-30,Table Lamp,Furniture,2.0,1187.6,South,Credit Card,CUST1571
+ORD1529,2025-01-01,Table Lamp,Furniture,7.0,1283.11,North,UPI,CUST1616
+ORD2258,2025-02-03,Backpack,Accessories,8.0,1224.9,North,Cash,CUST1693
+ORD1486,2025-03-04,Wireless Mouse,Electronics,1.0,595.62,West,UPI,CUST1183
+ORD2477,2025-06-10,Office Chair,Furniture,7.0,4744.05,North,UPI,CUST1406
+ORD1497,2025-02-04,USB-C Cable,Electronics,7.0,227.83,North,Debit Card,CUST1678
+ORD1106,2025-06-29,Yoga Mat,Fitness,5.0,807.92,South,Credit Card,CUST1247
+ORD1443,2025-01-27,Backpack,Accessories,4.0,1246.44,North,Debit Card,CUST1269
+ORD1646,2025-05-24,Water Bottle,Accessories,8.0,303.95,West,Net Banking,CUST1292
+ORD2036,2025-07-08,Water Bottle,Accessories,1.0,299.88,East,Credit Card,CUST1113
+ORD1726,2025-03-30,Yoga Mat,Fitness,7.0,836.68,North,UPI,CUST1457
+ORD1190,2025-04-20,Backpack,Accessories,2.0,1296.47,West,Credit Card,CUST1920
+ORD1282,2025-02-03,USB-C Cable,Electronics,2.0,227.37,West,Debit Card,CUST1538
+ORD1029,2025-01-19,Wireless Mouse,Electronics,1.0,566.53,North,Cash,CUST1072
+ORD1169,2025-07-25,Water Bottle,Accessories,2.0,297.11,North,UPI,CUST1772
+ORD2001,2025-07-24,Yoga Mat,Fitness,4.0,729.18,South,Debit Card,CUST1345
+ORD2204,2025-03-17,Backpack,Accessories,1.0,1312.25,North,Net Banking,CUST1110
+ORD1100,2025-07-30,Backpack,Accessories,8.0,1196.52,East,Debit Card,CUST1724
+ORD1197,2025-01-24,Bluetooth Speaker,Electronics,7.0,1378.05,East,UPI,CUST1569
+ORD1495,2025-02-06,Wireless Mouse,Electronics,5.0,550.24,South,Net Banking,CUST1422
+ORD1647,2025-07-26,Backpack,Accessories,1.0,1304.91,North,Debit Card,CUST1148
+ORD1987,2025-07-06,Backpack,Accessories,2.0,1309.43,North,Debit Card,CUST1977
+ORD1044,2025-07-03,Desk Organizer,Stationery,6.0,330.76, west ,UPI,CUST1687
+ORD1710,2025-06-03,Backpack,Accessories,1.0,1397.34,East,Credit Card,CUST1221
+ORD1373,2025-04-08,LED Desk Lamp,Electronics,8.0,905.05,East,Cash,CUST1267
+ORD1678,2025-06-15,Table Lamp,Furniture,6.0,1308.68,North,Net Banking,CUST1895
+ORD1566,2025-05-10,Table Lamp,Furniture,7.0,1111.63,North,UPI,CUST1197
+ORD1847,2025-02-07,Yoga Mat,Fitness,5.0,721.29,North,Cash,CUST1460
+ORD1460,2025-06-30,Bluetooth Speaker,Electronics,2.0,1349.43,West,Credit Card,CUST1135
+ORD2155,2025-07-27,Water Bottle,Accessories,7.0,316.3,East,Credit Card,CUST1842
+ORD1039,2025-07-07,Table Lamp,Furniture,8.0,1116.22,East,UPI,CUST1991
+ORD1434,2025-04-06,Office Chair,Furniture,3.0,5009.82,West,Net Banking,CUST1141
+ORD1973,2025-06-22,Wireless Mouse,Electronics,1.0,638.74,North,Debit Card,CUST1100
+ORD2239,2025-02-13,USB-C Cable,Electronics,2.0,237.35,West,Cash,CUST1644
+ORD2007,2025-04-17,LED Desk Lamp,Electronics,8.0,933.59,South,UPI,CUST1655
+ORD1456,2025-07-20,Desk Organizer,Stationery,8.0,315.24,South,Debit Card,CUST1467
+ORD1260,2025-04-29,Desk Organizer,Stationery,8.0,358.2,South,Credit Card,CUST1733
+ORD1035,2025-01-20,Notebook Set,Stationery,8.0,158.18,North,Credit Card,CUST1667
+ORD1827,2025-01-02,LED Desk Lamp,Electronics,-1.0,986.09,South,Cash,CUST1022
+ORD1309,2025-03-23,Yoga Mat,Fitness,3.0,781.89,East,,CUST1344
+ORD1276,2025-05-24,Backpack,Accessories,2.0,1237.11,East,Debit Card,CUST1219
+ORD1636,2025-07-03,Notebook Set,Stationery,6.0,137.31,West,Credit Card,CUST1948
+ORD1654,2025-02-27,Coffee Mug,Kitchen,6.0,209.15,South,UPI,CUST1301
+ORD1622,2025-06-29,Table Lamp,Furniture,2.0,1182.9,South,Debit Card,CUST1354
+ORD1844,2025-01-07,Desk Organizer,Stationery,5.0,325.91,East,Net Banking,CUST1841
+ORD1393,2025-05-25,Office Chair,Furniture,4.0,5065.68,West,Net Banking,CUST1339
+ORD1107,2025-04-15,Table Lamp,Furniture,8.0,1212.23,South,Debit Card,CUST1661
+ORD1349,2025-07-26,Desk Organizer,Stationery,5.0,364.58,West,Cash,CUST1836
+ORD1524,2025-01-16,Water Bottle,Accessories,1.0,277.93, south ,Credit Card,CUST1866
+ORD1784,2025-06-10,Backpack,Accessories,4.0,1303.32,East,Cash,CUST1664
+ORD1047,2025-03-31,Office Chair,Furniture,2.0,5378.19,East,Cash,CUST1161
+ORD1203,2025-06-27,Desk Organizer,Stationery,5.0,316.12,East,Cash,CUST1943
+ORD1021,2025-05-10,Office Chair,Furniture,2.0,5369.44,East,Net Banking,CUST1623
+ORD1402,2025-02-17,Bluetooth Speaker,Electronics,7.0,1483.66,West,Credit Card,CUST1026
+ORD2107,2025-06-20,Coffee Mug,Kitchen,7.0,218.4,East,UPI,CUST1786
+ORD2154,2025-07-30,Bluetooth Speaker,Electronics,4.0,1438.27,South,Debit Card,CUST1646
+ORD2439,2025-04-07,Bluetooth Speaker,Electronics,2.0,1432.07,East,Credit Card,CUST1599
+ORD1989,2025-04-13,LED Desk Lamp,Electronics,1.0,922.78,North,Cash,CUST1547
+ORD1741,2025-01-08,Yoga Mat,Fitness,,737.68,North,Debit Card,CUST1648
+ORD2310,2025-05-17,Backpack,Accessories,8.0,1251.26,West,UPI,CUST1342
+ORD2147,2025-01-28,Office Chair,Furniture,3.0,4713.17,East,Debit Card,CUST1418
+ORD1033,2025-01-14,Table Lamp,Furniture,2.0,1093.63,East,Credit Card,CUST1254
+ORD1787,2025-03-24,Notebook Set,Stationery,1.0,138.63,North,UPI,CUST1995
+ORD1923,2025-03-28,Yoga Mat,Fitness,8.0,727.21,North,Debit Card,CUST1924
+ORD2043,2025-02-15,Backpack,Accessories,5.0,1418.06,North,Credit Card,CUST1168
+ORD2462,2025-07-24,Water Bottle,Accessories,3.0,300.18,South,Credit Card,CUST1404
+ORD2243,2025-04-13,Water Bottle,Accessories,3.0,295.06,West,Credit Card,CUST1676
+ORD1579,2025-05-13,Office Chair,Furniture,4.0,5398.61,West,Cash,CUST1697
+ORD1481,2025-03-30,Coffee Mug,Kitchen,5.0,185.75,South,Cash,CUST1750
+ORD1931,2025-03-14,Office Chair,Furniture,6.0,5103.42,South,Net Banking,CUST1105
+ORD1356,2025-03-05,Notebook Set,Stationery,8.0,144.42,East,UPI,CUST1959
+ORD2248,2025-01-22,LED Desk Lamp,Electronics,1.0,905.73,West,UPI,CUST1532
+ORD1759,2025-02-15,Wireless Mouse,Electronics,7.0,598.95,East,Debit Card,CUST1307
+ORD1092,2025-01-18,Desk Organizer,Stationery,1.0,366.75,South,UPI,CUST1859
+ORD2175,2025-05-01,Notebook Set,Stationery,6.0,163.8,North,Credit Card,CUST1259
+ORD2415,2025-03-21,Coffee Mug,Kitchen,3.0,207.82,South,Debit Card,CUST1180
+ORD2341,2025-02-03,Office Chair,Furniture,4.0,4690.74,West,Cash,CUST1325
+ORD1803,2025-07-13,Desk Organizer,Stationery,6.0,370.33,West,UPI,CUST1021
+ORD1745,2025-02-25,Water Bottle,Accessories,5.0,280.03,South,Debit Card,CUST1754
+ORD1279,2025-05-21,Bluetooth Speaker,Electronics,5.0,1616.32,South,UPI,CUST1812
+ORD1764,2025-06-22,Water Bottle,Accessories,8.0,315.43,West,Credit Card,CUST1390
+ORD1604,2025-01-26,Desk Organizer,Stationery,5.0,357.57,South,Debit Card,CUST1850
+ORD1774,2025-07-08,Notebook Set,Stationery,5.0,147.31,South,UPI,CUST1539
+ORD2373,2025-02-03,Notebook Set,Stationery,4.0,143.33,West,UPI,CUST1618
+ORD2398,2025-02-14,Water Bottle,Accessories,1.0,293.15,East,Credit Card,CUST1398
+ORD1400,2025-07-02,Backpack,Accessories,3.0,1361.26,East,Cash,CUST1109
+ORD1257,2025-01-12,Coffee Mug,Kitchen,7.0,218.15, east ,Credit Card,CUST1365
+ORD1944,2025-01-08,LED Desk Lamp,Electronics,4.0,886.72,West,Cash,CUST1728
+ORD2096,2025-02-17,Yoga Mat,Fitness,8.0,826.73,North,UPI,CUST1854
+ORD2219,2025-05-22,Table Lamp,Furniture,5.0,1087.98,West,Debit Card,CUST1525
+ORD2161,2025-05-13,Notebook Set,Stationery,3.0,159.34,West,Cash,CUST1462
+ORD1494,2025-04-07,Desk Organizer,Stationery,5.0,321.36,South,Debit Card,CUST1503
+ORD1772,2025-07-17,Wireless Mouse,Electronics,7.0,601.87, north ,Credit Card,CUST1268
+ORD1550,2025-05-02,Notebook Set,Stationery,5.0,136.45,North,Net Banking,CUST1584
+ORD2486,2025-07-24,Coffee Mug,Kitchen,6.0,184.0,South,Net Banking,CUST1211
+ORD1201,2025-02-27,Coffee Mug,Kitchen,2.0,193.03,East,Credit Card,CUST1780
+ORD1312,2025-06-26,Table Lamp,Furniture,1.0,1222.24,East,Net Banking,CUST1591
+ORD1290,2025-07-04,Yoga Mat,Fitness,6.0,853.74,North,Credit Card,CUST1083
+ORD2213,2025-02-18,Wireless Mouse,Electronics,2.0,636.85,South,Credit Card,CUST1214
+ORD1763,2025-06-05,Desk Organizer,Stationery,4.0,354.36,South,Cash,CUST1363
+ORD2136,2025-06-25,Table Lamp,Furniture,5.0,1281.52,West,Cash,CUST1880
+ORD1949,2025-07-26,Desk Organizer,Stationery,7.0,374.14,West,Net Banking,CUST1184
+ORD1183,2025-02-23,USB-C Cable,Electronics,4.0,264.59,South,Cash,CUST1792
+ORD2176,2025-06-08,USB-C Cable,Electronics,7.0,239.16,West,Cash,CUST1135
+ORD2349,2025-03-20,Notebook Set,Stationery,7.0,160.58,South,Cash,CUST1260
+ORD2068,2025-05-02,LED Desk Lamp,Electronics,6.0,820.99,West,Credit Card,CUST1006
+ORD2468,2025-07-06,Coffee Mug,Kitchen,7.0,191.0,South,Credit Card,CUST1561
+ORD2030,2025-06-27,Wireless Mouse,Electronics,7.0,652.9,South,Cash,CUST1302
+ORD1250,2025-02-05,Office Chair,Furniture,1.0,4785.92,West,UPI,CUST1777
+ORD1823,2025-05-21,Water Bottle,Accessories,6.0,319.62,West,Debit Card,CUST1845
+ORD2099,2025-06-30,Water Bottle,Accessories,5.0,302.42,North,Credit Card,CUST1335
+ORD1940,2025-04-10,LED Desk Lamp,Electronics,8.0,844.28,East,Cash,CUST1583
+ORD1391,2025-06-25,Bluetooth Speaker,Electronics,5.0,1618.71,North,UPI,CUST1951
+ORD2456,2025-06-12,USB-C Cable,Electronics,8.0,228.6,East,UPI,CUST1954
+ORD2092,2025-02-21,Yoga Mat,Fitness,3.0,826.26,North,Credit Card,CUST1149
+ORD2191,2025-01-21,Wireless Mouse,Electronics,8.0,638.62,West,Debit Card,CUST1643
+ORD1904,2025-03-28,Water Bottle,Accessories,8.0,323.89,North,,CUST1493
+ORD1730,2025-06-05,Bluetooth Speaker,Electronics,1.0,1566.3,West,Net Banking,CUST1671
+ORD1554,2025-07-26,Table Lamp,Furniture,2.0,1099.97,West,,CUST1333
+ORD1366,2025-03-18,Notebook Set,Stationery,3.0,158.11,North,Net Banking,CUST1422
+ORD1345,2025-01-29,Yoga Mat,Fitness,1.0,851.54,South,Net Banking,CUST1549
+ORD1535,2025-03-31,Backpack,Accessories,7.0,1195.45,West,Net Banking,CUST1666
+ORD2422,2025-02-18,Office Chair,Furniture,1.0,4511.93,East,Debit Card,CUST1414
+ORD2209,2025-02-24,Office Chair,Furniture,3.0,4577.3,East,Credit Card,CUST1444
+ORD2372,2025-02-03,Bluetooth Speaker,Electronics,7.0,1492.48,North,Debit Card,CUST1978
+ORD1919,2025-02-19,Notebook Set,Stationery,5.0,142.34,East,Debit Card,CUST1687
+ORD1211,2025-01-12,LED Desk Lamp,Electronics,4.0,880.17,North,Credit Card,CUST1209
+ORD1502,2025-03-09,Coffee Mug,Kitchen,2.0,182.7,East,Net Banking,CUST1041
+ORD1537,2025-03-08,Water Bottle,Accessories,2.0,273.54,South,Debit Card,CUST1164
+ORD2220,2025-07-05,Yoga Mat,Fitness,8.0,756.16,North,Net Banking,CUST1019
+ORD1175,2025-01-12,Office Chair,Furniture,1.0,4803.4,West,Credit Card,CUST1099
