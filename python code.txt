@@ -1,0 +1,639 @@
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from pathlib import Path
+import json, csv
+import warnings
+warnings.filterwarnings("ignore")
+
+sns.set_theme(style="whitegrid")
+plt.rcParams["figure.figsize"] = (10, 5)
+
+np.random.seed(42)
+
+# Folder structure
+BASE = Path("Data-Analysis-with-Python/Task-2")
+for folder in ["datasets", "notebooks", "src", "reports/charts", "reports/dashboard", "screenshots", "diagrams", "docs"]:
+    (BASE / folder).mkdir(parents=True, exist_ok=True)
+
+print("Project folder structure ready at:", BASE.resolve())
+
+
+
+# ----- Customers -----
+n_customers = 250
+regions = ["North", "South", "East", "West"]
+segments_raw = ["Consumer", "Corporate", "Home Office"]
+
+customers = pd.DataFrame({
+    "CustomerID": [f"CUST{i:04d}" for i in range(1, n_customers + 1)],
+    "CustomerName": [f"Customer_{i}" for i in range(1, n_customers + 1)],
+    "Region": np.random.choice(regions, n_customers),
+    "Segment": np.random.choice(segments_raw, n_customers),
+    "SignupDate": pd.to_datetime("2022-01-01") + pd.to_timedelta(np.random.randint(0, 900, n_customers), unit="D"),
+})
+# Inject messiness: mixed case, whitespace, missing values, duplicates
+customers.loc[5:10, "Region"] = customers.loc[5:10, "Region"].str.lower()
+customers.loc[15:20, "Region"] = " " + customers.loc[15:20, "Region"] + " "
+customers.loc[np.random.choice(customers.index, 8, replace=False), "Segment"] = np.nan
+customers = pd.concat([customers, customers.iloc[0:5]], ignore_index=True)  # duplicate rows
+
+# ----- Products -----
+categories = ["Electronics", "Furniture", "Office Supplies", "Clothing", "Groceries"]
+n_products = 60
+products = pd.DataFrame({
+    "ProductID": [f"PRD{i:04d}" for i in range(1, n_products + 1)],
+    "ProductName": [f"Product_{i}" for i in range(1, n_products + 1)],
+    "Category": np.random.choice(categories, n_products),
+    "UnitCost": np.round(np.random.uniform(5, 400, n_products), 2),
+})
+products["UnitPrice"] = np.round(products["UnitCost"] * np.random.uniform(1.2, 2.2, n_products), 2)
+
+# ----- Sales -----
+n_sales = 1500
+sales = pd.DataFrame({
+    "OrderID": [f"ORD{i:06d}" for i in range(1, n_sales + 1)],
+    "CustomerID": np.random.choice(customers["CustomerID"].unique(), n_sales),
+    "ProductID": np.random.choice(products["ProductID"], n_sales),
+    "OrderDate": pd.to_datetime("2023-01-01") + pd.to_timedelta(np.random.randint(0, 730, n_sales), unit="D"),
+    "Quantity": np.random.randint(1, 15, n_sales),
+})
+sales = sales.merge(products[["ProductID", "UnitPrice"]], on="ProductID", how="left")
+
+# Inject outliers & missing values & duplicates (realistic messy data)
+outlier_idx = np.random.choice(sales.index, 12, replace=False)
+sales.loc[outlier_idx, "Quantity"] = np.random.randint(150, 500, len(outlier_idx))
+sales.loc[np.random.choice(sales.index, 25, replace=False), "Quantity"] = np.nan
+sales.loc[np.random.choice(sales.index, 15, replace=False), "UnitPrice"] = np.nan
+sales = pd.concat([sales, sales.iloc[0:10]], ignore_index=True)  # duplicate orders
+
+customers.to_csv(BASE / "datasets/customers.csv", index=False)
+products.to_csv(BASE / "datasets/products.csv", index=False)
+sales.to_csv(BASE / "datasets/sales.csv", index=False)
+
+print("customers:", customers.shape, "| products:", products.shape, "| sales:", sales.shape)
+customers.head()
+
+
+
+customers = pd.read_csv(BASE / "datasets/customers.csv", parse_dates=["SignupDate"])
+products = pd.read_csv(BASE / "datasets/products.csv")
+sales = pd.read_csv(BASE / "datasets/sales.csv", parse_dates=["OrderDate"])
+
+# ---- merge() : Exercise 1 - Merge two CSV datasets ----
+# Note: sales.csv already carries UnitPrice (joined in at generation time), so we only
+# pull the remaining product attributes here to avoid duplicate UnitPrice_x/UnitPrice_y columns.
+merged = sales.merge(customers, on="CustomerID", how="left")
+merged = merged.merge(products.drop(columns=["UnitPrice"]), on="ProductID", how="left")
+print("Merged shape:", merged.shape)
+merged.head()
+
+
+
+# ---- join() : index-based join example ----
+cust_indexed = customers.set_index("CustomerID")
+sales_indexed = sales.set_index("CustomerID")
+joined = sales_indexed.join(cust_indexed, how="left", rsuffix="_cust")
+joined.reset_index().head()
+
+
+
+# ---- concat() : stacking two sales batches (e.g. Q1 + Q2 exports from different systems) ----
+batch1 = sales.iloc[: len(sales)//2]
+batch2 = sales.iloc[len(sales)//2 :]
+stacked = pd.concat([batch1, batch2], axis=0, ignore_index=True)
+print("Concatenated rows:", stacked.shape[0], "== original rows:", sales.shape[0])
+
+# concat along columns (side-by-side) example
+side_by_side = pd.concat([products.set_index("ProductID")["Category"],
+                           products.set_index("ProductID")["UnitPrice"]], axis=1).head()
+side_by_side
+
+
+
+# ---- Multi-Index & Advanced Indexing ----
+multi = merged.groupby(["Region", "Category"]).agg(
+    TotalQty=("Quantity", "sum"),
+    Orders=("OrderID", "count")
+)
+print(multi.index.names)
+multi.loc[("North", "Electronics")] if ("North", "Electronics") in multi.index else multi.head()
+
+
+
+# .loc / .iloc / boolean advanced filtering & sorting
+high_value_north = merged.loc[(merged["Region"].str.strip().str.title() == "North") & (merged["Quantity"] > 5)]
+high_value_north_sorted = high_value_north.sort_values(["Quantity"], ascending=False)
+print(high_value_north_sorted.shape)
+high_value_north_sorted[["OrderID", "CustomerID", "Category", "Quantity"]].head()
+
+
+
+# ---- apply(), map(), replace() ----
+# apply: row-wise custom business logic
+merged["OrderSizeLabel"] = merged["Quantity"].apply(lambda q: "Bulk" if pd.notna(q) and q > 10 else "Regular")
+
+# map: fast value substitution using a dict
+segment_map = {"Consumer": "B2C", "Corporate": "B2B", "Home Office": "B2B-Home"}
+merged["SegmentType"] = merged["Segment"].map(segment_map)
+
+# replace: cleaning inconsistent category labels
+merged["Region"] = merged["Region"].astype(str).str.strip().str.title()
+merged["Region"] = merged["Region"].replace({"Nan": np.nan})
+
+merged[["OrderID", "Quantity", "OrderSizeLabel", "Segment", "SegmentType", "Region"]].head()
+
+
+
+print("Duplicate rows before cleaning:", merged.duplicated().sum())
+merged = merged.drop_duplicates().reset_index(drop=True)
+print("Duplicate rows after cleaning:", merged.duplicated().sum())
+print("\nMissing values per column:\n", merged.isna().sum()[merged.isna().sum() > 0])
+
+
+
+# ---- Missing value strategies ----
+# Numeric: median imputation (robust to outliers) for Quantity & UnitPrice
+for col in ["Quantity", "UnitPrice"]:
+    median_val = merged[col].median()
+    merged[col] = merged[col].fillna(median_val)
+
+# Categorical: mode / explicit 'Unknown' bucket
+merged["Segment"] = merged["Segment"].fillna("Unknown")
+merged["Region"] = merged["Region"].fillna(merged["Region"].mode()[0])
+
+print("Remaining missing values:", merged.isna().sum().sum())
+
+
+
+# ---- Outlier detection (IQR method) on Quantity ----
+Q1 = merged["Quantity"].quantile(0.25)
+Q3 = merged["Quantity"].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+outliers = merged[(merged["Quantity"] < lower_bound) | (merged["Quantity"] > upper_bound)]
+print(f"Outlier bounds: [{lower_bound:.1f}, {upper_bound:.1f}]  |  Outliers found: {len(outliers)}")
+
+# Cap outliers instead of dropping (preserve order count, avoid data loss)
+merged["Quantity"] = merged["Quantity"].clip(lower=lower_bound, upper=upper_bound)
+
+
+
+# ---- Normalization (Min-Max scaling) & Standardization (Z-score) ----
+# Kept in NEW columns so raw business figures (Quantity, UnitPrice) are preserved
+merged["Quantity_MinMax"] = (merged["Quantity"] - merged["Quantity"].min()) / (merged["Quantity"].max() - merged["Quantity"].min())
+merged["UnitPrice_Zscore"] = (merged["UnitPrice"] - merged["UnitPrice"].mean()) / merged["UnitPrice"].std()
+
+# ---- Column transformations ----
+merged["CustomerName"] = merged["CustomerName"].str.strip().str.title()
+merged["Category"] = merged["Category"].astype("category")   # categorical dtype for memory + speed
+
+merged[["Quantity", "Quantity_MinMax", "UnitPrice", "UnitPrice_Zscore"]].describe().round(2)
+
+
+
+# ---- Date & time feature extraction ----
+merged["OrderYear"] = merged["OrderDate"].dt.year
+merged["OrderMonth"] = merged["OrderDate"].dt.month
+merged["OrderMonthName"] = merged["OrderDate"].dt.month_name()
+merged["OrderQuarter"] = merged["OrderDate"].dt.quarter
+merged["OrderWeekday"] = merged["OrderDate"].dt.day_name()
+merged["YearMonth"] = merged["OrderDate"].dt.to_period("M").astype(str)
+
+# ---- Revenue, Cost, Profit (Exercise 4) ----
+# UnitCost was already merged in from `products` back in Part A, so it's available here directly.
+merged["Revenue"] = merged["Quantity"] * merged["UnitPrice"]
+merged["Cost"] = merged["Quantity"] * merged["UnitCost"]
+merged["Profit"] = merged["Revenue"] - merged["Cost"]
+merged["ProfitMargin%"] = (merged["Profit"] / merged["Revenue"].replace(0, np.nan) * 100).round(2)
+
+merged[["OrderDate", "YearMonth", "Quantity", "UnitPrice", "Revenue", "Cost", "Profit", "ProfitMargin%"]].head()
+
+
+
+# ---- Customer segmentation feature (simple RFM-style: total spend tiers) ----
+customer_spend = merged.groupby("CustomerID")["Revenue"].sum()
+merged["CustomerLifetimeSpend"] = merged["CustomerID"].map(customer_spend)
+
+def spend_tier(x):
+    if x >= customer_spend.quantile(0.75):
+        return "High Value"
+    elif x >= customer_spend.quantile(0.25):
+        return "Medium Value"
+    return "Low Value"
+
+merged["CustomerTier"] = merged["CustomerLifetimeSpend"].apply(spend_tier)
+
+# ---- Business KPI: Average Order Value per order ----
+merged["AOV"] = merged["Revenue"]  # per-order value; aggregate later for true AOV KPI
+
+merged[["CustomerID", "CustomerLifetimeSpend", "CustomerTier"]].drop_duplicates().head()
+
+
+
+# ---- GroupBy analysis (Exercise 7) ----
+category_summary = merged.groupby("Category").agg(
+    TotalRevenue=("Revenue", "sum"),
+    TotalProfit=("Profit", "sum"),
+    Orders=("OrderID", "nunique"),
+    AvgOrderValue=("Revenue", "mean"),
+).sort_values("TotalRevenue", ascending=False).round(2)
+category_summary
+
+
+
+# ---- Pivot Table (Exercise 6): Revenue by Category x Region ----
+pivot_rev = pd.pivot_table(
+    merged, values="Revenue", index="Category", columns="Region",
+    aggfunc="sum", fill_value=0
+).round(2)
+pivot_rev
+
+
+
+# ---- Cross Tabulation: Order counts by Segment x Category ----
+crosstab_orders = pd.crosstab(merged["SegmentType"], merged["Category"])
+crosstab_orders
+
+
+
+# ---- Ranking / Customer rankings (Exercise 9) ----
+customer_ranking = (
+    merged.groupby(["CustomerID", "CustomerName"])
+    .agg(TotalRevenue=("Revenue", "sum"), TotalOrders=("OrderID", "nunique"))
+    .sort_values("TotalRevenue", ascending=False)
+    .reset_index()
+)
+customer_ranking["Rank"] = customer_ranking["TotalRevenue"].rank(ascending=False, method="dense").astype(int)
+top10_customers = customer_ranking.head(10)
+top10_customers
+
+
+
+# ---- Monthly sales report (Exercise 10) ----
+monthly_report = merged.groupby("YearMonth").agg(
+    TotalRevenue=("Revenue", "sum"),
+    TotalProfit=("Profit", "sum"),
+    Orders=("OrderID", "nunique"),
+    AvgOrderValue=("Revenue", "mean"),
+).round(2).reset_index().sort_values("YearMonth")
+monthly_report.head(12)
+
+
+
+# ---- Overall Business KPIs for the dashboard ----
+kpis = {
+    "Total Revenue": round(merged["Revenue"].sum(), 2),
+    "Total Profit": round(merged["Profit"].sum(), 2),
+    "Total Orders": merged["OrderID"].nunique(),
+    "Total Customers": merged["CustomerID"].nunique(),
+    "Average Order Value": round(merged["Revenue"].mean(), 2),
+    "Overall Profit Margin %": round(merged["Profit"].sum() / merged["Revenue"].sum() * 100, 2),
+}
+for k, v in kpis.items():
+    print(f"{k:28s}: {v:,}")
+
+
+
+# 1) LINE CHART — Monthly revenue trend
+plt.figure(figsize=(11, 5))
+plt.plot(monthly_report["YearMonth"], monthly_report["TotalRevenue"], marker="o", color="#2563eb")
+plt.title("Monthly Revenue Trend", fontsize=14, fontweight="bold")
+plt.xlabel("Month"); plt.ylabel("Revenue")
+plt.xticks(rotation=60)
+plt.tight_layout(); plt.show()
+
+
+
+# 2) MULTI-LINE CHART — Revenue vs Profit trend over time
+plt.figure(figsize=(11, 5))
+plt.plot(monthly_report["YearMonth"], monthly_report["TotalRevenue"], marker="o", label="Revenue")
+plt.plot(monthly_report["YearMonth"], monthly_report["TotalProfit"], marker="s", label="Profit")
+plt.title("Revenue vs Profit Over Time", fontsize=14, fontweight="bold")
+plt.xlabel("Month"); plt.ylabel("Amount"); plt.legend()
+plt.xticks(rotation=60)
+plt.tight_layout(); plt.show()
+
+
+
+# 3) BAR CHART — Revenue by category
+plt.figure(figsize=(9, 5))
+sns.barplot(data=category_summary.reset_index(), x="Category", y="TotalRevenue", palette="viridis")
+plt.title("Total Revenue by Product Category", fontsize=14, fontweight="bold")
+plt.xticks(rotation=30)
+plt.tight_layout(); plt.show()
+
+
+
+# 4) HORIZONTAL BAR CHART — Top 10 customers by revenue
+plt.figure(figsize=(9, 6))
+sns.barplot(data=top10_customers, y="CustomerName", x="TotalRevenue", palette="mako", orient="h")
+plt.title("Top 10 Customers by Revenue", fontsize=14, fontweight="bold")
+plt.xlabel("Total Revenue"); plt.ylabel("Customer")
+plt.tight_layout(); plt.show()
+
+
+
+# 5) HISTOGRAM — Distribution of order revenue
+plt.figure(figsize=(9, 5))
+sns.histplot(merged["Revenue"], bins=30, kde=True, color="#7c3aed")
+plt.title("Distribution of Order Revenue", fontsize=14, fontweight="bold")
+plt.xlabel("Revenue per Order")
+plt.tight_layout(); plt.show()
+
+
+
+# 6) BOX PLOT — Revenue spread by category (also highlights outliers)
+plt.figure(figsize=(10, 5))
+sns.boxplot(data=merged, x="Category", y="Revenue", palette="Set2")
+plt.title("Revenue Spread by Category (Box Plot)", fontsize=14, fontweight="bold")
+plt.xticks(rotation=30)
+plt.tight_layout(); plt.show()
+
+
+
+# 7) HEATMAP — Revenue by Category x Region (from pivot table)
+plt.figure(figsize=(9, 6))
+sns.heatmap(pivot_rev, annot=True, fmt=".0f", cmap="YlGnBu", linewidths=0.5)
+plt.title("Revenue Heatmap: Category vs Region", fontsize=14, fontweight="bold")
+plt.tight_layout(); plt.show()
+
+
+
+# 8) SCATTER PLOT — Quantity vs Revenue relationship
+plt.figure(figsize=(9, 5))
+sns.scatterplot(data=merged, x="Quantity", y="Revenue", hue="Category", alpha=0.6)
+plt.title("Quantity vs Revenue by Category", fontsize=14, fontweight="bold")
+plt.legend(bbox_to_anchor=(1.02, 1), loc="upper left")
+plt.tight_layout(); plt.show()
+
+
+
+# 9) PAIR PLOT — Relationships across key numeric business features
+pairplot_df = merged[["Quantity", "UnitPrice", "Revenue", "Profit"]].sample(300, random_state=1)
+sns.pairplot(pairplot_df, corner=True, plot_kws={"alpha": 0.5})
+plt.suptitle("Pair Plot — Quantity, Price, Revenue, Profit", y=1.02, fontsize=14, fontweight="bold")
+plt.show()
+
+
+
+# 10) COUNT PLOT — Number of orders per region
+plt.figure(figsize=(8, 5))
+sns.countplot(data=merged, x="Region", palette="pastel", order=merged["Region"].value_counts().index)
+plt.title("Order Count by Region", fontsize=14, fontweight="bold")
+plt.tight_layout(); plt.show()
+
+
+
+import matplotlib
+from openpyxl.utils.dataframe import dataframe_to_rows
+from openpyxl import Workbook
+from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.chart import BarChart, Reference
+
+reports_dir = BASE / "reports"
+
+# ---- CSV export (Exercise 5 & Part F) ----
+merged.to_csv(reports_dir / "cleaned_merged_data.csv", index=False)
+category_summary.to_csv(reports_dir / "category_summary.csv")
+monthly_report.to_csv(reports_dir / "monthly_report.csv", index=False)
+customer_ranking.to_csv(reports_dir / "customer_ranking.csv", index=False)
+print("CSV reports exported to:", reports_dir.resolve())
+
+
+
+# ---- Automated Excel report with multiple sheets + a native chart (Exercise 12) ----
+excel_path = reports_dir / "Business_Report.xlsx"
+
+with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+    merged.drop(columns=["Quantity_MinMax", "UnitPrice_Zscore"]).to_excel(writer, sheet_name="Cleaned_Data", index=False)
+    category_summary.to_excel(writer, sheet_name="Category_Summary")
+    monthly_report.to_excel(writer, sheet_name="Monthly_Report", index=False)
+    customer_ranking.to_excel(writer, sheet_name="Customer_Ranking", index=False)
+    pivot_rev.to_excel(writer, sheet_name="Pivot_Category_Region")
+
+# Style the header row + add a native Excel bar chart on the Category_Summary sheet
+wb = writer if False else None
+from openpyxl import load_workbook
+wb = load_workbook(excel_path)
+
+header_fill = PatternFill(start_color="2563EB", end_color="2563EB", fill_type="solid")
+header_font = Font(color="FFFFFF", bold=True)
+for sheet in wb.sheetnames:
+    ws = wb[sheet]
+    for cell in ws[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = Alignment(horizontal="center")
+    for col in ws.columns:
+        max_len = max((len(str(c.value)) for c in col if c.value is not None), default=10)
+        ws.column_dimensions[col[0].column_letter].width = min(max_len + 3, 40)
+
+ws = wb["Category_Summary"]
+chart = BarChart()
+chart.title = "Total Revenue by Category"
+chart.y_axis.title = "Revenue"
+chart.x_axis.title = "Category"
+data = Reference(ws, min_col=2, min_row=1, max_row=ws.max_row, max_col=2)
+cats = Reference(ws, min_col=1, min_row=2, max_row=ws.max_row)
+chart.add_data(data, titles_from_data=True)
+chart.set_categories(cats)
+ws.add_chart(chart, "H2")
+
+wb.save(excel_path)
+print("Excel report saved:", excel_path.resolve())
+
+
+
+# ---- PDF summary report (Business Insights + KPIs) ----
+from reportlab.lib.pagesizes import A4
+from reportlab.lib import colors
+from reportlab.lib.units import cm
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, Image
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+
+pdf_path = reports_dir / "Business_Report_Summary.pdf"
+styles = getSampleStyleSheet()
+title_style = ParagraphStyle("TitleStyle", parent=styles["Title"], textColor=colors.HexColor("#1e3a8a"))
+h2_style = ParagraphStyle("H2", parent=styles["Heading2"], textColor=colors.HexColor("#2563eb"))
+
+# Save a chart image to embed in the PDF
+fig, ax = plt.subplots(figsize=(7, 3.2))
+sns.barplot(data=category_summary.reset_index(), x="Category", y="TotalRevenue", palette="viridis", ax=ax)
+ax.set_title("Revenue by Category")
+plt.xticks(rotation=20)
+plt.tight_layout()
+chart_img_path = reports_dir / "charts" / "revenue_by_category.png"
+fig.savefig(chart_img_path, dpi=150)
+plt.close(fig)
+
+story = [
+    Paragraph("Customer Sales Performance & Business Analytics Report", title_style),
+    Spacer(1, 0.4 * cm),
+    Paragraph("Generated automatically from the cleaned & merged business dataset.", styles["Normal"]),
+    Spacer(1, 0.6 * cm),
+    Paragraph("Key Business KPIs", h2_style),
+]
+
+kpi_table_data = [["Metric", "Value"]] + [[k, f"{v:,}"] for k, v in kpis.items()]
+kpi_table = Table(kpi_table_data, colWidths=[8 * cm, 6 * cm])
+kpi_table.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#2563eb")),
+    ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+    ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+    ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
+    ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f1f5f9")]),
+]))
+story += [kpi_table, Spacer(1, 0.6 * cm), Paragraph("Revenue by Category", h2_style),
+          Image(str(chart_img_path), width=15 * cm, height=6.5 * cm), Spacer(1, 0.5 * cm),
+          Paragraph("Top 5 Customers by Revenue", h2_style)]
+
+top5_table_data = [["Customer", "Revenue", "Orders"]] + top10_customers.head(5)[
+    ["CustomerName", "TotalRevenue", "TotalOrders"]].values.tolist()
+top5_table = Table(top5_table_data, colWidths=[7 * cm, 5 * cm, 3 * cm])
+top5_table.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#7c3aed")),
+    ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+    ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+    ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
+]))
+story.append(top5_table)
+
+doc = SimpleDocTemplate(str(pdf_path), pagesize=A4)
+doc.build(story)
+print("PDF summary saved:", pdf_path.resolve())
+
+
+
+fig, axes = plt.subplots(2, 2, figsize=(14, 9))
+fig.suptitle("Customer Sales Performance & Business Analytics Dashboard", fontsize=16, fontweight="bold")
+
+sns.lineplot(data=monthly_report, x="YearMonth", y="TotalRevenue", marker="o", ax=axes[0, 0], color="#2563eb")
+axes[0, 0].set_title("Monthly Revenue Trend")
+axes[0, 0].tick_params(axis="x", rotation=70)
+
+sns.barplot(data=category_summary.reset_index(), x="Category", y="TotalRevenue", palette="viridis", ax=axes[0, 1])
+axes[0, 1].set_title("Revenue by Category")
+axes[0, 1].tick_params(axis="x", rotation=25)
+
+sns.heatmap(pivot_rev, annot=True, fmt=".0f", cmap="YlGnBu", ax=axes[1, 0], cbar=False)
+axes[1, 0].set_title("Revenue: Category vs Region")
+
+sns.barplot(data=top10_customers.head(5), y="CustomerName", x="TotalRevenue", palette="mako", ax=axes[1, 1])
+axes[1, 1].set_title("Top 5 Customers by Revenue")
+
+plt.tight_layout(rect=[0, 0, 1, 0.96])
+dashboard_path = BASE / "reports/dashboard/dashboard_overview.png"
+fig.savefig(dashboard_path, dpi=150)
+plt.show()
+print("Dashboard image saved:", dashboard_path.resolve())
+
+
+
+# ---- Automated business insight summary (plain-English, generated from the data) ----
+top_category = category_summary["TotalRevenue"].idxmax()
+best_month = monthly_report.loc[monthly_report["TotalRevenue"].idxmax(), "YearMonth"]
+top_customer = top10_customers.iloc[0]
+top_region = merged.groupby("Region")["Revenue"].sum().idxmax()
+
+insights = f"""
+BUSINESS INSIGHT SUMMARY
+=========================
+- Total revenue across the analysis period: {kpis['Total Revenue']:,}
+- Overall profit margin: {kpis['Overall Profit Margin %']}%
+- Best-performing category: {top_category} (drives the highest total revenue)
+- Best-performing region: {top_region}
+- Strongest sales month: {best_month}
+- Top customer: {top_customer['CustomerName']} (Revenue: {top_customer['TotalRevenue']:,.2f})
+- Average order value across all orders: {kpis['Average Order Value']:,}
+
+RECOMMENDATIONS
+=========================
+1. Prioritize marketing spend on '{top_category}' and the '{top_region}' region, which show the
+   strongest revenue contribution.
+2. Investigate seasonality around '{best_month}' to replicate the demand drivers in future periods.
+3. Launch a loyalty / retention program targeted at 'High Value' tier customers to protect
+   recurring revenue.
+4. Review low-margin categories for pricing or cost-of-goods optimization.
+"""
+print(insights)
+
+with open(BASE / "reports/business_insights.txt", "w") as f:
+    f.write(insights)
+
+
+
+class SalesAnalyticsPipeline:
+    """Reusable end-to-end pipeline: load -> clean -> merge -> engineer -> analyze -> export."""
+
+    def __init__(self, customers_path, products_path, sales_path):
+        self.customers_path = customers_path
+        self.products_path = products_path
+        self.sales_path = sales_path
+        self.data = None
+
+    def load(self):
+        self.customers = pd.read_csv(self.customers_path, parse_dates=["SignupDate"])
+        self.products = pd.read_csv(self.products_path)
+        self.sales = pd.read_csv(self.sales_path, parse_dates=["OrderDate"])
+        return self
+
+    def clean(self):
+        for df in (self.customers, self.sales):
+            df.drop_duplicates(inplace=True)
+        self.sales["Quantity"] = self.sales["Quantity"].fillna(self.sales["Quantity"].median())
+        self.sales["UnitPrice"] = self.sales["UnitPrice"].fillna(self.sales["UnitPrice"].median())
+        self.customers["Segment"] = self.customers["Segment"].fillna("Unknown")
+        self.customers["Region"] = self.customers["Region"].astype(str).str.strip().str.title()
+        return self
+
+    def merge_all(self):
+        # sales already carries UnitPrice from generation time, so avoid re-merging that column
+        self.data = self.sales.merge(self.customers, on="CustomerID", how="left")
+        self.data = self.data.merge(self.products.drop(columns=["UnitPrice"]), on="ProductID", how="left")
+        return self
+
+    def engineer_features(self):
+        d = self.data
+        d["Revenue"] = d["Quantity"] * d["UnitPrice"]
+        d["Cost"] = d["Quantity"] * d["UnitCost"]
+        d["Profit"] = d["Revenue"] - d["Cost"]
+        d["YearMonth"] = d["OrderDate"].dt.to_period("M").astype(str)
+        self.data = d
+        return self
+
+    def kpis(self):
+        d = self.data
+        return {
+            "Total Revenue": round(d["Revenue"].sum(), 2),
+            "Total Profit": round(d["Profit"].sum(), 2),
+            "Orders": d["OrderID"].nunique(),
+            "Customers": d["CustomerID"].nunique(),
+        }
+
+    def export(self, out_dir):
+        out_dir = Path(out_dir)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        self.data.to_csv(out_dir / "pipeline_output.csv", index=False)
+        return out_dir / "pipeline_output.csv"
+
+    def run(self, out_dir):
+        return (self.load().clean().merge_all().engineer_features()
+                    .export(out_dir))
+
+
+# ---- Demonstrate the reusable pipeline end-to-end on the same datasets ----
+pipeline = SalesAnalyticsPipeline(
+    BASE / "datasets/customers.csv",
+    BASE / "datasets/products.csv",
+    BASE / "datasets/sales.csv",
+)
+output_path = pipeline.run(BASE / "reports")
+print("Pipeline KPIs:", pipeline.kpis())
+print("Pipeline output written to:", output_path.resolve())
+
+

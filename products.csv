@@ -1,0 +1,61 @@
+ProductID,ProductName,Category,UnitCost,UnitPrice
+PRD0001,Product_1,Furniture,65.38,133.49
+PRD0002,Product_2,Clothing,102.15,136.86
+PRD0003,Product_3,Electronics,68.47,136.62
+PRD0004,Product_4,Electronics,78.69,110.29
+PRD0005,Product_5,Office Supplies,117.61,160.38
+PRD0006,Product_6,Groceries,73.48,100.25
+PRD0007,Product_7,Clothing,359.22,723.68
+PRD0008,Product_8,Furniture,36.69,68.43
+PRD0009,Product_9,Clothing,212.18,365.6
+PRD0010,Product_10,Furniture,167.11,260.5
+PRD0011,Product_11,Groceries,393.04,816.42
+PRD0012,Product_12,Furniture,49.26,78.44
+PRD0013,Product_13,Office Supplies,162.15,326.99
+PRD0014,Product_14,Office Supplies,387.94,635.89
+PRD0015,Product_15,Office Supplies,346.88,547.01
+PRD0016,Product_16,Office Supplies,327.74,544.93
+PRD0017,Product_17,Clothing,106.87,160.45
+PRD0018,Product_18,Groceries,72.5,141.2
+PRD0019,Product_19,Furniture,269.11,458.22
+PRD0020,Product_20,Furniture,372.1,532.93
+PRD0021,Product_21,Office Supplies,224.92,472.24
+PRD0022,Product_22,Office Supplies,230.79,365.55
+PRD0023,Product_23,Electronics,115.59,201.54
+PRD0024,Product_24,Groceries,308.95,650.79
+PRD0025,Product_25,Clothing,78.88,143.9
+PRD0026,Product_26,Furniture,132.85,174.95
+PRD0027,Product_27,Electronics,173.05,370.3
+PRD0028,Product_28,Electronics,205.51,375.61
+PRD0029,Product_29,Furniture,100.75,154.64
+PRD0030,Product_30,Clothing,50.36,67.45
+PRD0031,Product_31,Electronics,246.19,490.91
+PRD0032,Product_32,Electronics,119.01,216.61
+PRD0033,Product_33,Groceries,234.59,406.65
+PRD0034,Product_34,Clothing,65.97,138.13
+PRD0035,Product_35,Electronics,195.05,387.88
+PRD0036,Product_36,Clothing,215.37,291.11
+PRD0037,Product_37,Furniture,25.47,38.5
+PRD0038,Product_38,Office Supplies,137.96,199.83
+PRD0039,Product_39,Electronics,58.09,112.92
+PRD0040,Product_40,Groceries,30.03,37.04
+PRD0041,Product_41,Furniture,396.03,700.93
+PRD0042,Product_42,Clothing,132.33,259.69
+PRD0043,Product_43,Furniture,324.9,674.74
+PRD0044,Product_44,Electronics,105.58,162.81
+PRD0045,Product_45,Clothing,274.19,554.21
+PRD0046,Product_46,Office Supplies,305.29,400.12
+PRD0047,Product_47,Furniture,240.28,491.72
+PRD0048,Product_48,Electronics,191.27,253.91
+PRD0049,Product_49,Groceries,167.68,267.83
+PRD0050,Product_50,Clothing,142.8,285.21
+PRD0051,Product_51,Furniture,372.16,502.39
+PRD0052,Product_52,Furniture,333.09,476.07
+PRD0053,Product_53,Office Supplies,386.19,742.35
+PRD0054,Product_54,Office Supplies,54.1,103.87
+PRD0055,Product_55,Groceries,293.69,540.73
+PRD0056,Product_56,Groceries,375.64,711.44
+PRD0057,Product_57,Electronics,76.59,133.48
+PRD0058,Product_58,Electronics,31.27,45.4
+PRD0059,Product_59,Groceries,297.74,460.22
+PRD0060,Product_60,Groceries,231.92,320.42
